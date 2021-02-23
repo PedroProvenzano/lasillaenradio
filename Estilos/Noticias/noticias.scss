@@ -1,4 +1,10 @@
-.seccion-actualidad {
+@import "./Actualidad/actualidad";
+@import "./Cultura/cultura";
+@import "./Deporte/deporte";
+@import "./Streaming/streaming";
+@import "./Espectaculo/espectaculo";
+
+.seccion-noticias {
   transition: opacity 500ms;
   opacity: 0%;
   margin-top: 4rem;
@@ -13,7 +19,7 @@
     font-size: 3rem;
   }
 
-  .actualidad-main-cont {
+  .general-main-cont {
     margin-top: 8rem;
     display: flex;
     flex-direction: column;
@@ -48,7 +54,7 @@
     }
   }
 
-  .actualidad-cont-noticias {
+  .general-cont-noticias {
     margin: 4rem 0 4rem 0;
     min-width: 800px;
     max-width: 1000px;

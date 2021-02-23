@@ -38,23 +38,44 @@
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  overflow: hidden;
+}
+
+.barra-navegacion .boton-cont-nav #boton-inicio {
+  margin-right: 2rem;
+  position: relative;
+  top: -3rem;
+}
+
+.barra-navegacion .boton-cont-nav #boton-inicio:hover {
+  cursor: pointer;
 }
 
 .barra-navegacion .boton-cont-nav .boton-nav {
+  width: 100%;
+  position: relative;
   color: black;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   height: 100%;
   -webkit-transition: 200ms all;
   transition: 200ms all;
 }
 
 .barra-navegacion .boton-cont-nav .boton-nav:hover {
-  margin-bottom: 2px solid blue;
+  border-top: 5px solid blue;
   cursor: pointer;
 }
 

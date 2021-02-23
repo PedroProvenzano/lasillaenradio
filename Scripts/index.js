@@ -9,8 +9,31 @@ const seccionCultura = document.getElementById("cultura");
 const seccionDeporte = document.getElementById("deporte");
 const seccionStreaming = document.getElementById("streaming");
 const seccionEspectaculo = document.getElementById("espectaculo");
+const escenasArray = [
+  seccionNoticiasPrincipales,
+  seccionBotonContacto,
+  seccionTopicos,
+  seccionActualidad,
+  seccionCultura,
+  seccionDeporte,
+  seccionStreaming,
+  seccionEspectaculo,
+];
+const escenasInicio = [
+  seccionNoticiasPrincipales,
+  seccionBotonContacto,
+  seccionTopicos,
+];
+const escenasNoticias = [
+  seccionActualidad,
+  seccionCultura,
+  seccionDeporte,
+  seccionStreaming,
+  seccionEspectaculo,
+];
 // Botones
 // Escena NAV
+const botonInicio = document.getElementById("boton-inicio");
 const botonActualidad = document.getElementById("boton-actualidad");
 const botonCultura = document.getElementById("boton-cultura");
 const botonDeporte = document.getElementById("boton-deporte");
@@ -27,32 +50,69 @@ const botonArray = [
 
 // Eventos
 botonActualidad.addEventListener("click", () => {
-  seccionNoticiasPrincipales.style.display = "none";
-  botonActualidad.style.color = "blue";
-  botonActualidad.style.fontSize = "2rem";
-
-  // Reset botones
-  reinciarBotones(botonActualidad);
-
-  seccionBotonContacto.style.display = "none";
-  seccionTopicos.style.display = "none";
-  seccionActualidad.style.display = "flex";
-  setTimeout(() => {
-    seccionActualidad.style.opacity = "100%";
-  }, 10);
+  cambiarEscena(seccionActualidad, botonActualidad);
 });
-// 1.5rem
-// color: $primary-color;
-// font-size: 2rem;
 
+botonCultura.addEventListener("click", () => {
+  cambiarEscena(seccionCultura, botonCultura);
+});
+
+botonDeporte.addEventListener("click", () => {
+  cambiarEscena(seccionDeporte, botonDeporte);
+});
+
+botonStreaming.addEventListener("click", () => {
+  cambiarEscena(seccionStreaming, botonStreaming);
+});
+
+botonEspectaculo.addEventListener("click", () => {
+  cambiarEscena(seccionEspectaculo, botonEspectaculo);
+});
+
+botonInicio.addEventListener("click", irAlInicio);
 // Funciones
+// Boton de inicio
+function irAlInicio() {
+  botonInicio.removeAttribute("style");
+  for (let i of escenasInicio) {
+    i.removeAttribute("style");
+    if (i == seccionNoticiasPrincipales) {
+      i.style.display = "grid";
+    } else {
+      i.style.display = "flex";
+    }
+  }
+  for (let i of escenasNoticias) {
+    i.removeAttribute("style");
+    i.style.display = "none";
+  }
+  reinciarBotones(botonInicio);
+}
 
 // Reiniciar botones
 function reinciarBotones(botonActual) {
   for (let i of botonArray) {
     if (botonActual != i) {
-      i.style.color = "black";
-      i.style.fontSize = "1.5rem";
+      i.removeAttribute("style");
+    }
+    if (botonActual != botonInicio) {
+      botonInicio.style.top = "0";
     }
   }
+}
+// cambio de escena
+function cambiarEscena(escena, botonActual) {
+  for (let i of escenasArray) {
+    if (i != escena) {
+      i.removeAttribute("style");
+      i.style.display = "none";
+    }
+  }
+  botonActual.style.borderTop = "4rem blue solid";
+  // Reset botones
+  reinciarBotones(botonActual);
+  escena.style.display = "flex";
+  setTimeout(() => {
+    escena.style.opacity = "100%";
+  }, 10);
 }

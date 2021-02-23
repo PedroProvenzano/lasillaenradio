@@ -39,23 +39,44 @@
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  overflow: hidden;
+}
+
+.barra-navegacion .boton-cont-nav #boton-inicio {
+  margin-right: 2rem;
+  position: relative;
+  top: -3rem;
+}
+
+.barra-navegacion .boton-cont-nav #boton-inicio:hover {
+  cursor: pointer;
 }
 
 .barra-navegacion .boton-cont-nav .boton-nav {
+  width: 100%;
+  position: relative;
   color: black;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   height: 100%;
   -webkit-transition: 200ms all;
   transition: 200ms all;
 }
 
 .barra-navegacion .boton-cont-nav .boton-nav:hover {
-  margin-bottom: 2px solid blue;
+  border-top: 5px solid blue;
   cursor: pointer;
 }
 
@@ -265,7 +286,23 @@ i:hover {
   padding: 0.2rem;
 }
 
-.seccion-actualidad {
+.seccion-cultura {
+  display: none;
+}
+
+.seccion-deporte {
+  display: none;
+}
+
+.seccion-streaming {
+  display: none;
+}
+
+.seccion-espectaculo {
+  display: none;
+}
+
+.seccion-noticias {
   -webkit-transition: opacity 500ms;
   transition: opacity 500ms;
   opacity: 0%;
@@ -285,11 +322,11 @@ i:hover {
           justify-content: center;
 }
 
-.seccion-actualidad h2 {
+.seccion-noticias h2 {
   font-size: 3rem;
 }
 
-.seccion-actualidad .actualidad-main-cont {
+.seccion-noticias .general-main-cont {
   margin-top: 8rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -309,19 +346,19 @@ i:hover {
   height: 600px;
 }
 
-.seccion-actualidad .actualidad-main-cont img {
+.seccion-noticias .general-main-cont img {
   max-height: 600px;
   height: 100%;
   width: 100%;
   min-width: 800px;
 }
 
-.seccion-actualidad .actualidad-main-cont img:hover,
-.seccion-actualidad .actualidad-main-cont h3:hover {
+.seccion-noticias .general-main-cont img:hover,
+.seccion-noticias .general-main-cont h3:hover {
   cursor: pointer;
 }
 
-.seccion-actualidad .actualidad-main-cont h3 {
+.seccion-noticias .general-main-cont h3 {
   font-size: 3rem;
   color: white;
   text-align: center;
@@ -338,11 +375,11 @@ i:hover {
           user-select: none;
 }
 
-.seccion-actualidad .actualidad-main-cont h3:hover {
+.seccion-noticias .general-main-cont h3:hover {
   font-weight: 600;
 }
 
-.seccion-actualidad .actualidad-cont-noticias {
+.seccion-noticias .general-cont-noticias {
   margin: 4rem 0 4rem 0;
   min-width: 800px;
   max-width: 1000px;
@@ -362,11 +399,11 @@ i:hover {
           justify-content: center;
 }
 
-.seccion-actualidad .actualidad-cont-noticias .noticia:nth-of-type(2n) {
+.seccion-noticias .general-cont-noticias .noticia:nth-of-type(2n) {
   background-color: rgba(134, 134, 134, 0.096);
 }
 
-.seccion-actualidad .actualidad-cont-noticias .noticia {
+.seccion-noticias .general-cont-noticias .noticia {
   margin-top: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -385,12 +422,12 @@ i:hover {
   height: 200px;
 }
 
-.seccion-actualidad .actualidad-cont-noticias .noticia img {
+.seccion-noticias .general-cont-noticias .noticia img {
   width: 35%;
   height: 100%;
 }
 
-.seccion-actualidad .actualidad-cont-noticias .noticia .noticia-textos {
+.seccion-noticias .general-cont-noticias .noticia .noticia-textos {
   padding: 1rem;
   width: 65%;
   height: 100%;
@@ -409,28 +446,12 @@ i:hover {
           justify-content: flex-start;
 }
 
-.seccion-actualidad .actualidad-cont-noticias .noticia .noticia-textos p {
+.seccion-noticias .general-cont-noticias .noticia .noticia-textos p {
   margin-top: 5px;
 }
 
-.seccion-actualidad .actualidad-cont-noticias .noticia:hover {
+.seccion-noticias .general-cont-noticias .noticia:hover {
   cursor: pointer;
-}
-
-.seccion-cultura {
-  display: none;
-}
-
-.seccion-deporte {
-  display: none;
-}
-
-.seccion-streaming {
-  display: none;
-}
-
-.seccion-espectaculo {
-  display: none;
 }
 
 * {

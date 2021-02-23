@@ -22,15 +22,29 @@ $secondary-color: #ff9000;
     max-width: 800px;
     font-size: 1.5rem;
     user-select: none;
+    overflow: hidden;
+    #boton-inicio {
+      margin-right: 2rem;
+      position: relative;
+      top: -3rem;
+    }
+    #boton-inicio:hover {
+      cursor: pointer;
+    }
     .boton-nav {
+      width: 100%;
+      position: relative;
       color: black;
       display: flex;
+      flex-direction: column;
       align-items: center;
+      text-align: center;
+      justify-content: center;
       height: 100%;
       transition: 200ms all;
     }
     .boton-nav:hover {
-      margin-bottom: 2px solid $primary-color;
+      border-top: 5px solid $primary-color;
       cursor: pointer;
     }
   }
