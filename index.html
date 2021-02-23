@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="Estilos/index/index.css" />
+    <script
+      src="https://kit.fontawesome.com/c19f763333.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>La Silla Noticias</title>
+  </head>
+  <body>
+    <header>
+      <div class="logo-cont">
+        <a href="index.html">
+          <img
+            src="imagenes/la-silla-noticias-logo.png"
+            alt="logo-lasilla-noticias"
+            width="250px"
+          />
+        </a>
+        <p>La pagina de noticias de @lasillaenradio</p>
+      </div>
+      <iframe
+        allow="autoplay"
+        style="padding: 0px"
+        frameborder="0"
+        src="https://player.raddios.com/multiplayer_get.php?r=38&amp;autoplay=1&amp;currentsong=0&amp;r_tipo=22&amp;lang=es"
+        width="undefined"
+        height="50"
+        allowtransparency="true"
+        scrolling="no"
+      ></iframe>
+    </header>
+    <main>
+      <nav class="barra-navegacion">
+        <div class="boton-cont-nav">
+          <div class="boton-nav" id="boton-actualidad">Actualidad</div>
+          <div class="boton-nav" id="boton-cultura">Cultura</div>
+          <div class="boton-nav" id="boton-deporte">Deporte</div>
+          <div class="boton-nav" id="boton-streaming">Streaming</div>
+          <div class="boton-nav" id="boton-espectaculo">Espectaculo</div>
+        </div>
+        <div class="redes-cont-nav">
+          <a href="https://www.facebook.com/lasillaenradio/" target="_blank"
+            ><i class="fab fa-facebook"></i
+          ></a>
+          <a
+            href="https://www.youtube.com/channel/UCxnXkeHoxiMUk2R90bNTsGw"
+            target="_blank"
+            ><i class="fab fa-youtube"></i
+          ></a>
+          <a href="https://www.instagram.com/lasillaenradio/" target="_blank"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a href="https://twitter.com/RadioLaSilla" target="_blank"
+            ><i class="fab fa-twitter"></i
+          ></a>
+          <input
+            type="text"
+            class="buscador-input"
+            id="buscador-input"
+            placeholder="Buscador..."
+          />
+          <i class="fas fa-search boton-buscar" id="boton-buscar"></i>
+        </div>
+      </nav>
+      <!--Section 1 (noticias principales)-->
+
+      <section class="section1" id="noticias-principales">
+        <div class="card1" style="width: 18rem">
+          <img src="..." class="card-img-top" alt="" />
+          <div class="card-body">
+            <h5 class="card-title">Titulo principal</h5>
+            <p class="card-text">
+              Some quick example text to build on the card title and make up the
+              bulk of the card's content.
+            </p>
+            <a href="notas/nota-principal.html" class="btn btn-primary"
+              >Leer nota!</a
+            >
+          </div>
+        </div>
+        <div class="card2" style="width: 30rem">
+          <div class="card-body">
+            <h5 class="card-title">Titulo secundario 1</h5>
+            <p class="card-text">
+              Some quick example text to build on the card title and make up the
+              bulk of the card's content.
+            </p>
+            <a href="notas/nota-secundaria1.html" class="btn btn-primary"
+              >Leer nota!</a
+            >
+          </div>
+        </div>
+        <div class="card3" style="width: 30rem">
+          <div class="card-body">
+            <h5 class="card-title">Titulo secundario 2</h5>
+            <p class="card-text">
+              Some quick example text to build on the card title and make up the
+              bulk of the card's content.
+            </p>
+            <a href="notas/nota-secundaria2.html" class="btn btn-primary"
+              >Leer nota!</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!--Section 2 (boton a contacto)-->
+
+      <section class="section2" id="contacto">
+        <div class="boton-contacto" id="boton-contacto">DEJANOS TU MENSAJE</div>
+      </section>
+
+      <!--Contacto-->
+
+      <section class="section-form" id="section-form">
+        <div class="cont-anim-form" id="cont-anim-form">
+          <div class="cont-head-form">
+            <h3>Contacto</h3>
+          </div>
+          <form class="form-cont" action="">
+            <div class="form-cont-inputs">
+              <input
+                type="text"
+                name="nombre"
+                required
+                id="nombre"
+                placeholder="Nombre*"
+              />
+              <input
+                type="text"
+                name="apellido"
+                id="apellido"
+                placeholder="Apellido"
+              />
+              <input
+                type="email"
+                name="email"
+                required
+                id="email"
+                placeholder="E-mail*"
+              />
+            </div>
+            <textarea
+              name="mensaje"
+              id="mensaje"
+              cols="100"
+              rows="10"
+              placeholder="Tu mensaje"
+            ></textarea>
+            <div class="form-button">
+              <div class="boton-form" id="boton-form-cancelar">CANCELAR</div>
+              <div class="boton-form" id="boton-form-enviar">ENVIAR</div>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <!--Section 3 (botones con topicos)-->
+
+      <section class="section3" id="topicos">
+        <div>
+          <a href="Tópicos/actualidad.html">
+            <img
+              class="redondeo"
+              width="200px"
+              src="imagenes/1x/baño-de-actualidad.png"
+              alt="actualidad"
+          /></a>
+        </div>
+        <div>
+          <a href="/Tópicos/deportes.html">
+            <img
+              class="redondeo"
+              width="200px"
+              src="imagenes/1x/deportes.png"
+              alt="deportes"
+          /></a>
+        </div>
+        <div class="cultura">
+          <a href="/Tópicos/cultura.html">
+            <img
+              class="redondeo"
+              width="200px"
+              src="imagenes/1x/cultura.png"
+              alt="cultura"
+          /></a>
+        </div>
+        <div>
+          <a href="/Tópicos/espectaculos.html">
+            <img
+              class="redondeo"
+              width="195px"
+              src="imagenes/1x/espectaculos.png"
+              alt="espectaculos"
+          /></a>
+        </div>
+      </section>
+
+      <!-- Seccion actualidad -->
+      <section class="seccion-actualidad" id="actualidad">
+        <h2>Actualidad</h2>
+        <div class="actualidad-main-cont">
+          <img
+            src="./imagenes/imagenNoticiaPortada.jpg"
+            alt="imagen principal noticia"
+          />
+          <h3>Titulo llamativo</h3>
+        </div>
+        <div class="actualidad-cont-noticias">
+          <div class="noticia">
+            <img
+              src="./imagenes/imagenNoticiaPrueba.png"
+              alt="imagen de la noticia"
+            />
+            <div class="noticia-textos">
+              <h3>Titulo de la noticia</h3>
+              <p>Contenido resumido de la noticia</p>
+            </div>
+          </div>
+          <div class="noticia">
+            <img
+              src="./imagenes/imagenNoticiaPrueba.png"
+              alt="imagen de la noticia"
+            />
+            <div class="noticia-textos">
+              <h3>Titulo de la noticia</h3>
+              <p>Contenido resumido de la noticia</p>
+            </div>
+          </div>
+          <div class="noticia">
+            <img
+              src="./imagenes/imagenNoticiaPrueba.png"
+              alt="imagen de la noticia"
+            />
+            <div class="noticia-textos">
+              <h3>Titulo de la noticia</h3>
+              <p>Contenido resumido de la noticia</p>
+            </div>
+          </div>
+          <div class="noticia">
+            <img
+              src="./imagenes/imagenNoticiaPrueba.png"
+              alt="imagen de la noticia"
+            />
+            <div class="noticia-textos">
+              <h3>Titulo de la noticia</h3>
+              <p>Contenido resumido de la noticia</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Seccion Cultura -->
+      <section class="seccion-cultura" id="cultura">
+        <h2>Cultura</h2>
+      </section>
+
+      <!-- Seccion Deporte -->
+      <section class="seccion-deporte" id="deporte">
+        <h2>Deporte</h2>
+      </section>
+
+      <!-- Seccion Streaming -->
+      <section class="seccion-streaming" id="streaming">
+        <h2>Streaming</h2>
+      </section>
+
+      <!-- Seccion Espectaculos -->
+      <section class="seccion-espectaculo" id="espectaculo">
+        <h2>Espectaculos</h2>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>copyright 2020 ©</p>
+    </footer>
+
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./Scripts/index.js"></script>
+    <script src="./Scripts/contacto.js"></script>
+  </body>
+</html>

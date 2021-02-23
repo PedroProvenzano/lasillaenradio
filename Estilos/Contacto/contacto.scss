@@ -1,0 +1,100 @@
+// Variables
+$primary-color: blue;
+$secondary-color: #ff9000;
+
+.boton-contacto {
+  font-size: 2rem;
+  font-weight: 500;
+  user-select: none;
+  cursor: pointer;
+}
+.boton-contacto:hover {
+  color: white;
+}
+.section-form {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: opacity 500ms;
+  opacity: 0%;
+  display: none; // flex
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.2rem;
+  .cont-anim-form {
+    height: 500px;
+    padding: 20px;
+    border: outset 3px black;
+    background-color: $secondary-color;
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .cont-head-form {
+      display: flex;
+      flex-direction: row;
+      h3 {
+        font-size: 3rem;
+      }
+    }
+    input {
+      background-color: #ffe9d2;
+    }
+    input:focus {
+      background-color: white;
+    }
+    .form-cont-inputs {
+      margin: 1rem;
+      display: flex;
+      justify-content: space-around;
+    }
+    .form-cont {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-content: center;
+
+      textarea {
+        resize: none;
+        background-color: #ffe9d2;
+      }
+      textarea:focus {
+        background-color: white;
+      }
+    }
+    .form-button {
+      margin-top: 8px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      align-self: center;
+      justify-content: space-around;
+      width: 30vw;
+      .boton-form {
+        border: outset 3px black;
+        color: white;
+        background-color: $primary-color;
+        padding: 3px;
+        font-weight: 400;
+        user-select: none;
+        width: 120px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      .boton-form:hover {
+        cursor: pointer;
+        font-weight: 500;
+      }
+    }
+    #mensaje,
+    #nombre,
+    #apellido,
+    #email {
+      padding: 0.2rem;
+    }
+  }
+}

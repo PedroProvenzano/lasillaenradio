@@ -1,0 +1,64 @@
+// Variables
+$primary-color: blue;
+$secondary-color: #ff9000;
+
+.barra-navegacion {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  background-color: $secondary-color;
+
+  .boton-cont-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    width: 50vw;
+    min-width: 696px;
+    max-width: 800px;
+    font-size: 1.5rem;
+    user-select: none;
+    .boton-nav {
+      color: black;
+      display: flex;
+      align-items: center;
+      height: 100%;
+      transition: 200ms all;
+    }
+    .boton-nav:hover {
+      margin-bottom: 2px solid $primary-color;
+      cursor: pointer;
+    }
+  }
+  .redes-cont-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 25vw;
+  }
+  .buscador-input {
+    border-radius: 5%;
+    height: 100%;
+    font-size: 1.3rem;
+  }
+}
+
+/* redes sociales */
+i {
+  font-size: 2rem;
+  margin: 0.2rem;
+  color: $primary-color;
+  transition: 200ms all;
+}
+
+i:hover {
+  transform: rotate(30deg);
+}
+.boton-buscar {
+  cursor: pointer;
+}

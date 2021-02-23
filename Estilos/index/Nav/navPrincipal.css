@@ -1,0 +1,100 @@
+.barra-navegacion {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 50px;
+  background-color: #ff9000;
+}
+
+.barra-navegacion .boton-cont-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  width: 50vw;
+  min-width: 696px;
+  max-width: 800px;
+  font-size: 1.5rem;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.barra-navegacion .boton-cont-nav .boton-nav {
+  color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  -webkit-transition: 200ms all;
+  transition: 200ms all;
+}
+
+.barra-navegacion .boton-cont-nav .boton-nav:hover {
+  margin-bottom: 2px solid blue;
+  cursor: pointer;
+}
+
+.barra-navegacion .redes-cont-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 25vw;
+}
+
+.barra-navegacion .buscador-input {
+  border-radius: 5%;
+  height: 100%;
+  font-size: 1.3rem;
+}
+
+/* redes sociales */
+i {
+  font-size: 2rem;
+  margin: 0.2rem;
+  color: blue;
+  -webkit-transition: 200ms all;
+  transition: 200ms all;
+}
+
+i:hover {
+  -webkit-transform: rotate(30deg);
+          transform: rotate(30deg);
+}
+
+.boton-buscar {
+  cursor: pointer;
+}
+/*# sourceMappingURL=navPrincipal.css.map */
