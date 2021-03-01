@@ -116,3 +116,64 @@ function cambiarEscena(escena, botonActual) {
     escena.style.opacity = "100%";
   }, 10);
 }
+
+// Conseguir noticias
+fetch("https://lasilla-api.herokuapp.com/noticias/todas")
+  .then((res) => res.json())
+  .then((res) => {
+    // Separar los que tienen importancia
+    let importanteUno = res.filter((obj) => obj.importancia == "importante1");
+    let importanteDos = res.filter((obj) => obj.importancia == "importante2");
+    let importanteTres = res.filter((obj) => obj.importancia == "importante3");
+
+    // Noticia Importante 1
+    const imgNotUno = document.getElementById("img-not1");
+    const titNotUno = document.getElementById("tit-not1");
+    const contNotUno = document.getElementById("cont-not1");
+    const autNotUno = document.getElementById("aut-not1");
+    const btnNotUno = document.getElementById("btn-not1");
+
+    let imgUno = JSON.parse(importanteUno[0].imagenesUrl);
+
+    imgNotUno.src = imgUno[0];
+    titNotUno.innerText = importanteUno[0].titulo;
+    contNotUno.innerText = importanteUno[0].contenidoRes;
+    autNotUno.innerText = importanteUno[0].autor;
+    btnNotUno.addEventListener("click", () => {
+      console.log("holi");
+    });
+
+    // Noticia Importante 2
+    const imgNotDos = document.getElementById("img-not2");
+    const titNotDos = document.getElementById("tit-not2");
+    const contNotDos = document.getElementById("cont-not2");
+    const autNotDos = document.getElementById("aut-not2");
+    const btnNotDos = document.getElementById("btn-not2");
+
+    let imgDos = JSON.parse(importanteDos[0].imagenesUrl);
+
+    imgNotDos.src = imgDos[0];
+    titNotDos.innerText = importanteDos[0].titulo;
+    contNotDos.innerText = importanteDos[0].contenidoRes;
+    autNotDos.innerText = importanteDos[0].autor;
+    btnNotDos.addEventListener("click", () => {
+      console.log("holi");
+    });
+
+    // Noticia Importante 3
+    const imgNotTres = document.getElementById("img-not3");
+    const titNotTres = document.getElementById("tit-not3");
+    const contNotTres = document.getElementById("cont-not3");
+    const autNotTres = document.getElementById("aut-not3");
+    const btnNotTres = document.getElementById("btn-not3");
+
+    let imgTres = JSON.parse(importanteTres[0].imagenesUrl);
+
+    imgNotTres.src = imgTres[0];
+    titNotTres.innerText = importanteTres[0].titulo;
+    contNotTres.innerText = importanteTres[0].contenidoRes;
+    autNotTres.innerText = importanteTres[0].autor;
+    btnNotTres.addEventListener("click", () => {
+      console.log("holi");
+    });
+  });

@@ -508,7 +508,7 @@ header {
 
 /* Seccion 1 = tarjetas */
 .section1 {
-  padding: 7%;
+  padding: 2%;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr;
@@ -516,6 +516,16 @@ header {
   -ms-grid-rows: 1fr 1fr;
       grid-template-rows: 1fr 1fr;
       grid-template-areas: "principal secundaria1" "principal secundaria2";
+}
+
+.img-general-principal {
+  height: 300px;
+  width: auto;
+}
+
+.img-general-secundaria {
+  height: 100px;
+  width: auto;
 }
 
 .card1 {
@@ -531,6 +541,7 @@ header {
   grid-area: secundaria1;
   -ms-grid-column-align: center;
       justify-self: center;
+  width: 80%;
 }
 
 .card3 {
@@ -539,6 +550,7 @@ header {
   grid-area: secundaria2;
   -ms-grid-column-align: center;
       justify-self: center;
+  width: 80%;
 }
 
 /* Botón de contacto */

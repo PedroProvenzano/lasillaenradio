@@ -43,9 +43,8 @@ header {
 }
 
 /* Seccion 1 = tarjetas */
-
 .section1 {
-  padding: 7%;
+  padding: 2%;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
@@ -53,7 +52,14 @@ header {
     "principal secundaria1"
     "principal secundaria2";
 }
-
+.img-general-principal {
+  height: 300px;
+  width: auto;
+}
+.img-general-secundaria {
+  height: 100px;
+  width: auto;
+}
 .card1 {
   grid-area: principal;
 }
@@ -61,11 +67,13 @@ header {
 .card2 {
   grid-area: secundaria1;
   justify-self: center;
+  width: 80%;
 }
 
 .card3 {
   grid-area: secundaria2;
   justify-self: center;
+  width: 80%;
 }
 
 /* Botón de contacto */
