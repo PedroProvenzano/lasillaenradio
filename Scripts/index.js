@@ -87,6 +87,7 @@ function irAlInicio() {
       i.style.display = "flex";
     }
   }
+  seccionNoticia.style.display = "none";
   for (let i of escenasNoticias) {
     i.removeAttribute("style");
     i.style.display = "none";
@@ -144,7 +145,7 @@ fetch("https://lasilla-api.herokuapp.com/noticias/todas")
     imgNotUno.src = imgUno[0];
     titNotUno.innerText = importanteUno[0].titulo;
     contNotUno.innerText = importanteUno[0].contenidoRes;
-    autNotUno.innerText = importanteUno[0].autor;
+    autNotUno.innerText = `Autor: ${importanteUno[0].autor}`;
     btnNotUno.addEventListener("click", () => {
       cargarNoticia(importanteUno[0]);
     });
@@ -161,7 +162,7 @@ fetch("https://lasilla-api.herokuapp.com/noticias/todas")
     imgNotDos.src = imgDos[0];
     titNotDos.innerText = importanteDos[0].titulo;
     contNotDos.innerText = importanteDos[0].contenidoRes;
-    autNotDos.innerText = importanteDos[0].autor;
+    autNotDos.innerText = `Autor: ${importanteDos[0].autor}`;
     btnNotDos.addEventListener("click", () => {
       cargarNoticia(importanteDos[0]);
     });
@@ -178,7 +179,7 @@ fetch("https://lasilla-api.herokuapp.com/noticias/todas")
     imgNotTres.src = imgTres[0];
     titNotTres.innerText = importanteTres[0].titulo;
     contNotTres.innerText = importanteTres[0].contenidoRes;
-    autNotTres.innerText = importanteTres[0].autor;
+    autNotTres.innerText = `Autor: ${importanteTres[0].autor}`;
     btnNotTres.addEventListener("click", () => {
       cargarNoticia(importanteTres[0]);
     });
