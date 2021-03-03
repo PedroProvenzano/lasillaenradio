@@ -3,7 +3,7 @@ const botonFormCancelar = document.getElementById("boton-form-cancelar");
 const botonFormEnviar = document.getElementById("boton-form-enviar");
 const botonContacto = document.getElementById("boton-contacto");
 // Escenas
-const sectionForm = document.getElementById("section-form");
+const sectionForm = document.getElementById("cont-anim-form");
 
 // Input values
 const inputNombre = document.getElementById("nombre");

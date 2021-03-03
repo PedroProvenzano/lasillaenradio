@@ -12,15 +12,19 @@
   color: white;
 }
 
-.section-form {
-  position: absolute;
-  left: 50%;
+.cont-anim-form {
+  height: 450px;
+  padding: 20px;
+  border: outset 3px black;
+  background-color: #ff9000;
+  position: fixed;
   top: 50%;
+  left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  -webkit-transition: opacity 500ms;
-  transition: opacity 500ms;
-  opacity: 0%;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
   display: none;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -29,30 +33,9 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 1.2rem;
 }
 
-.section-form .cont-anim-form {
-  height: 500px;
-  padding: 20px;
-  border: outset 3px black;
-  background-color: #ff9000;
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.section-form .cont-anim-form .cont-head-form {
+.cont-anim-form .cont-head-form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -62,19 +45,19 @@
           flex-direction: row;
 }
 
-.section-form .cont-anim-form .cont-head-form h3 {
+.cont-anim-form .cont-head-form h3 {
   font-size: 3rem;
 }
 
-.section-form .cont-anim-form input {
+.cont-anim-form input {
   background-color: #ffe9d2;
 }
 
-.section-form .cont-anim-form input:focus {
+.cont-anim-form input:focus {
   background-color: white;
 }
 
-.section-form .cont-anim-form .form-cont-inputs {
+.cont-anim-form .form-cont-inputs {
   margin: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -83,7 +66,7 @@
       justify-content: space-around;
 }
 
-.section-form .cont-anim-form .form-cont {
+.cont-anim-form .form-cont {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -98,16 +81,16 @@
       align-content: center;
 }
 
-.section-form .cont-anim-form .form-cont textarea {
+.cont-anim-form .form-cont textarea {
   resize: none;
   background-color: #ffe9d2;
 }
 
-.section-form .cont-anim-form .form-cont textarea:focus {
+.cont-anim-form .form-cont textarea:focus {
   background-color: white;
 }
 
-.section-form .cont-anim-form .form-button {
+.cont-anim-form .form-button {
   margin-top: 8px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -126,7 +109,7 @@
   width: 30vw;
 }
 
-.section-form .cont-anim-form .form-button .boton-form {
+.cont-anim-form .form-button .boton-form {
   border: outset 3px black;
   color: white;
   background-color: blue;
@@ -152,15 +135,15 @@
           justify-content: center;
 }
 
-.section-form .cont-anim-form .form-button .boton-form:hover {
+.cont-anim-form .form-button .boton-form:hover {
   cursor: pointer;
   font-weight: 500;
 }
 
-.section-form .cont-anim-form #mensaje,
-.section-form .cont-anim-form #nombre,
-.section-form .cont-anim-form #apellido,
-.section-form .cont-anim-form #email {
+.cont-anim-form #mensaje,
+.cont-anim-form #nombre,
+.cont-anim-form #apellido,
+.cont-anim-form #email {
   padding: 0.2rem;
 }
 /*# sourceMappingURL=contacto.css.map */

@@ -1,3 +1,6 @@
+// Variables
+let noticias = [];
+
 // Escenas
 const seccionNoticiasPrincipales = document.getElementById(
   "noticias-principales"
@@ -9,6 +12,7 @@ const seccionCultura = document.getElementById("cultura");
 const seccionDeporte = document.getElementById("deporte");
 const seccionStreaming = document.getElementById("streaming");
 const seccionEspectaculo = document.getElementById("espectaculo");
+const seccionNoticia = document.getElementById("section-noticia");
 const escenasArray = [
   seccionNoticiasPrincipales,
   seccionBotonContacto,
@@ -18,6 +22,7 @@ const escenasArray = [
   seccionDeporte,
   seccionStreaming,
   seccionEspectaculo,
+  seccionNoticia,
 ];
 const escenasInicio = [
   seccionNoticiasPrincipales,
@@ -121,6 +126,7 @@ function cambiarEscena(escena, botonActual) {
 fetch("https://lasilla-api.herokuapp.com/noticias/todas")
   .then((res) => res.json())
   .then((res) => {
+    noticias = res;
     // Separar los que tienen importancia
     let importanteUno = res.filter((obj) => obj.importancia == "importante1");
     let importanteDos = res.filter((obj) => obj.importancia == "importante2");
@@ -140,7 +146,7 @@ fetch("https://lasilla-api.herokuapp.com/noticias/todas")
     contNotUno.innerText = importanteUno[0].contenidoRes;
     autNotUno.innerText = importanteUno[0].autor;
     btnNotUno.addEventListener("click", () => {
-      console.log("holi");
+      cargarNoticia(importanteUno[0]);
     });
 
     // Noticia Importante 2
@@ -157,7 +163,7 @@ fetch("https://lasilla-api.herokuapp.com/noticias/todas")
     contNotDos.innerText = importanteDos[0].contenidoRes;
     autNotDos.innerText = importanteDos[0].autor;
     btnNotDos.addEventListener("click", () => {
-      console.log("holi");
+      cargarNoticia(importanteDos[0]);
     });
 
     // Noticia Importante 3
@@ -174,6 +180,86 @@ fetch("https://lasilla-api.herokuapp.com/noticias/todas")
     contNotTres.innerText = importanteTres[0].contenidoRes;
     autNotTres.innerText = importanteTres[0].autor;
     btnNotTres.addEventListener("click", () => {
-      console.log("holi");
+      cargarNoticia(importanteTres[0]);
     });
   });
+
+// Seccion noticia seleccionada
+let imgNumber = 0;
+const flechaIzq = document.getElementById("flecha-izq");
+const flechaDer = document.getElementById("flecha-der");
+const imgNumb = document.getElementById("img-numb");
+
+flechaIzq.addEventListener("click", () => {
+  let arrayImgNoticia = document.getElementsByClassName("scrollImg");
+  if (imgNumber > 0) {
+    imgNumber--;
+  }
+  let iterFor = 0;
+  for (let i of arrayImgNoticia) {
+    if (iterFor == imgNumber) {
+      i.style.display = "block";
+    } else {
+      i.style.display = "none";
+    }
+    iterFor++;
+  }
+  imgNumb.innerText = `${imgNumber + 1}/${arrayImgNoticia.length}`;
+});
+flechaDer.addEventListener("click", () => {
+  let arrayImgNoticia = document.getElementsByClassName("scrollImg");
+  if (imgNumber < arrayImgNoticia.length - 1) {
+    imgNumber++;
+  }
+  let iterFor = 0;
+  for (let i of arrayImgNoticia) {
+    if (iterFor == imgNumber) {
+      i.style.display = "block";
+    } else {
+      i.style.display = "none";
+    }
+    iterFor++;
+  }
+  imgNumb.innerText = `${imgNumber + 1}/${arrayImgNoticia.length}`;
+});
+
+// Cargar noticia
+function cargarNoticia(noticia) {
+  // Traer donde autocompleta
+  botonInicio.style.top = "0";
+  const tituloNoticia = document.getElementById("titulo-noticia");
+  const contenidoNoticia = document.getElementById("contenido-noticia");
+  const autorNoticia = document.getElementById("autor-noticia");
+  const fechaNoticia = document.getElementById("fecha-noticia");
+  const contImagenes = document.getElementById("grid-img-cont");
+
+  tituloNoticia.innerText = noticia.titulo;
+  contenidoNoticia.innerText = noticia.contenido;
+  autorNoticia.innerText = `Autor: ${noticia.autor}`;
+  fechaNoticia.innerText = `Fecha: ${noticia.fecha.slice(
+    8,
+    10
+  )}/${noticia.fecha.slice(5, 7)}/${noticia.fecha.slice(0, 4)}`;
+  let arrayImg = JSON.parse(noticia.imagenesUrl);
+  let isFirst = true;
+  contImagenes.innerHTML = "";
+  for (let i of arrayImg) {
+    let imgChild = document.createElement("img");
+    imgChild.setAttribute("class", "imagen-noticia scrollImg");
+    if (!isFirst) {
+      imgChild.style.display = "none";
+    }
+    isFirst = false;
+    imgChild.src = i;
+    contImagenes.append(imgChild);
+  }
+
+  imgNumb.innerText = `1/${arrayImg.length}`;
+  for (let i of escenasArray) {
+    if (i.id != "section-noticia") {
+      i.style.display = "none";
+    } else {
+      i.style.display = "flex";
+    }
+  }
+}

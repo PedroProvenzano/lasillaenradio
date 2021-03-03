@@ -4,9 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="Estilos/index/index.css" />
@@ -127,48 +127,87 @@
       </section>
 
       <!--Contacto-->
-
-      <section class="section-form" id="section-form">
-        <div class="cont-anim-form" id="cont-anim-form">
-          <div class="cont-head-form">
-            <h3>Contacto</h3>
-          </div>
-          <form class="form-cont" action="">
-            <div class="form-cont-inputs">
-              <input
-                type="text"
-                name="nombre"
-                required
-                id="nombre"
-                placeholder="Nombre*"
-              />
-              <input
-                type="text"
-                name="apellido"
-                id="apellido"
-                placeholder="Apellido"
-              />
-              <input
-                type="email"
-                name="email"
-                required
-                id="email"
-                placeholder="E-mail*"
-              />
-            </div>
-            <textarea
-              name="mensaje"
-              id="mensaje"
-              cols="100"
-              rows="10"
-              placeholder="Tu mensaje"
-            ></textarea>
-            <div class="form-button">
-              <div class="boton-form" id="boton-form-cancelar">CANCELAR</div>
-              <div class="boton-form" id="boton-form-enviar">ENVIAR</div>
-            </div>
-          </form>
+      <div class="cont-anim-form" id="cont-anim-form">
+        <div class="cont-head-form">
+          <h3>Contacto</h3>
         </div>
+        <form class="form-cont" action="">
+          <div class="form-cont-inputs">
+            <input
+              type="text"
+              name="nombre"
+              required
+              id="nombre"
+              placeholder="Nombre*"
+            />
+            <input
+              type="text"
+              name="apellido"
+              id="apellido"
+              placeholder="Apellido"
+            />
+            <input
+              type="email"
+              name="email"
+              required
+              id="email"
+              placeholder="E-mail*"
+            />
+          </div>
+          <textarea
+            name="mensaje"
+            id="mensaje"
+            cols="100"
+            rows="10"
+            placeholder="Tu mensaje"
+          ></textarea>
+          <div class="form-button">
+            <div class="boton-form" id="boton-form-cancelar">CANCELAR</div>
+            <div class="boton-form" id="boton-form-enviar">ENVIAR</div>
+          </div>
+        </form>
+      </div>
+
+      <!-- Section 2 (Noticia seleccionada) -->
+      <section class="section-noticia" id="section-noticia">
+        <h2 class="titulo-noticia" id="titulo-noticia">
+          Cargando titulo de noticia...
+        </h2>
+        <div class="contenedor-imagenes">
+          <div class="flecha-izq" id="flecha-izq">
+            <i class="fas fa-arrow-left"></i>
+          </div>
+          <div class="cont-imagen-noticia" id="grid-img-cont">
+            <img
+              class="imagen-noticia scrollImg"
+              src="./imagenes/imagenCarga.jpg"
+              alt=""
+            />
+            <img
+              class="imagen-noticia scrollImg"
+              src="./imagenes/imagenNoticiaPortada.jpg"
+              alt=""
+              style="display: none"
+            />
+            <img
+              class="imagen-noticia scrollImg"
+              src="./imagenes/imagenNoticiaPrueba.png"
+              alt=""
+              style="display: none"
+            />
+          </div>
+          <div class="flecha-der" id="flecha-der">
+            <i class="fas fa-arrow-right"></i>
+          </div>
+        </div>
+        <p id="img-numb">Imagen</p>
+        <p class="autor-noticia" id="autor-noticia">Cargando autor...</p>
+        <p class="contenido-noticia" id="contenido-noticia">
+          Cargando contenido de noticia...
+        </p>
+        <p class="fecha-noticia" id="fecha-noticia">
+          Cargando fecha de noticia...
+        </p>
       </section>
 
       <!--Section 3 (botones con topicos)-->
@@ -486,15 +525,14 @@
     <footer class="footer">
       <p>copyright 2020 ©</p>
     </footer>
-
     <script
       src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
       integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
       crossorigin="anonymous"
     ></script>
     <script
-      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
       crossorigin="anonymous"
     ></script>
     <script
