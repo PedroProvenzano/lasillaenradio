@@ -222,6 +222,7 @@ function irAlInicio() {
     i.removeAttribute("style");
     if (i == seccionNoticiasPrincipales) {
       i.style.display = "grid";
+      seccionNoticiasPrincipales.style.opacity = "100%";
     } else {
       i.style.display = "flex";
     }
