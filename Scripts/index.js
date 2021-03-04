@@ -54,25 +54,163 @@ const botonArray = [
 // Valores
 
 // Eventos
+
+// Actualidad
+const tituloActualidad = document.getElementById("actualidad-titulo-port");
+const contenidoActualidad = document.getElementById("actualidad-cont-port");
+const imgActualidad = document.getElementById("actualidad-img-port");
+const contenedorNoticiasActualidad = document.getElementById(
+  "actualidad-cont-noticias"
+);
+const arrayDomActualidad = [
+  tituloActualidad,
+  contenidoActualidad,
+  imgActualidad,
+  contenedorNoticiasActualidad,
+];
+
 botonActualidad.addEventListener("click", () => {
+  cargarNoticiasSeccion("actualidad", arrayDomActualidad);
   cambiarEscena(seccionActualidad, botonActualidad);
 });
 
+// Cultura
+const tituloCultura = document.getElementById("cultura-titulo-port");
+const contenidoCultura = document.getElementById("cultura-cont-port");
+const imgCultura = document.getElementById("cultura-img-port");
+const contenedorNoticiasCultura = document.getElementById(
+  "cultura-cont-noticias"
+);
+const arrayDomCultura = [
+  tituloCultura,
+  contenidoCultura,
+  imgCultura,
+  contenedorNoticiasCultura,
+];
+
 botonCultura.addEventListener("click", () => {
+  cargarNoticiasSeccion("cultura", arrayDomCultura);
   cambiarEscena(seccionCultura, botonCultura);
 });
 
+// Deporte
+const tituloDeporte = document.getElementById("deporte-titulo-port");
+const contenidoDeporte = document.getElementById("deporte-cont-port");
+const imgDeporte = document.getElementById("deporte-img-port");
+const contenedorNoticiasDeporte = document.getElementById(
+  "deporte-cont-noticias"
+);
+const arrayDomDeporte = [
+  tituloDeporte,
+  contenidoDeporte,
+  imgDeporte,
+  contenedorNoticiasDeporte,
+];
+
 botonDeporte.addEventListener("click", () => {
+  cargarNoticiasSeccion("deporte", arrayDomDeporte);
   cambiarEscena(seccionDeporte, botonDeporte);
 });
 
+// Streaming
+const tituloStreaming = document.getElementById("streaming-titulo-port");
+const contenidoStreaming = document.getElementById("streaming-cont-port");
+const imgStreaming = document.getElementById("streaming-img-port");
+const contenedorNoticiasStreaming = document.getElementById(
+  "streaming-cont-noticias"
+);
+const arrayDomStreaming = [
+  tituloStreaming,
+  contenidoStreaming,
+  imgStreaming,
+  contenedorNoticiasStreaming,
+];
+
 botonStreaming.addEventListener("click", () => {
+  cargarNoticiasSeccion("streaming", arrayDomStreaming);
   cambiarEscena(seccionStreaming, botonStreaming);
 });
 
+// Espectaculo
+const tituloEspectaculo = document.getElementById("espectaculo-titulo-port");
+const contenidoEspectaculo = document.getElementById("espectaculo-cont-port");
+const imgEspectaculo = document.getElementById("espectaculo-img-port");
+const contenedorNoticiasEspectaculo = document.getElementById(
+  "espectaculo-cont-noticias"
+);
+const arrayDomEspectaculo = [
+  tituloEspectaculo,
+  contenidoEspectaculo,
+  imgEspectaculo,
+  contenedorNoticiasEspectaculo,
+];
+
 botonEspectaculo.addEventListener("click", () => {
+  cargarNoticiasSeccion("espectaculo", arrayDomEspectaculo);
   cambiarEscena(seccionEspectaculo, botonEspectaculo);
 });
+
+// Funcion Cargar noticias seccion
+function cargarNoticiasSeccion(topico, objetosDOM) {
+  let noticiasTopico = noticias.filter((obj) => obj.temaPrincipal == topico);
+  if (noticiasTopico.length == 0) {
+    return;
+  }
+  let primero = true;
+  objetosDOM[3].innerHTML = "";
+  for (let i of noticiasTopico) {
+    if (primero) {
+      objetosDOM[0].innerText = i.titulo;
+      objetosDOM[1].innerText = i.contenidoRes;
+      let urlIMG = JSON.parse(i.imagenesUrl);
+      objetosDOM[2].src = urlIMG[0] || urlIMG;
+      primero = false;
+      objetosDOM[2].addEventListener("click", () => {
+        cargarNoticia(i);
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      });
+    } else {
+      // Contenedor
+      let divCont = document.createElement("div");
+      divCont.setAttribute("class", "noticia");
+      // Imagen noticia
+      let imgNot = document.createElement("img");
+      let urlIMGnot = JSON.parse(i.imagenesUrl);
+      imgNot.src = urlIMGnot[0] || urlIMGnot;
+      divCont.append(imgNot);
+      // Contenido texto
+      let notTextCont = document.createElement("div");
+      notTextCont.setAttribute("class", "noticia-textos");
+      // Titulo
+      let tituloNot = document.createElement("h3");
+      tituloNot.innerText = i.titulo;
+      notTextCont.append(tituloNot);
+      // Contenido
+      let contenidoNot = document.createElement("p");
+      contenidoNot.innerText = i.contenidoRes;
+      notTextCont.append(contenidoNot);
+      // Autor
+      let autorNot = document.createElement("p");
+      autorNot.innerText = `Autor: ${i.autor}`;
+      notTextCont.append(autorNot);
+      // Fecha
+      let fechaNot = document.createElement("p");
+      fechaNot.innerText = `Fecha: ${i.fecha.slice(8, 10)}/${i.fecha.slice(
+        5,
+        7
+      )}/${i.fecha.slice(0, 4)}`;
+      notTextCont.append(fechaNot);
+      divCont.append(notTextCont);
+      divCont.addEventListener("click", () => {
+        cargarNoticia(i);
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      });
+      objetosDOM[3].append(divCont);
+    }
+  }
+}
 
 botonInicio.addEventListener("click", irAlInicio);
 // Funciones
@@ -114,7 +252,7 @@ function cambiarEscena(escena, botonActual) {
       i.style.display = "none";
     }
   }
-  botonActual.style.borderTop = "4rem blue solid";
+  botonActual.style.borderTop = "4rem #4caf50 solid";
   // Reset botones
   reinciarBotones(botonActual);
   escena.style.display = "flex";
@@ -148,6 +286,8 @@ fetch("https://lasilla-api.herokuapp.com/noticias/todas")
     autNotUno.innerText = `Autor: ${importanteUno[0].autor}`;
     btnNotUno.addEventListener("click", () => {
       cargarNoticia(importanteUno[0]);
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
     });
 
     // Noticia Importante 2
@@ -165,6 +305,8 @@ fetch("https://lasilla-api.herokuapp.com/noticias/todas")
     autNotDos.innerText = `Autor: ${importanteDos[0].autor}`;
     btnNotDos.addEventListener("click", () => {
       cargarNoticia(importanteDos[0]);
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
     });
 
     // Noticia Importante 3
@@ -182,6 +324,8 @@ fetch("https://lasilla-api.herokuapp.com/noticias/todas")
     autNotTres.innerText = `Autor: ${importanteTres[0].autor}`;
     btnNotTres.addEventListener("click", () => {
       cargarNoticia(importanteTres[0]);
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
     });
   });
 

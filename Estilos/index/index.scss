@@ -5,8 +5,8 @@
 @import "../Noticias/Seleccionada/Seleccionada";
 // Variables
 // Color Principal
-$primary-color: blue;
-$secondary-color: #ff9000;
+$primary-color: #4caf50;
+$secondary-color: #ffa733;
 
 * {
   padding: 0;
@@ -42,7 +42,17 @@ header {
   background-color: $primary-color;
   padding: 1.5%;
 }
-
+.HiddenObject {
+  display: none;
+}
+.btn-primary {
+  background-color: $secondary-color !important;
+  border-color: $secondary-color !important;
+}
+.btn-primary:hover {
+  background-color: #ff9100 !important;
+  border-color: #ff9100 !important;
+}
 /* Seccion 1 = tarjetas */
 .section1 {
   padding: 2%;
