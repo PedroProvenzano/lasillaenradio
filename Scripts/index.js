@@ -2,6 +2,7 @@
 let noticias = [];
 
 // Escenas
+const spinner = document.getElementById("spinner");
 const seccionNoticiasPrincipales = document.getElementById(
   "noticias-principales"
 );
@@ -190,17 +191,17 @@ function cargarNoticiasSeccion(topico, objetosDOM) {
       let contenidoNot = document.createElement("p");
       contenidoNot.innerText = i.contenidoRes;
       notTextCont.append(contenidoNot);
-      // Autor
-      let autorNot = document.createElement("p");
-      autorNot.innerText = `Autor: ${i.autor}`;
-      notTextCont.append(autorNot);
-      // Fecha
-      let fechaNot = document.createElement("p");
-      fechaNot.innerText = `Fecha: ${i.fecha.slice(8, 10)}/${i.fecha.slice(
-        5,
-        7
-      )}/${i.fecha.slice(0, 4)}`;
-      notTextCont.append(fechaNot);
+      // // Autor
+      // let autorNot = document.createElement("p");
+      // autorNot.innerText = `Autor: ${i.autor}`;
+      // notTextCont.append(autorNot);
+      // // Fecha
+      // let fechaNot = document.createElement("p");
+      // fechaNot.innerText = `Fecha: ${i.fecha.slice(8, 10)}/${i.fecha.slice(
+      //   5,
+      //   7
+      // )}/${i.fecha.slice(0, 4)}`;
+      // notTextCont.append(fechaNot);
       divCont.append(notTextCont);
       divCont.addEventListener("click", () => {
         cargarNoticia(i);
@@ -327,6 +328,8 @@ fetch("https://lasilla-api.herokuapp.com/noticias/todas")
       document.body.scrollTop = 0;
       document.documentElement.scrollTop = 0;
     });
+    seccionNoticiasPrincipales.style.opacity = "100%";
+    spinner.style.display = "none";
   });
 
 // Seccion noticia seleccionada
