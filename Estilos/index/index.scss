@@ -20,11 +20,16 @@ a {
 .logo-cont {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
+  padding: 0.5rem;
   width: 20vw;
   p {
+    margin: 0 0 0 20px;
     color: white;
     font-size: 0.9rem;
+  }
+  .slogan {
+    margin: 0 0 0 20px;
   }
 }
 main {
@@ -40,7 +45,8 @@ header {
   width: 100%;
   justify-content: space-between;
   background-color: $primary-color;
-  padding: 1.5%;
+  align-items: center;
+  padding: 1%;
 }
 .HiddenObject {
   display: none;
@@ -61,30 +67,35 @@ header {
   grid-template-rows: 1fr 1fr;
   grid-template-areas:
     "principal secundaria1"
-    "principal secundaria2";
+    "secundaria2 secundaria3";
   transition: 200ms opacity;
   opacity: 0%;
 }
 .img-general-principal {
-  height: 300px;
+  height: 200px;
   width: auto;
 }
 .img-general-secundaria {
-  height: 100px;
+  height: 200px;
   width: auto;
 }
 .card1 {
   grid-area: principal;
+  justify-self: center;
+  width: 80%;
 }
-
 .card2 {
   grid-area: secundaria1;
   justify-self: center;
   width: 80%;
 }
-
 .card3 {
   grid-area: secundaria2;
+  justify-self: center;
+  width: 80%;
+}
+.card4 {
+  grid-area: secundaria3;
   justify-self: center;
   width: 80%;
 }
@@ -115,15 +126,25 @@ header {
 }
 
 /* topicos */
-
 .section3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  padding: 5%;
+}
+.section3 div {
+  margin-top: 1.5rem;
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  padding: 8%;
 }
-
-.section3 img:hover {
+.titulo-section3 {
+  font-size: 1.5rem;
+}
+.section3 div img:hover {
   -webkit-box-shadow: 10px 12px 12px 2px rgba(0, 0, 0, 0.81);
   -moz-box-shadow: 10px 12px 12px 2px rgba(0, 0, 0, 0.81);
   box-shadow: 10px 12px 12px 2px rgba(0, 0, 0, 0.81);
@@ -141,13 +162,22 @@ header {
 .footer {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
   background-color: $primary-color;
-  height: 3rem;
+  height: 200px;
   color: #ffffff;
   font-size: 1rem;
   position: relative;
   top: 0rem;
   width: 100%;
+  font-size: 0.8rem;
+  .footer-texto {
+    padding: 1rem;
+  }
+  .firma {
+    font-style: italic;
+  }
 }
 
 .spinner-position {
@@ -158,4 +188,8 @@ header {
   height: 100px;
   font-size: 2rem;
   color: $primary-color;
+}
+.clima {
+  margin: 0 12px 0 0 !important;
+  border: none !important;
 }

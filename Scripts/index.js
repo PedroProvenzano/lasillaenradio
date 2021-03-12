@@ -254,7 +254,7 @@ function cambiarEscena(escena, botonActual) {
       i.style.display = "none";
     }
   }
-  botonActual.style.borderTop = "4rem #4caf50 solid";
+  botonActual.style.borderTop = "5rem #4caf50 solid";
   // Reset botones
   reinciarBotones(botonActual);
   escena.style.display = "flex";
@@ -272,6 +272,9 @@ fetch("https://lasilla-api.herokuapp.com/noticias/todas")
     let importanteUno = res.filter((obj) => obj.importancia == "importante1");
     let importanteDos = res.filter((obj) => obj.importancia == "importante2");
     let importanteTres = res.filter((obj) => obj.importancia == "importante3");
+    let importanteCuatro = res.filter(
+      (obj) => obj.importancia == "importante4"
+    );
 
     // Noticia Importante 1
     const imgNotUno = document.getElementById("img-not1");
@@ -326,6 +329,25 @@ fetch("https://lasilla-api.herokuapp.com/noticias/todas")
     autNotTres.innerText = `Autor: ${importanteTres[0].autor}`;
     btnNotTres.addEventListener("click", () => {
       cargarNoticia(importanteTres[0]);
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    });
+
+    // Noticia Importante 4
+    const imgNotCuatro = document.getElementById("img-not4");
+    const titNotCuatro = document.getElementById("tit-not4");
+    const contNotCuatro = document.getElementById("cont-not4");
+    const autNotCuatro = document.getElementById("aut-not4");
+    const btnNotCuatro = document.getElementById("btn-not4");
+
+    let imgCuatro = JSON.parse(importanteCuatro[0].imagenesUrl);
+
+    imgNotCuatro.src = imgTres[0];
+    titNotCuatro.innerText = importanteCuatro[0].titulo;
+    contNotCuatro.innerText = importanteCuatro[0].contenidoRes;
+    autNotCuatro.innerText = `Autor: ${importanteCuatro[0].autor}`;
+    btnNotCuatro.addEventListener("click", () => {
+      cargarNoticia(importanteCuatro[0]);
       document.body.scrollTop = 0;
       document.documentElement.scrollTop = 0;
     });

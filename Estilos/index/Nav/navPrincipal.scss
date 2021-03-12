@@ -18,9 +18,8 @@ $secondary-color: #ffa733;
     align-items: center;
     height: 100%;
     width: 50vw;
-    min-width: 696px;
-    max-width: 800px;
-    font-size: 1.5rem;
+    max-width: 50vw;
+    font-size: 1.5vw;
     user-select: none;
     overflow: hidden;
     #boton-inicio {
@@ -59,12 +58,13 @@ $secondary-color: #ffa733;
     border-radius: 5%;
     height: 100%;
     font-size: 1.3rem;
+    width: 10vw;
   }
 }
 
 /* redes sociales */
 i {
-  font-size: 2rem;
+  font-size: 2vw;
   margin: 0.2rem;
   color: #357a38;
   transition: 200ms all;
