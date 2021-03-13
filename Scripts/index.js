@@ -342,7 +342,7 @@ fetch("https://lasilla-api.herokuapp.com/noticias/todas")
 
     let imgCuatro = JSON.parse(importanteCuatro[0].imagenesUrl);
 
-    imgNotCuatro.src = imgTres[0];
+    imgNotCuatro.src = imgCuatro[0];
     titNotCuatro.innerText = importanteCuatro[0].titulo;
     contNotCuatro.innerText = importanteCuatro[0].contenidoRes;
     autNotCuatro.innerText = `Autor: ${importanteCuatro[0].autor}`;
