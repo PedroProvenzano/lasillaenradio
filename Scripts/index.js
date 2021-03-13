@@ -401,12 +401,14 @@ function cargarNoticia(noticia) {
   const tituloNoticia = document.getElementById("titulo-noticia");
   const contenidoNoticia = document.getElementById("contenido-noticia");
   const autorNoticia = document.getElementById("autor-noticia");
+  const fuenteNoticia = document.getElementById("fuente-noticia");
   const fechaNoticia = document.getElementById("fecha-noticia");
   const contImagenes = document.getElementById("grid-img-cont");
 
   tituloNoticia.innerText = noticia.titulo;
   contenidoNoticia.innerText = noticia.contenido;
   autorNoticia.innerText = `Autor: ${noticia.autor}`;
+  fuenteNoticia.innerText = `Fuente: ${noticia.fuente}`;
   fechaNoticia.innerText = `Fecha: ${noticia.fecha.slice(
     8,
     10
