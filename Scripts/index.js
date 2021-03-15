@@ -6,6 +6,7 @@ const spinner = document.getElementById("spinner");
 const seccionNoticiasPrincipales = document.getElementById(
   "noticias-principales"
 );
+const seccionArte = document.getElementById("sectionArte");
 const seccionBotonContacto = document.getElementById("contacto");
 const seccionTopicos = document.getElementById("topicos");
 const seccionActualidad = document.getElementById("actualidad");
@@ -24,11 +25,13 @@ const escenasArray = [
   seccionStreaming,
   seccionEspectaculo,
   seccionNoticia,
+  seccionArte,
 ];
 const escenasInicio = [
   seccionNoticiasPrincipales,
   seccionBotonContacto,
   seccionTopicos,
+  seccionArte,
 ];
 const escenasNoticias = [
   seccionActualidad,
