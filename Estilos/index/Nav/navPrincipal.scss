@@ -1,64 +1,74 @@
 // Variables
 $primary-color: #4caf50;
 $secondary-color: #ffa733;
+$max-width: 90%;
 
-.barra-navegacion {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  width: 100%;
-  height: 50px;
+.contenedor-barra-navegacion {
   background-color: $secondary-color;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  .barra-navegacion {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 96%;
+    height: 50px;
 
-  .boton-cont-nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    height: 100%;
-    width: 50vw;
-    max-width: 50vw;
-    font-size: 1.5vw;
-    user-select: none;
-    overflow: hidden;
-    #boton-inicio {
-      margin-right: 2rem;
-      position: relative;
-      top: -3rem;
-    }
-    #boton-inicio:hover {
-      cursor: pointer;
-    }
-    .boton-nav {
-      width: 100%;
-      position: relative;
-      color: black;
+    .boton-cont-nav {
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
+      justify-content: space-around;
       align-items: center;
-      text-align: center;
-      justify-content: center;
       height: 100%;
-      transition: 200ms all;
+      width: 50vw;
+      max-width: 50vw;
+      font-size: 1.5vw;
+      user-select: none;
+      overflow: hidden;
+      #boton-inicio {
+        margin-right: 2rem;
+        position: relative;
+        top: -3rem;
+      }
+      #boton-inicio:hover {
+        cursor: pointer;
+      }
+      .boton-nav {
+        width: 100%;
+        position: relative;
+        color: black;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        height: 100%;
+        transition: 200ms all;
+      }
+      .boton-nav:hover {
+        border-top: 5px solid $primary-color;
+        cursor: pointer;
+      }
     }
-    .boton-nav:hover {
-      border-top: 5px solid $primary-color;
-      cursor: pointer;
+    .redes-cont-nav {
+      margin-right: 5.3vw;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      width: 25vw;
     }
-  }
-  .redes-cont-nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    width: 25vw;
-  }
-  .buscador-input {
-    border-radius: 5%;
-    height: 100%;
-    font-size: 1.3rem;
-    width: 10vw;
+    .buscador-input {
+      border-radius: 5%;
+      padding: 0.2vw;
+      height: 100%;
+      font-size: 1.3vw;
+      width: 10vw;
+    }
   }
 }
 

@@ -1,4 +1,22 @@
-.barra-navegacion {
+.contenedor-barra-navegacion {
+  background-color: #ffa733;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.contenedor-barra-navegacion .barra-navegacion {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -6,17 +24,17 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 100%;
+  width: 96%;
   height: 50px;
-  background-color: #ffa733;
 }
 
-.barra-navegacion .boton-cont-nav {
+.contenedor-barra-navegacion .barra-navegacion .boton-cont-nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -40,17 +58,17 @@
   overflow: hidden;
 }
 
-.barra-navegacion .boton-cont-nav #boton-inicio {
+.contenedor-barra-navegacion .barra-navegacion .boton-cont-nav #boton-inicio {
   margin-right: 2rem;
   position: relative;
   top: -3rem;
 }
 
-.barra-navegacion .boton-cont-nav #boton-inicio:hover {
+.contenedor-barra-navegacion .barra-navegacion .boton-cont-nav #boton-inicio:hover {
   cursor: pointer;
 }
 
-.barra-navegacion .boton-cont-nav .boton-nav {
+.contenedor-barra-navegacion .barra-navegacion .boton-cont-nav .boton-nav {
   width: 100%;
   position: relative;
   color: black;
@@ -73,12 +91,13 @@
   transition: 200ms all;
 }
 
-.barra-navegacion .boton-cont-nav .boton-nav:hover {
+.contenedor-barra-navegacion .barra-navegacion .boton-cont-nav .boton-nav:hover {
   border-top: 5px solid #4caf50;
   cursor: pointer;
 }
 
-.barra-navegacion .redes-cont-nav {
+.contenedor-barra-navegacion .barra-navegacion .redes-cont-nav {
+  margin-right: 5.3vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -94,10 +113,11 @@
   width: 25vw;
 }
 
-.barra-navegacion .buscador-input {
+.contenedor-barra-navegacion .barra-navegacion .buscador-input {
   border-radius: 5%;
+  padding: 0.2vw;
   height: 100%;
-  font-size: 1.3rem;
+  font-size: 1.3vw;
   width: 10vw;
 }
 

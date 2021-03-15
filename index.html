@@ -18,61 +18,65 @@
   </head>
   <body>
     <header>
-      <div class="logo-cont">
-        <a href="index.html">
-          <img
-            src="imagenes/la-silla-noticias-logo.png"
-            alt="logo-lasilla-noticias"
-            width="250px"
-          />
-        </a>
-        <p class="slogan">Noticias concretas</p>
-        <p>La pagina de noticias de @lasillaenradio</p>
+      <div class="header-container">
+        <div class="logo-cont">
+          <a href="index.html">
+            <img
+              src="imagenes/la-silla-noticias-logo.png"
+              alt="logo-lasilla-noticias"
+              width="250px"
+            />
+          </a>
+          <p class="slogan">Noticias concretas</p>
+          <p>La pagina de noticias de @lasillaenradio</p>
+        </div>
+        <iframe
+          style="padding: 0px"
+          frameborder="0"
+          src="https://player.raddios.com/multiplayer_get.php?r=38&amp;autoplay=1&amp;currentsong=0&amp;r_tipo=22&amp;lang=es"
+          width="undefined"
+          height="50"
+          allowtransparency="true"
+          scrolling="no"
+        ></iframe>
       </div>
-      <iframe
-        style="padding: 0px"
-        frameborder="0"
-        src="https://player.raddios.com/multiplayer_get.php?r=38&amp;autoplay=1&amp;currentsong=0&amp;r_tipo=22&amp;lang=es"
-        width="undefined"
-        height="50"
-        allowtransparency="true"
-        scrolling="no"
-      ></iframe>
     </header>
     <main>
-      <nav class="barra-navegacion">
-        <div class="boton-cont-nav">
-          <i class="fas fa-arrow-circle-left" id="boton-inicio"></i>
-          <div class="boton-nav" id="boton-actualidad">Actualidad</div>
-          <div class="boton-nav" id="boton-cultura">Cultura</div>
-          <div class="boton-nav" id="boton-deporte">Deporte</div>
-          <div class="boton-nav" id="boton-streaming">Streaming</div>
-          <div class="boton-nav" id="boton-espectaculo">Espectáculo</div>
-        </div>
-        <div class="redes-cont-nav">
-          <a href="https://www.facebook.com/lasillaenradio/" target="_blank"
-            ><i class="fab fa-facebook"></i
-          ></a>
-          <a
-            href="https://www.youtube.com/channel/UCxnXkeHoxiMUk2R90bNTsGw"
-            target="_blank"
-            ><i class="fab fa-youtube"></i
-          ></a>
-          <a href="https://www.instagram.com/lasillaenradio/" target="_blank"
-            ><i class="fab fa-instagram"></i
-          ></a>
-          <a href="https://twitter.com/RadioLaSilla" target="_blank"
-            ><i class="fab fa-twitter"></i
-          ></a>
-          <input
-            type="text"
-            class="buscador-input"
-            id="buscador-input"
-            placeholder="Buscador..."
-          />
-          <i class="fas fa-search boton-buscar" id="boton-buscar"></i>
-        </div>
-      </nav>
+      <div class="contenedor-barra-navegacion">
+        <nav class="barra-navegacion">
+          <div class="boton-cont-nav">
+            <i class="fas fa-arrow-circle-left" id="boton-inicio"></i>
+            <div class="boton-nav" id="boton-actualidad">Actualidad</div>
+            <div class="boton-nav" id="boton-cultura">Cultura</div>
+            <div class="boton-nav" id="boton-deporte">Deporte</div>
+            <div class="boton-nav" id="boton-streaming">Streaming</div>
+            <div class="boton-nav" id="boton-espectaculo">Espectáculo</div>
+          </div>
+          <div class="redes-cont-nav">
+            <a href="https://www.facebook.com/lasillaenradio/" target="_blank"
+              ><i class="fab fa-facebook"></i
+            ></a>
+            <a
+              href="https://www.youtube.com/channel/UCxnXkeHoxiMUk2R90bNTsGw"
+              target="_blank"
+              ><i class="fab fa-youtube"></i
+            ></a>
+            <a href="https://www.instagram.com/lasillaenradio/" target="_blank"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a href="https://twitter.com/RadioLaSilla" target="_blank"
+              ><i class="fab fa-twitter"></i
+            ></a>
+            <input
+              type="text"
+              class="buscador-input"
+              id="buscador-input"
+              placeholder="Buscador..."
+            />
+            <i class="fas fa-search boton-buscar" id="boton-buscar"></i>
+          </div>
+        </nav>
+      </div>
       <!--Section 1 (noticias principales)-->
       <div class="spinner-border spinner-position" id="spinner" role="status">
         <span class="visually-hidden">Loading...</span>
@@ -88,8 +92,10 @@
           <div class="card-body">
             <h5 class="card-title" id="tit-not1">Titulo principal</h5>
             <p class="card-text" id="cont-not1">Cargando noticia...</p>
-            <p id="aut-not1">Cargando autor...</p>
-            <a id="btn-not1" class="btn btn-primary">Leer nota!</a>
+            <div class="card-cont-boton-autor">
+              <a id="btn-not1" class="btn btn-primary">Leer nota!</a>
+              <p id="aut-not1">Cargando autor...</p>
+            </div>
           </div>
         </div>
         <div class="card2">
@@ -102,8 +108,10 @@
           <div class="card-body">
             <h5 class="card-title" id="tit-not2">Titulo secundario 1</h5>
             <p class="card-text" id="cont-not2">Cargando noticia...</p>
-            <p id="aut-not2">Cargando autor...</p>
-            <a class="btn btn-primary" id="btn-not2">Leer nota!</a>
+            <div class="card-cont-boton-autor">
+              <a class="btn btn-primary" id="btn-not2">Leer nota!</a>
+              <p id="aut-not2">Cargando autor...</p>
+            </div>
           </div>
         </div>
         <div class="card3">
@@ -116,8 +124,10 @@
           <div class="card-body">
             <h5 class="card-title" id="tit-not3">Titulo secundario 2</h5>
             <p class="card-text" id="cont-not3">Cargando noticia...</p>
-            <p id="aut-not3">Cargando autor...</p>
-            <a id="btn-not3" class="btn btn-primary">Leer nota!</a>
+            <div class="card-cont-boton-autor">
+              <a id="btn-not3" class="btn btn-primary">Leer nota!</a>
+              <p id="aut-not3">Cargando autor...</p>
+            </div>
           </div>
         </div>
         <div class="card4">
@@ -130,8 +140,10 @@
           <div class="card-body">
             <h5 class="card-title" id="tit-not4">Titulo principal</h5>
             <p class="card-text" id="cont-not4">Cargando noticia...</p>
-            <p id="aut-not4">Cargando autor...</p>
-            <a id="btn-not4" class="btn btn-primary">Leer nota!</a>
+            <div class="card-cont-boton-autor">
+              <a id="btn-not4" class="btn btn-primary">Leer nota!</a>
+              <p id="aut-not4">Cargando autor...</p>
+            </div>
           </div>
         </div>
       </section>
@@ -225,6 +237,16 @@
         <p class="fecha-noticia" id="fecha-noticia">
           Cargando fecha de noticia...
         </p>
+      </section>
+
+      <!-- Section Arte -->
+      <section class="sectionArte">
+        <div class="contenedor-arte">
+          <p class="arte-titulo">Arte del dia</p>
+          <img src="./imagenes/imagenNoticiaPortada.jpg" alt="" id="arte-img" />
+          <p id="arte-txt-desc">Descripcion del arte del dia</p>
+          <p id="arte-txt-autor">Autor: Ejemplo de nombre</p>
+        </div>
       </section>
 
       <!--Section 3 (botones con topicos)-->
@@ -364,22 +386,24 @@
     </main>
 
     <footer class="footer">
-      <div class="footer-texto">
-        <p>
-          ¿Interesado en publicitarte en nuestra web? Comunicate con nosotros
-        </p>
-        <p>Tel - 15445657565</p>
-        <p class="firma">
-          Pagina web hecha por Pedro Provenzano - email pedroprov0@gmail.com
-        </p>
-        <p>Copyright 2021 ©</p>
-      </div>
-      <div id="cont_92467cb641eb2f38b05a151e53ecec0c" class="clima">
-        <script
-          type="text/javascript"
-          async
-          src="https://www.meteored.com.ar/wid_loader/92467cb641eb2f38b05a151e53ecec0c"
-        ></script>
+      <div class="contenedor-footer">
+        <div class="footer-texto">
+          <p>
+            ¿Interesado en publicitarte en nuestra web? Comunicate con nosotros
+          </p>
+          <p>Tel - 15445657565</p>
+          <p class="firma">
+            Pagina web hecha por Pedro Provenzano - email pedroprov0@gmail.com
+          </p>
+          <p>Copyright 2021 ©</p>
+        </div>
+        <div id="cont_92467cb641eb2f38b05a151e53ecec0c" class="clima">
+          <script
+            type="text/javascript"
+            async
+            src="https://www.meteored.com.ar/wid_loader/92467cb641eb2f38b05a151e53ecec0c"
+          ></script>
+        </div>
       </div>
     </footer>
     <script
