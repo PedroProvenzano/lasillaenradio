@@ -336,6 +336,18 @@ fetch("https://lasilla-api.herokuapp.com/noticias/todas")
     spinner.style.display = "none";
   });
 
+// Cargar imagen del dia
+fetch("https://lasilla-api.herokuapp.com/imagen/todas")
+  .then((res) => res.json())
+  .then((res) => {
+    const imagenDelDia = document.getElementById("arte-img");
+    const descImagenDia = document.getElementById("arte-txt-desc");
+    const autorImagenDia = document.getElementById("arte-txt-autor");
+    imagenDelDia.src = res[0].imgUrl;
+    descImagenDia.innerText = res[0].descripcion;
+    autorImagenDia.innerText = res[0].autor;
+  });
+
 // Seccion noticia seleccionada
 let imgNumber = 0;
 const flechaIzq = document.getElementById("flecha-izq");
