@@ -345,7 +345,7 @@ fetch("https://lasilla-api.herokuapp.com/imagen/todas")
     const autorImagenDia = document.getElementById("arte-txt-autor");
     imagenDelDia.src = res[0].imgUrl;
     descImagenDia.innerText = res[0].descripcion;
-    autorImagenDia.innerText = res[0].autor;
+    autorImagenDia.innerText = `Autor: ${res[0].autor}`;
   });
 
 // Seccion noticia seleccionada

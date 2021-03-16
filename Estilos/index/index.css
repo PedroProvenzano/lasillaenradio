@@ -141,7 +141,7 @@ i:hover {
 }
 
 .boton-contacto {
-  font-size: 2vw;
+  font-size: 1.8vw;
   font-weight: 500;
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -800,8 +800,7 @@ header {
   margin: 50px 0 50px 0;
 }
 
-.section3 div {
-  margin-top: 1.5rem;
+.tarjeta-persona div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -818,12 +817,12 @@ header {
 }
 
 .img-hacemos-cont {
+  margin-top: 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -842,9 +841,31 @@ header {
   border: 0px solid #000000;
 }
 
+.tarjeta-persona p {
+  font-size: 1vw;
+  font-weight: 500;
+  margin-top: 1rem;
+}
+
 .redondeo {
-  height: 300px;
-  width: auto;
+  height: 16vw;
+  width: 13vw;
+}
+
+.tarjeta-persona {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .sectionArte {
@@ -865,7 +886,26 @@ header {
           flex-direction: column;
 }
 
-.sectionArte .arte-titulo {
+.sectionArte .cont-arte-titulo {
+  position: relative;
+  top: 5vw;
+  z-index: 5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: rgba(0, 0, 0, 0.637);
+  width: 12vw;
+  padding: 0.1vw;
+  color: white;
+}
+
+.sectionArte .cont-arte-titulo .arte-titulo {
   font-size: 2vw;
 }
 
@@ -873,9 +913,33 @@ header {
   width: 80vw;
 }
 
-.sectionArte p {
+.sectionArte .cont-arte-txt {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  background-color: rgba(0, 0, 0, 0.637);
+  position: relative;
+  z-index: 5;
+  top: -7vw;
+  padding: 0.5vw 1vw 0.5vw 1vw;
+  color: white;
+}
+
+.sectionArte .cont-arte-txt p {
+  margin-bottom: 0 !important;
   font-size: 1vw;
   font-weight: 500;
+}
+
+.sectionArte .cont-arte-txt #arte-txt-desc {
+  margin-bottom: 1rem !important;
 }
 
 /* footer */
