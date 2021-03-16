@@ -257,7 +257,7 @@ function cambiarEscena(escena, botonActual) {
       i.style.display = "none";
     }
   }
-  botonActual.style.borderTop = "5rem #4caf50 solid";
+  botonActual.style.borderTop = "5rem #333333 solid";
   // Reset botones
   reinciarBotones(botonActual);
   escena.style.display = "flex";
@@ -266,94 +266,72 @@ function cambiarEscena(escena, botonActual) {
   }, 10);
 }
 
+// Importante 1
+let importanteUno = {
+  imgNot: document.getElementById("img-not1"),
+  titNot: document.getElementById("tit-not1"),
+  contNot: document.getElementById("cont-not1"),
+  autNot: document.getElementById("aut-not1"),
+  btnNot: document.getElementById("btn-not1"),
+};
+// Importante 2
+let importanteDos = {
+  imgNot: document.getElementById("img-not2"),
+  titNot: document.getElementById("tit-not2"),
+  contNot: document.getElementById("cont-not2"),
+  autNot: document.getElementById("aut-not2"),
+  btnNot: document.getElementById("btn-not2"),
+};
+// Importante 3
+let importanteTres = {
+  imgNot: document.getElementById("img-not3"),
+  titNot: document.getElementById("tit-not3"),
+  contNot: document.getElementById("cont-not3"),
+  autNot: document.getElementById("aut-not3"),
+  btnNot: document.getElementById("btn-not3"),
+};
+// Importante 4
+let importanteCuatro = {
+  imgNot: document.getElementById("img-not4"),
+  titNot: document.getElementById("tit-not4"),
+  contNot: document.getElementById("cont-not4"),
+  autNot: document.getElementById("aut-not4"),
+  btnNot: document.getElementById("btn-not4"),
+};
+
+let ArrayObjetosNoticias = [
+  importanteUno,
+  importanteDos,
+  importanteTres,
+  importanteCuatro,
+];
+
 // Conseguir noticias
 fetch("https://lasilla-api.herokuapp.com/noticias/todas")
   .then((res) => res.json())
   .then((res) => {
     noticias = res;
-    // Separar los que tienen importancia
-    let importanteUno = res.filter((obj) => obj.importancia == "importante1");
-    let importanteDos = res.filter((obj) => obj.importancia == "importante2");
-    let importanteTres = res.filter((obj) => obj.importancia == "importante3");
-    let importanteCuatro = res.filter(
-      (obj) => obj.importancia == "importante4"
-    );
 
-    // Noticia Importante 1
-    const imgNotUno = document.getElementById("img-not1");
-    const titNotUno = document.getElementById("tit-not1");
-    const contNotUno = document.getElementById("cont-not1");
-    const autNotUno = document.getElementById("aut-not1");
-    const btnNotUno = document.getElementById("btn-not1");
+    // Agregar noticias importantes a seccion 1
+    let iterNum = 1;
+    for (let i of ArrayObjetosNoticias) {
+      let notaImportante = res.filter(
+        (obj) => obj.importancia == `importante${iterNum}`
+      );
 
-    let imgUno = JSON.parse(importanteUno[0].imagenesUrl);
+      let imgUno = JSON.parse(notaImportante[0].imagenesUrl);
 
-    imgNotUno.src = imgUno[0];
-    titNotUno.innerText = importanteUno[0].titulo;
-    contNotUno.innerText = importanteUno[0].contenidoRes;
-    autNotUno.innerText = `Autor: ${importanteUno[0].autor}`;
-    btnNotUno.addEventListener("click", () => {
-      cargarNoticia(importanteUno[0]);
-      document.body.scrollTop = 0;
-      document.documentElement.scrollTop = 0;
-    });
-
-    // Noticia Importante 2
-    const imgNotDos = document.getElementById("img-not2");
-    const titNotDos = document.getElementById("tit-not2");
-    const contNotDos = document.getElementById("cont-not2");
-    const autNotDos = document.getElementById("aut-not2");
-    const btnNotDos = document.getElementById("btn-not2");
-
-    let imgDos = JSON.parse(importanteDos[0].imagenesUrl);
-
-    imgNotDos.src = imgDos[0];
-    titNotDos.innerText = importanteDos[0].titulo;
-    contNotDos.innerText = importanteDos[0].contenidoRes;
-    autNotDos.innerText = `Autor: ${importanteDos[0].autor}`;
-    btnNotDos.addEventListener("click", () => {
-      cargarNoticia(importanteDos[0]);
-      document.body.scrollTop = 0;
-      document.documentElement.scrollTop = 0;
-    });
-
-    // Noticia Importante 3
-    const imgNotTres = document.getElementById("img-not3");
-    const titNotTres = document.getElementById("tit-not3");
-    const contNotTres = document.getElementById("cont-not3");
-    const autNotTres = document.getElementById("aut-not3");
-    const btnNotTres = document.getElementById("btn-not3");
-
-    let imgTres = JSON.parse(importanteTres[0].imagenesUrl);
-
-    imgNotTres.src = imgTres[0];
-    titNotTres.innerText = importanteTres[0].titulo;
-    contNotTres.innerText = importanteTres[0].contenidoRes;
-    autNotTres.innerText = `Autor: ${importanteTres[0].autor}`;
-    btnNotTres.addEventListener("click", () => {
-      cargarNoticia(importanteTres[0]);
-      document.body.scrollTop = 0;
-      document.documentElement.scrollTop = 0;
-    });
-
-    // Noticia Importante 4
-    const imgNotCuatro = document.getElementById("img-not4");
-    const titNotCuatro = document.getElementById("tit-not4");
-    const contNotCuatro = document.getElementById("cont-not4");
-    const autNotCuatro = document.getElementById("aut-not4");
-    const btnNotCuatro = document.getElementById("btn-not4");
-
-    let imgCuatro = JSON.parse(importanteCuatro[0].imagenesUrl);
-
-    imgNotCuatro.src = imgCuatro[0];
-    titNotCuatro.innerText = importanteCuatro[0].titulo;
-    contNotCuatro.innerText = importanteCuatro[0].contenidoRes;
-    autNotCuatro.innerText = `Autor: ${importanteCuatro[0].autor}`;
-    btnNotCuatro.addEventListener("click", () => {
-      cargarNoticia(importanteCuatro[0]);
-      document.body.scrollTop = 0;
-      document.documentElement.scrollTop = 0;
-    });
+      i.imgNot.src = imgUno[0];
+      i.titNot.innerText = notaImportante[0].titulo;
+      i.contNot.innerText = notaImportante[0].contenidoRes;
+      i.autNot.innerText = `Autor: ${notaImportante[0].autor}`;
+      i.btnNot.addEventListener("click", () => {
+        cargarNoticia(notaImportante[0]);
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      });
+      iterNum++;
+    }
     seccionNoticiasPrincipales.style.opacity = "100%";
     spinner.style.display = "none";
   });

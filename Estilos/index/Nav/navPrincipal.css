@@ -92,7 +92,7 @@
 }
 
 .contenedor-barra-navegacion .barra-navegacion .boton-cont-nav .boton-nav:hover {
-  border-top: 5px solid #4caf50;
+  border-top: 5px solid #333333;
   cursor: pointer;
 }
 
@@ -125,7 +125,7 @@
 i {
   font-size: 2vw;
   margin: 0.2rem;
-  color: #357a38;
+  color: #333333;
   -webkit-transition: 200ms all;
   transition: 200ms all;
 }
