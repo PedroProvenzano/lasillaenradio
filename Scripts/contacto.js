@@ -45,7 +45,8 @@ botonFormEnviar.addEventListener("click", () => {
   }
 
   let bodyCont = {
-    nombre: `${inputNombre.value} ${inputApellido.value}`,
+    nombre: `${inputNombre.value}`,
+    barrio: `${inputApellido.value}`,
     email: `${inputEmail.value}`,
     contenido: `${inputTextArea.value}`,
   };

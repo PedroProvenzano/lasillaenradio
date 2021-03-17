@@ -344,6 +344,13 @@ fetch("https://lasilla-api.herokuapp.com/imagen/todas")
     const descImagenDia = document.getElementById("arte-txt-desc");
     const autorImagenDia = document.getElementById("arte-txt-autor");
     imagenDelDia.src = res[0].imgUrl;
+    if (imagenDelDia.width > imagenDelDia.height) {
+      imagenDelDia.style.width = "80vw";
+      imagenDelDia.style.height = "auto";
+    } else {
+      imagenDelDia.style.height = "80vh";
+      imagenDelDia.style.width = "auto";
+    }
     descImagenDia.innerText = res[0].descripcion;
     autorImagenDia.innerText = `Autor: ${res[0].autor}`;
   });
