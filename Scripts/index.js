@@ -160,58 +160,71 @@ function cargarNoticiasSeccion(topico, objetosDOM) {
   if (noticiasTopico.length == 0) {
     return;
   }
+  noticiasTopico.sort(function (a, b) {
+    if (a.id > b.id) {
+      return -1;
+    }
+    if (a.id < b.id) {
+      return 1;
+    }
+    // a must be equal to b
+    return 0;
+  });
   let primero = true;
+  let vecesNot = 0;
   objetosDOM[3].innerHTML = "";
   for (let i of noticiasTopico) {
-    if (primero) {
-      objetosDOM[0].innerText = i.titulo;
-      objetosDOM[1].innerText = i.contenidoRes;
-      let urlIMG = JSON.parse(i.imagenesUrl);
-      objetosDOM[2].src = urlIMG[0] || urlIMG;
-      primero = false;
-      objetosDOM[2].addEventListener("click", () => {
-        cargarNoticia(i);
-        document.body.scrollTop = 0;
-        document.documentElement.scrollTop = 0;
-      });
-    } else {
-      // Contenedor
-      let divCont = document.createElement("div");
-      divCont.setAttribute("class", "noticia");
-      // Imagen noticia
-      let imgNot = document.createElement("img");
-      let urlIMGnot = JSON.parse(i.imagenesUrl);
-      imgNot.src = urlIMGnot[0] || urlIMGnot;
-      divCont.append(imgNot);
-      // Contenido texto
-      let notTextCont = document.createElement("div");
-      notTextCont.setAttribute("class", "noticia-textos");
-      // Titulo
-      let tituloNot = document.createElement("h3");
-      tituloNot.innerText = i.titulo;
-      notTextCont.append(tituloNot);
-      // Contenido
-      let contenidoNot = document.createElement("p");
-      contenidoNot.innerText = i.contenidoRes;
-      notTextCont.append(contenidoNot);
-      // // Autor
-      // let autorNot = document.createElement("p");
-      // autorNot.innerText = `Autor: ${i.autor}`;
-      // notTextCont.append(autorNot);
-      // // Fecha
-      // let fechaNot = document.createElement("p");
-      // fechaNot.innerText = `Fecha: ${i.fecha.slice(8, 10)}/${i.fecha.slice(
-      //   5,
-      //   7
-      // )}/${i.fecha.slice(0, 4)}`;
-      // notTextCont.append(fechaNot);
-      divCont.append(notTextCont);
-      divCont.addEventListener("click", () => {
-        cargarNoticia(i);
-        document.body.scrollTop = 0;
-        document.documentElement.scrollTop = 0;
-      });
-      objetosDOM[3].append(divCont);
+    if (vecesNot < 6) {
+      if (primero) {
+        objetosDOM[0].innerText = i.titulo;
+        objetosDOM[1].innerText = i.contenidoRes;
+        let urlIMG = JSON.parse(i.imagenesUrl);
+        objetosDOM[2].src = urlIMG[0] || urlIMG;
+
+        // check dim
+        if (objetosDOM[2].height > objetosDOM[2].width) {
+          objetosDOM[2].style.width = "auto";
+          objetosDOM[2].style.height = "40vw";
+        } else {
+          objetosDOM[2].style.width = "60vw";
+          objetosDOM[2].style.height = "auto";
+        }
+
+        primero = false;
+        objetosDOM[2].addEventListener("click", () => {
+          cargarNoticia(i);
+          document.body.scrollTop = 0;
+          document.documentElement.scrollTop = 0;
+        });
+      } else {
+        // Contenedor
+        let divCont = document.createElement("div");
+        divCont.setAttribute("class", "noticia");
+        // Imagen noticia
+        let imgNot = document.createElement("img");
+        let urlIMGnot = JSON.parse(i.imagenesUrl);
+        imgNot.src = urlIMGnot[0] || urlIMGnot;
+        divCont.append(imgNot);
+        // Contenido texto
+        let notTextCont = document.createElement("div");
+        notTextCont.setAttribute("class", "noticia-textos");
+        // Titulo
+        let tituloNot = document.createElement("h3");
+        tituloNot.innerText = i.titulo;
+        notTextCont.append(tituloNot);
+        // Contenido
+        let contenidoNot = document.createElement("p");
+        contenidoNot.innerText = i.contenidoRes;
+        notTextCont.append(contenidoNot);
+        divCont.append(notTextCont);
+        divCont.addEventListener("click", () => {
+          cargarNoticia(i);
+          document.body.scrollTop = 0;
+          document.documentElement.scrollTop = 0;
+        });
+        objetosDOM[3].append(divCont);
+      }
+      vecesNot++;
     }
   }
 }
@@ -322,6 +335,16 @@ fetch("https://lasilla-api.herokuapp.com/noticias/todas")
       let imgUno = JSON.parse(notaImportante[0].imagenesUrl);
 
       i.imgNot.src = imgUno[0];
+      // check dim
+      if (300 > i.imgNot.height) {
+        i.imgNot.style.height = "15vw";
+        i.imgNot.style.width = "auto";
+        i.imgNot.style.maxWidth = "100%";
+      } else {
+        i.imgNot.style.height = "auto";
+        i.imgNot.style.width = "100%";
+        i.imgNot.style.maxWidth = "100%";
+      }
       i.titNot.innerText = notaImportante[0].titulo;
       i.contNot.innerText = notaImportante[0].contenidoRes;
       i.autNot.innerText = `Autor: ${notaImportante[0].autor}`;

@@ -38,14 +38,12 @@
       -ms-flex-pack: center;
           justify-content: center;
   width: 100%;
-  max-width: 1000px;
-  height: 600px;
+  height: auto;
 }
 
 .seccion-noticias .general-main-cont img {
-  height: 100%;
-  width: auto;
-  min-width: 90%;
+  width: 60vw;
+  height: auto;
 }
 
 .seccion-noticias .general-main-cont img:hover,
@@ -55,14 +53,14 @@
 
 .seccion-noticias .general-main-cont h3 {
   background-color: rgba(0, 0, 0, 0.3);
-  font-size: 2rem;
+  font-size: 1.5vw;
   color: white;
   text-align: center;
-  position: absolute;
+  position: relative;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-  top: 800px;
+  top: -10vw;
   max-width: 55%;
   font-weight: 700;
   -webkit-user-select: none;
@@ -74,11 +72,12 @@
 .seccion-noticias .general-main-cont p {
   background-color: rgba(0, 0, 0, 0.3);
   width: 55%;
-  position: absolute;
+  position: relative;
   color: white;
   font-weight: 600;
-  top: 900px;
-  padding: 1rem;
+  top: -10vw;
+  padding: 0.5vw;
+  font-size: 1vw;
 }
 
 .seccion-noticias .general-cont-noticias {
