@@ -29,9 +29,11 @@ a {
     color: white;
     font-size: 0.8vw;
   }
-  // .slogan {
-  //   // margin: 0 0 0 20px;
-  // }
+  .slogan {
+    align-self: center;
+    margin-top: -6px;
+    margin-left: -78px;
+  }
 }
 main {
   background-image: url(../../imagenes/fondo.png);
@@ -229,10 +231,12 @@ header {
     align-items: center;
     background-color: rgba(0, 0, 0, 0.637);
     width: 12vw;
+    height: 3vw;
     padding: 0.1vw;
     color: white;
     .arte-titulo {
-      font-size: 2vw;
+      font-size: 1.4vw;
+      margin-bottom: 0 !important;
     }
   }
   .contenedor-arte {
@@ -259,6 +263,21 @@ header {
     #arte-txt-desc {
       margin-bottom: 1rem !important;
     }
+  }
+}
+
+//  Trivia
+.sectionTrivia {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  .contenedorTrivia {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 }
 

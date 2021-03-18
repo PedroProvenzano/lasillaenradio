@@ -14,7 +14,7 @@
 
 .cont-anim-form {
   z-index: 10;
-  height: 450px;
+  height: 22vw;
   padding: 20px;
   border: outset 3px black;
   background-color: #ffa733;
@@ -47,7 +47,7 @@
 }
 
 .cont-anim-form .cont-head-form h3 {
-  font-size: 3rem;
+  font-size: 2vw;
 }
 
 .cont-anim-form input {
@@ -85,6 +85,7 @@
 .cont-anim-form .form-cont textarea {
   resize: none;
   background-color: #ffe9d2;
+  height: 10vw;
 }
 
 .cont-anim-form .form-cont textarea:focus {

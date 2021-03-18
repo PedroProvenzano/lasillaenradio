@@ -362,16 +362,16 @@ fetch("https://lasilla-api.herokuapp.com/noticias/todas")
 // Cargar imagen del dia
 fetch("https://lasilla-api.herokuapp.com/imagen/todas")
   .then((res) => res.json())
-  .then((res) => {
-    const imagenDelDia = document.getElementById("arte-img");
+  .then(async (res) => {
+    const imagenDelDia = await document.getElementById("arte-img");
     const descImagenDia = document.getElementById("arte-txt-desc");
     const autorImagenDia = document.getElementById("arte-txt-autor");
     imagenDelDia.src = res[0].imgUrl;
     if (imagenDelDia.width > imagenDelDia.height) {
-      imagenDelDia.style.width = "80vw";
+      imagenDelDia.style.width = "50vw";
       imagenDelDia.style.height = "auto";
     } else {
-      imagenDelDia.style.height = "80vh";
+      imagenDelDia.style.height = "50vh";
       imagenDelDia.style.width = "auto";
     }
     descImagenDia.innerText = res[0].descripcion;
