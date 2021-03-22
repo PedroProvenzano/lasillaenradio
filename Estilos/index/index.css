@@ -994,11 +994,21 @@ header {
           justify-content: center;
 }
 
+.sectionTrivia .spinner-positionTrivia {
+  position: relative;
+  top: 5vw;
+  width: 80px;
+  height: 80px;
+  font-size: 2rem;
+  color: #333333;
+}
+
 .sectionTrivia .preguntaTrivia {
   font-size: 1.3vw;
 }
 
 .sectionTrivia .contenedorTrivia {
+  opacity: 0%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

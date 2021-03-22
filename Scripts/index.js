@@ -469,8 +469,27 @@ function cargarNoticia(noticia) {
 
 // Trivia
 
+// Cargar trivia
+fetch("https://lasilla-api.herokuapp.com/trivia/todas")
+  .then((res) => res.json())
+  .then(async (res) => {
+    const preguntaTrivia = document.getElementById("preguntaTrivia");
+    const triviaLabels = document.getElementsByClassName("triviaLabel");
+    preguntaTrivia.innerText = res[0].pregunta;
+    triviaLabels[0].innerText = res[0].respuestaUno;
+    triviaLabels[1].innerText = res[0].respuestaDos;
+    triviaLabels[2].innerText = res[0].respuestaTres;
+    Trivia.solucion = res[0].solucion;
+  })
+  .then(() => {
+    Trivia.iniciarTrivia();
+    Trivia.spinnerTrivia.style.display = "none";
+    Trivia.contenedor.style.opacity = "100%";
+  });
+
 let Trivia = {
   contenedor: document.getElementById("TriviaForm"),
+  spinnerTrivia: document.getElementById("spinnerTrivia"),
   contenedoresTrivia: document.getElementsByClassName("trivia-op-cont"),
   inputsTrivia: document.getElementsByClassName("trivia"),
   solucion: "Gustavo Cerati",
@@ -497,5 +516,3 @@ let Trivia = {
     }
   },
 };
-
-Trivia.iniciarTrivia();
