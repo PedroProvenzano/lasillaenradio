@@ -906,6 +906,15 @@ header {
           flex-direction: column;
 }
 
+.sectionArte .spinner-positionArt {
+  position: relative;
+  top: 20vw;
+  width: 80px;
+  height: 80px;
+  font-size: 2rem;
+  color: #333333;
+}
+
 .sectionArte .cont-arte-titulo {
   position: relative;
   top: 5vw;
@@ -932,6 +941,7 @@ header {
 }
 
 .sectionArte .contenedor-arte {
+  opacity: 0%;
   height: auto;
 }
 
@@ -984,6 +994,10 @@ header {
           justify-content: center;
 }
 
+.sectionTrivia .preguntaTrivia {
+  font-size: 1.3vw;
+}
+
 .sectionTrivia .contenedorTrivia {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -998,6 +1012,45 @@ header {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.sectionTrivia .contenedorTrivia input:hover {
+  cursor: pointer;
+}
+
+.sectionTrivia .contenedorTrivia .trivia-op-cont {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 5px outset #ffa733;
+  border-radius: 25px;
+  width: 30vw;
+  padding: 0.5vw;
+  margin-top: 2px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  font-weight: 500;
+  font-size: 1.2vw;
+  -webkit-transition: background-color 200ms;
+  transition: background-color 200ms;
+}
+
+.sectionTrivia .contenedorTrivia .trivia-op-cont label {
+  margin-left: 10px;
+}
+
+.sectionTrivia .contenedorTrivia .trivia-op-cont label:hover {
+  cursor: pointer;
+}
+
+.sectionTrivia .contenedorTrivia .trivia-op-cont:hover {
+  cursor: pointer;
+  background-color: rgba(173, 173, 173, 0.425);
 }
 
 /* footer */

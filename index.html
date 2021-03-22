@@ -251,11 +251,16 @@
 
       <!-- Section Arte -->
       <section class="sectionArte" id="sectionArte">
-        <div class="contenedor-arte">
+        <div
+          class="spinner-border spinner-positionArt"
+          id="spinnerArte"
+          role="status"
+        ></div>
+        <div class="contenedor-arte" id="contenedor-arte">
           <div class="cont-arte-titulo">
             <p class="arte-titulo">Dato Art</p>
           </div>
-          <img src="./imagenes/imagenNoticiaPortada.jpg" alt="" id="arte-img" />
+          <img src="./imagenes/imagenNoticiaPrueba.png" alt="" id="arte-img" />
           <div class="cont-arte-txt">
             <p id="arte-txt-desc">Descripcion del arte del día</p>
             <p id="arte-txt-autor">Autor: Ejemplo de nombre</p>
@@ -263,22 +268,25 @@
         </div>
       </section>
 
-      <section class="sectionTrivia">
+      <section class="sectionTrivia" id="sectionTrivia">
         <h2>Trivia</h2>
-        <div class="contenedorTrivia">
-          <div>
-            <input name="trivia" type="radio" id="triviaA" value="a" />
-            <label for="a">A</label>
+        <p class="preguntaTrivia" id="preguntaTrivia">
+          ¿Quién fue el compositor de Té para tres?
+        </p>
+        <form class="contenedorTrivia" id="TriviaForm">
+          <div class="trivia-op-cont">
+            <input name="trivia" type="radio" class="trivia" value="a" />
+            <label for="a">Gustavo Cerati</label>
           </div>
-          <div>
-            <input name="trivia" type="radio" id="triviaA" value="b" />
-            <label for="b">B</label>
+          <div class="trivia-op-cont">
+            <input name="trivia" type="radio" class="trivia" value="b" />
+            <label for="b">Luis Alberto Spinetta</label>
           </div>
-          <div>
-            <input name="trivia" type="radio" id="triviaA" value="c" />
-            <label for="c">C</label>
+          <div class="trivia-op-cont">
+            <input name="trivia" type="radio" class="trivia" value="c" />
+            <label for="c">Charly García</label>
           </div>
-        </div>
+        </form>
       </section>
 
       <!--Section 3 (botones con topicos)-->
@@ -337,6 +345,19 @@
               /></a>
             </div>
             <p>Cavazzuti</p>
+          </div>
+          <div class="tarjeta-persona">
+            <p>María Julia</p>
+            <div class="img-hacemos">
+              <a>
+                <img
+                  class="redondeo"
+                  width="200px"
+                  src="imagenes/1x/Maria julia rodriguez.jpeg"
+                  alt="Redes"
+              /></a>
+            </div>
+            <p>Rodriguez</p>
           </div>
         </div>
       </section>

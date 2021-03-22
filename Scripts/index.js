@@ -15,6 +15,7 @@ const seccionDeporte = document.getElementById("deporte");
 const seccionStreaming = document.getElementById("streaming");
 const seccionEspectaculo = document.getElementById("espectaculo");
 const seccionNoticia = document.getElementById("section-noticia");
+const seccionTrivia = document.getElementById("sectionTrivia");
 const escenasArray = [
   seccionNoticiasPrincipales,
   seccionBotonContacto,
@@ -26,12 +27,14 @@ const escenasArray = [
   seccionEspectaculo,
   seccionNoticia,
   seccionArte,
+  seccionTrivia,
 ];
 const escenasInicio = [
   seccionNoticiasPrincipales,
   seccionBotonContacto,
   seccionTopicos,
   seccionArte,
+  seccionTrivia,
 ];
 const escenasNoticias = [
   seccionActualidad,
@@ -366,6 +369,8 @@ fetch("https://lasilla-api.herokuapp.com/imagen/todas")
     const imagenDelDia = await document.getElementById("arte-img");
     const descImagenDia = document.getElementById("arte-txt-desc");
     const autorImagenDia = document.getElementById("arte-txt-autor");
+    const contenedorArte = document.getElementById("contenedor-arte");
+    const spinnerArte = document.getElementById("spinnerArte");
     imagenDelDia.src = res[0].imgUrl;
     if (imagenDelDia.width > imagenDelDia.height) {
       imagenDelDia.style.width = "50vw";
@@ -376,6 +381,8 @@ fetch("https://lasilla-api.herokuapp.com/imagen/todas")
     }
     descImagenDia.innerText = res[0].descripcion;
     autorImagenDia.innerText = `Autor: ${res[0].autor}`;
+    contenedorArte.style.opacity = "100%";
+    spinnerArte.style.display = "none";
   });
 
 // Seccion noticia seleccionada
@@ -459,3 +466,36 @@ function cargarNoticia(noticia) {
     }
   }
 }
+
+// Trivia
+
+let Trivia = {
+  contenedor: document.getElementById("TriviaForm"),
+  contenedoresTrivia: document.getElementsByClassName("trivia-op-cont"),
+  inputsTrivia: document.getElementsByClassName("trivia"),
+  solucion: "Gustavo Cerati",
+  checkRespuesta(respuesta) {
+    if (respuesta == this.solucion) {
+      return true;
+    } else {
+      return false;
+    }
+  },
+  iniciarTrivia() {
+    for (let i = 0; i < 3; i++) {
+      this.contenedoresTrivia[i].addEventListener("click", () => {
+        this.inputsTrivia[i].click();
+        for (let obj of this.contenedoresTrivia) {
+          if (this.checkRespuesta(obj.innerText)) {
+            obj.style.backgroundColor = "rgb(148, 255, 133)";
+          } else {
+            obj.style.backgroundColor = "rgb(255, 10, 10)";
+          }
+          obj.style.pointerEvents = "none";
+        }
+      });
+    }
+  },
+};
+
+Trivia.iniciarTrivia();

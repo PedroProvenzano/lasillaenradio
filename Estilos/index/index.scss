@@ -222,6 +222,14 @@ header {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  .spinner-positionArt {
+    position: relative;
+    top: 20vw;
+    width: 80px;
+    height: 80px;
+    font-size: 2rem;
+    color: #333333;
+  }
   .cont-arte-titulo {
     position: relative;
     top: 5vw;
@@ -240,6 +248,7 @@ header {
     }
   }
   .contenedor-arte {
+    opacity: 0%;
     height: auto;
   }
   img {
@@ -272,12 +281,40 @@ header {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
+  .preguntaTrivia {
+    font-size: 1.3vw;
+  }
   .contenedorTrivia {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    input:hover {
+      cursor: pointer;
+    }
+    .trivia-op-cont {
+      display: flex;
+      align-items: center;
+      border: 5px outset $secondary-color;
+      border-radius: 25px;
+      width: 30vw;
+      padding: 0.5vw;
+      margin-top: 2px;
+      user-select: none;
+      font-weight: 500;
+      font-size: 1.2vw;
+      transition: background-color 200ms;
+      label {
+        margin-left: 10px;
+      }
+      label:hover {
+        cursor: pointer;
+      }
+    }
+    .trivia-op-cont:hover {
+      cursor: pointer;
+      background-color: rgba(173, 173, 173, 0.425);
+    }
   }
 }
 
