@@ -1247,7 +1247,31 @@ header {
   .section1 .card3,
   .section1 .card4 {
     width: 80vw;
-    height: 500px;
+    height: 400px;
+  }
+  .section1 .card1 .card-title,
+  .section1 .card2 .card-title,
+  .section1 .card3 .card-title,
+  .section1 .card4 .card-title {
+    font-size: 5vw;
+  }
+  .section1 .card1 .card-text,
+  .section1 .card2 .card-text,
+  .section1 .card3 .card-text,
+  .section1 .card4 .card-text {
+    font-size: 4vw;
+  }
+  .section1 .card1 .card-cont-boton-autor p,
+  .section1 .card2 .card-cont-boton-autor p,
+  .section1 .card3 .card-cont-boton-autor p,
+  .section1 .card4 .card-cont-boton-autor p {
+    font-size: 3.5vw;
+  }
+  .section1 .card1 .card-cont-boton-autor a,
+  .section1 .card2 .card-cont-boton-autor a,
+  .section1 .card3 .card-cont-boton-autor a,
+  .section1 .card4 .card-cont-boton-autor a {
+    font-size: 3.5vw;
   }
   .section2 {
     width: 100vw;

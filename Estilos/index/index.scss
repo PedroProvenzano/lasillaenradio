@@ -456,7 +456,21 @@ header {
     .card3,
     .card4 {
       width: 80vw;
-      height: 500px;
+      height: 400px;
+      .card-title {
+        font-size: 5vw;
+      }
+      .card-text {
+        font-size: 4vw;
+      }
+      .card-cont-boton-autor {
+        p {
+          font-size: 3.5vw;
+        }
+        a {
+          font-size: 3.5vw;
+        }
+      }
     }
   }
   .section2 {
