@@ -456,6 +456,8 @@ flechaDer.addEventListener("click", () => {
 function cargarNoticia(noticia) {
   // Traer donde autocompleta
   botonInicio.style.top = "0";
+  botonInicio.style.width = "auto";
+  botonInicio.style.margin = "0 10px 0 10px";
   const tituloNoticia = document.getElementById("titulo-noticia");
   const contenidoNoticia = document.getElementById("contenido-noticia");
   const autorNoticia = document.getElementById("autor-noticia");
