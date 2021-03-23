@@ -385,6 +385,9 @@ header {
 }
 
 @media (max-width: 570px) {
+  .spinner-position {
+    left: 35%;
+  }
   header {
     height: auto;
   }
