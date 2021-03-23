@@ -391,26 +391,28 @@ fetch("https://lasilla-api.herokuapp.com/noticias/todas")
   });
 
 // Cargar imagen del dia
+const imagenDelDia = document.getElementById("arte-img");
 fetch("https://lasilla-api.herokuapp.com/imagen/todas")
   .then((res) => res.json())
-  .then(async (res) => {
-    const imagenDelDia = await document.getElementById("arte-img");
+  .then((res) => {
     const descImagenDia = document.getElementById("arte-txt-desc");
     const autorImagenDia = document.getElementById("arte-txt-autor");
     const contenedorArte = document.getElementById("contenedor-arte");
     const spinnerArte = document.getElementById("spinnerArte");
     imagenDelDia.src = res[0].imgUrl;
-    if (imagenDelDia.width > imagenDelDia.height) {
+    descImagenDia.innerText = res[0].descripcion;
+    autorImagenDia.innerText = `Autor: ${res[0].autor}`;
+    contenedorArte.style.opacity = "100%";
+    spinnerArte.style.display = "none";
+  })
+  .then(() => {
+    if (imagenDelDia.naturalWidth > imagenDelDia.naturalHeight) {
       imagenDelDia.style.width = "50vw";
       imagenDelDia.style.height = "auto";
     } else {
       imagenDelDia.style.height = "50vh";
       imagenDelDia.style.width = "auto";
     }
-    descImagenDia.innerText = res[0].descripcion;
-    autorImagenDia.innerText = `Autor: ${res[0].autor}`;
-    contenedorArte.style.opacity = "100%";
-    spinnerArte.style.display = "none";
   });
 
 // Seccion noticia seleccionada
