@@ -1205,7 +1205,7 @@ header {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    height: 60px;
+    height: 18vw;
   }
   .contenedor-barra-navegacion .barra-navegacion .boton-cont-nav {
     height: 100px;
@@ -1214,7 +1214,7 @@ header {
     font-size: 3vw;
   }
   .contenedor-barra-navegacion .barra-navegacion .boton-cont-nav #boton-inicio {
-    margin-right: 0;
+    margin: 0 10px 0 10px;
   }
   .contenedor-barra-navegacion .barra-navegacion .redes-cont-nav {
     width: 80vw;
