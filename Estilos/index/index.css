@@ -1356,6 +1356,88 @@ header {
   .section3 .img-hacemos-cont .tarjeta-persona p {
     font-size: 2.5vw;
   }
+  .seccion-noticias {
+    margin-top: 5vw;
+  }
+  .seccion-noticias h2 {
+    font-size: 8vw;
+  }
+  .seccion-noticias .general-main-cont {
+    width: 100vw;
+    height: 100vw;
+    margin-top: 4vw;
+  }
+  .seccion-noticias .general-main-cont h3 {
+    font-size: 4vw;
+    max-width: 85%;
+    top: -30vw;
+  }
+  .seccion-noticias .general-main-cont p {
+    font-size: 3vw;
+    width: 85%;
+    top: -28vw;
+  }
+  .seccion-noticias .general-cont-noticias {
+    margin: 0;
+    min-width: 0;
+    width: 100vw;
+  }
+  .seccion-noticias .general-cont-noticias .noticia {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 85vw;
+    height: 100vw;
+  }
+  .seccion-noticias .general-cont-noticias .noticia img {
+    width: 100%;
+  }
+  .seccion-noticias .general-cont-noticias .noticia .noticia-textos {
+    width: 100%;
+  }
+  .seccion-noticias .general-cont-noticias .noticia .noticia-textos h3 {
+    font-size: 4vw;
+  }
+  .seccion-noticias .general-cont-noticias .noticia .noticia-textos p {
+    font-size: 3vw;
+    width: 100%;
+  }
+  .section-noticia {
+    width: 100vw;
+  }
+  .section-noticia .titulo-noticia {
+    font-size: 4.5vw;
+    width: 87vw;
+  }
+  .section-noticia .contenedor-imagenes .flecha-izq {
+    position: relative;
+    top: 35vw;
+    left: 20vw;
+  }
+  .section-noticia .contenedor-imagenes .flecha-der {
+    position: relative;
+    top: 35vw;
+    left: -20vw;
+  }
+  .section-noticia .contenedor-imagenes .cont-imagen-noticia {
+    height: auto;
+    width: 100vw;
+    margin: 0;
+  }
+  .section-noticia .contenedor-imagenes .cont-imagen-noticia .imagen-noticia {
+    height: 60vw;
+  }
+  .section-noticia #img-numb {
+    font-size: 6vw;
+  }
+  .section-noticia .autor-noticia,
+  .section-noticia .fecha-noticia {
+    font-size: 3vw;
+  }
+  .section-noticia .contenido-noticia {
+    font-size: 3.5vw;
+  }
   .footer .contenedor-footer {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;

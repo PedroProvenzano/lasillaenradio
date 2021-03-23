@@ -185,12 +185,22 @@ function cargarNoticiasSeccion(topico, objetosDOM) {
         objetosDOM[2].src = urlIMG[0] || urlIMG;
 
         // check dim
-        if (objetosDOM[2].height > objetosDOM[2].width) {
-          objetosDOM[2].style.width = "auto";
-          objetosDOM[2].style.height = "40vw";
+        if (window.screen.width > 570) {
+          if (objetosDOM[2].height > objetosDOM[2].width) {
+            objetosDOM[2].style.width = "auto";
+            objetosDOM[2].style.height = "40vw";
+          } else {
+            objetosDOM[2].style.width = "60vw";
+            objetosDOM[2].style.height = "auto";
+          }
         } else {
-          objetosDOM[2].style.width = "60vw";
-          objetosDOM[2].style.height = "auto";
+          if (objetosDOM[2].height > objetosDOM[2].width) {
+            objetosDOM[2].style.width = "auto";
+            objetosDOM[2].style.height = "70vw";
+          } else {
+            objetosDOM[2].style.width = "100vw";
+            objetosDOM[2].style.height = "auto";
+          }
         }
 
         primero = false;
