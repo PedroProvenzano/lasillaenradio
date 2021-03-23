@@ -240,7 +240,11 @@ function irAlInicio() {
   for (let i of escenasInicio) {
     i.removeAttribute("style");
     if (i == seccionNoticiasPrincipales) {
-      i.style.display = "grid";
+      if (window.screen.width > 570) {
+        i.style.display = "grid";
+      } else {
+        i.style.display = "flex";
+      }
       seccionNoticiasPrincipales.style.opacity = "100%";
     } else {
       i.style.display = "flex";
@@ -339,14 +343,26 @@ fetch("https://lasilla-api.herokuapp.com/noticias/todas")
 
       i.imgNot.src = imgUno[0];
       // check dim
-      if (300 > i.imgNot.height) {
-        i.imgNot.style.height = "15vw";
-        i.imgNot.style.width = "auto";
-        i.imgNot.style.maxWidth = "100%";
+      if (window.screen.width > 570) {
+        if (300 > i.imgNot.height) {
+          i.imgNot.style.height = "15vw";
+          i.imgNot.style.width = "auto";
+          i.imgNot.style.maxWidth = "100%";
+        } else {
+          i.imgNot.style.height = "auto";
+          i.imgNot.style.width = "100%";
+          i.imgNot.style.maxWidth = "100%";
+        }
       } else {
-        i.imgNot.style.height = "auto";
-        i.imgNot.style.width = "100%";
-        i.imgNot.style.maxWidth = "100%";
+        if (300 > i.imgNot.height) {
+          i.imgNot.style.height = "50vw";
+          i.imgNot.style.width = "auto";
+          i.imgNot.style.maxWidth = "100%";
+        } else {
+          i.imgNot.style.height = "auto";
+          i.imgNot.style.width = "100%";
+          i.imgNot.style.maxWidth = "100%";
+        }
       }
       i.titNot.innerText = notaImportante[0].titulo;
       i.contNot.innerText = notaImportante[0].contenidoRes;
@@ -516,3 +532,8 @@ let Trivia = {
     }
   },
 };
+
+const contClima = document.getElementsByClassName("clima");
+if (window.screen.width <= 570) {
+  contClima[0].style.display = "none";
+}

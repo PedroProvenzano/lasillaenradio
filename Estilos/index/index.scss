@@ -383,3 +383,197 @@ header {
   margin: 0 12px 0 0 !important;
   border: none !important;
 }
+
+@media (max-width: 570px) {
+  header {
+    height: auto;
+  }
+  .header-container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: auto;
+  }
+  .logo-cont {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .slogan {
+      margin: 0;
+    }
+  }
+  .logo-cont p {
+    font-size: 2vw;
+    margin: 0;
+  }
+  .radioCont {
+    height: auto;
+    p {
+      font-size: 2vw;
+      margin: 1vw 0 1vw 0;
+    }
+    iframe {
+      width: 60vw;
+      height: 50px;
+    }
+  }
+  .contenedor-barra-navegacion {
+    .barra-navegacion {
+      flex-direction: column;
+      height: 60px;
+      .boton-cont-nav {
+        height: 100px;
+        width: 100vw;
+        max-width: 100vw;
+        font-size: 3vw;
+        #boton-inicio {
+          margin-right: 0;
+        }
+      }
+      .redes-cont-nav {
+        width: 80vw;
+        .buscador-input {
+          width: 40vw;
+          font-size: 3vw;
+        }
+      }
+    }
+  }
+  i {
+    font-size: 5vw;
+  }
+  // Seccion noticias principales
+  .section1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0;
+    .card1,
+    .card2,
+    .card3,
+    .card4 {
+      width: 80vw;
+      height: 500px;
+    }
+  }
+  .section2 {
+    width: 100vw;
+    height: 15vw;
+    clip-path: polygon(16% 0, 88% 0, 85% 100%, 12% 100%);
+    .boton-contacto {
+      font-size: 4vw;
+    }
+  }
+  .cont-anim-form {
+    width: 100vw;
+    height: 80vw;
+    transform: none;
+    top: 40%;
+    left: 0;
+    .cont-head-form {
+      h3 {
+        font-size: 4vw;
+      }
+    }
+    .form-cont {
+      height: 100%;
+      width: 100vw;
+      justify-content: center;
+      align-items: center;
+      .form-cont-inputs {
+        margin: 0 0 1vw 0;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        input {
+          width: 80vw;
+          font-size: 3vw;
+        }
+      }
+      .form-button {
+        width: 80vw;
+        .boton-form {
+          font-size: 3vw;
+        }
+      }
+    }
+    #mensaje {
+      width: 80vw;
+      height: 20vw;
+      font-size: 3vw;
+    }
+  }
+  .sectionArte {
+    margin-top: 10vw;
+    .contenedor-arte {
+      .cont-arte-titulo {
+        width: 24vw;
+        height: 7vw;
+        top: 9vw;
+        .arte-titulo {
+          font-size: 4vw;
+        }
+      }
+      .cont-arte-txt {
+        height: 15vw;
+        width: 100%;
+        top: -18vw;
+        p {
+          font-size: 3vw;
+        }
+      }
+    }
+  }
+  .sectionTrivia {
+    width: 100vw;
+    .contenedorTrivia {
+      width: 80vw;
+      h2 {
+        font-size: 9vw;
+      }
+      .preguntaTrivia {
+        font-size: 4vw;
+      }
+      .trivia-op-cont {
+        width: 70%;
+        height: 10vw;
+        font-size: 3vw;
+      }
+    }
+  }
+  .section3 {
+    .titulo-section3 {
+      font-size: 6vw;
+    }
+    .img-hacemos-cont {
+      margin: 0;
+      width: 100vw;
+      .tarjeta-persona {
+        width: 30%;
+        p {
+          font-size: 2.5vw;
+        }
+      }
+    }
+  }
+  .footer {
+    .contenedor-footer {
+      flex-direction: column;
+      .footer-texto {
+        padding: 0.5vw;
+        p {
+          font-size: 3vw;
+        }
+        .firma {
+          font-size: 2vw;
+        }
+        .copyR {
+          font-size: 2vw;
+        }
+      }
+    }
+  }
+}

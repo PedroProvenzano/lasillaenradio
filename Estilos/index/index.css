@@ -1151,4 +1151,228 @@ header {
   margin: 0 12px 0 0 !important;
   border: none !important;
 }
+
+@media (max-width: 570px) {
+  header {
+    height: auto;
+  }
+  .header-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100vw;
+    height: auto;
+  }
+  .logo-cont {
+    width: 100vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .logo-cont .slogan {
+    margin: 0;
+  }
+  .logo-cont p {
+    font-size: 2vw;
+    margin: 0;
+  }
+  .radioCont {
+    height: auto;
+  }
+  .radioCont p {
+    font-size: 2vw;
+    margin: 1vw 0 1vw 0;
+  }
+  .radioCont iframe {
+    width: 60vw;
+    height: 50px;
+  }
+  .contenedor-barra-navegacion .barra-navegacion {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 60px;
+  }
+  .contenedor-barra-navegacion .barra-navegacion .boton-cont-nav {
+    height: 100px;
+    width: 100vw;
+    max-width: 100vw;
+    font-size: 3vw;
+  }
+  .contenedor-barra-navegacion .barra-navegacion .boton-cont-nav #boton-inicio {
+    margin-right: 0;
+  }
+  .contenedor-barra-navegacion .barra-navegacion .redes-cont-nav {
+    width: 80vw;
+  }
+  .contenedor-barra-navegacion .barra-navegacion .redes-cont-nav .buscador-input {
+    width: 40vw;
+    font-size: 3vw;
+  }
+  i {
+    font-size: 5vw;
+  }
+  .section1 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-bottom: 0;
+  }
+  .section1 .card1,
+  .section1 .card2,
+  .section1 .card3,
+  .section1 .card4 {
+    width: 80vw;
+    height: 500px;
+  }
+  .section2 {
+    width: 100vw;
+    height: 15vw;
+    -webkit-clip-path: polygon(16% 0, 88% 0, 85% 100%, 12% 100%);
+            clip-path: polygon(16% 0, 88% 0, 85% 100%, 12% 100%);
+  }
+  .section2 .boton-contacto {
+    font-size: 4vw;
+  }
+  .cont-anim-form {
+    width: 100vw;
+    height: 80vw;
+    -webkit-transform: none;
+            transform: none;
+    top: 40%;
+    left: 0;
+  }
+  .cont-anim-form .cont-head-form h3 {
+    font-size: 4vw;
+  }
+  .cont-anim-form .form-cont {
+    height: 100%;
+    width: 100vw;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .cont-anim-form .form-cont .form-cont-inputs {
+    margin: 0 0 1vw 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .cont-anim-form .form-cont .form-cont-inputs input {
+    width: 80vw;
+    font-size: 3vw;
+  }
+  .cont-anim-form .form-cont .form-button {
+    width: 80vw;
+  }
+  .cont-anim-form .form-cont .form-button .boton-form {
+    font-size: 3vw;
+  }
+  .cont-anim-form #mensaje {
+    width: 80vw;
+    height: 20vw;
+    font-size: 3vw;
+  }
+  .sectionArte {
+    margin-top: 10vw;
+  }
+  .sectionArte .contenedor-arte .cont-arte-titulo {
+    width: 24vw;
+    height: 7vw;
+    top: 9vw;
+  }
+  .sectionArte .contenedor-arte .cont-arte-titulo .arte-titulo {
+    font-size: 4vw;
+  }
+  .sectionArte .contenedor-arte .cont-arte-txt {
+    height: 15vw;
+    width: 100%;
+    top: -18vw;
+  }
+  .sectionArte .contenedor-arte .cont-arte-txt p {
+    font-size: 3vw;
+  }
+  .sectionTrivia {
+    width: 100vw;
+  }
+  .sectionTrivia .contenedorTrivia {
+    width: 80vw;
+  }
+  .sectionTrivia .contenedorTrivia h2 {
+    font-size: 9vw;
+  }
+  .sectionTrivia .contenedorTrivia .preguntaTrivia {
+    font-size: 4vw;
+  }
+  .sectionTrivia .contenedorTrivia .trivia-op-cont {
+    width: 70%;
+    height: 10vw;
+    font-size: 3vw;
+  }
+  .section3 .titulo-section3 {
+    font-size: 6vw;
+  }
+  .section3 .img-hacemos-cont {
+    margin: 0;
+    width: 100vw;
+  }
+  .section3 .img-hacemos-cont .tarjeta-persona {
+    width: 30%;
+  }
+  .section3 .img-hacemos-cont .tarjeta-persona p {
+    font-size: 2.5vw;
+  }
+  .footer .contenedor-footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .footer .contenedor-footer .footer-texto {
+    padding: 0.5vw;
+  }
+  .footer .contenedor-footer .footer-texto p {
+    font-size: 3vw;
+  }
+  .footer .contenedor-footer .footer-texto .firma {
+    font-size: 2vw;
+  }
+  .footer .contenedor-footer .footer-texto .copyR {
+    font-size: 2vw;
+  }
+}
 /*# sourceMappingURL=index.css.map */
