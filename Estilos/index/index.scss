@@ -429,7 +429,8 @@ header {
         max-width: 100vw;
         font-size: 3vw;
         #boton-inicio {
-          margin: 0 10px 0 10px;
+          margin: 0;
+          width: 0;
         }
       }
       .redes-cont-nav {

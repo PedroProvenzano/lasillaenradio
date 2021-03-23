@@ -1214,7 +1214,8 @@ header {
     font-size: 3vw;
   }
   .contenedor-barra-navegacion .barra-navegacion .boton-cont-nav #boton-inicio {
-    margin: 0 10px 0 10px;
+    margin: 0;
+    width: 0;
   }
   .contenedor-barra-navegacion .barra-navegacion .redes-cont-nav {
     width: 80vw;

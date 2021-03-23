@@ -276,6 +276,8 @@ function reinciarBotones(botonActual) {
     }
     if (botonActual != botonInicio) {
       botonInicio.style.top = "0";
+      botonInicio.style.width = "auto";
+      botonInicio.style.margin = "0 10px 0 10px";
     }
   }
 }
