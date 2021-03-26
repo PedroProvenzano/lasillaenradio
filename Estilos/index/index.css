@@ -645,6 +645,11 @@ header {
           align-items: center;
 }
 
+.sillaEnRadio {
+  font-size: 0.8vw;
+  font-weight: 600;
+}
+
 .HiddenObject {
   display: none;
 }
