@@ -349,7 +349,6 @@ header {
   justify-content: center;
   margin: 0 0 4vw 0;
   .spinner-positionVida {
-    display: none;
     position: relative;
     top: 25vw;
     width: 100px;
@@ -362,6 +361,8 @@ header {
     flex-direction: column;
     width: 100%;
     height: 50vw;
+    transition: opacity 200ms;
+    opacity: 0%;
   }
   .vida-nav-cont {
     display: flex;

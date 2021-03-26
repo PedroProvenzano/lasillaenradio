@@ -16,6 +16,7 @@ const seccionStreaming = document.getElementById("streaming");
 const seccionEspectaculo = document.getElementById("espectaculo");
 const seccionNoticia = document.getElementById("section-noticia");
 const seccionTrivia = document.getElementById("sectionTrivia");
+const seccionContemporaneo = document.getElementById("sectionVida");
 const escenasArray = [
   seccionNoticiasPrincipales,
   seccionBotonContacto,
@@ -28,6 +29,7 @@ const escenasArray = [
   seccionNoticia,
   seccionArte,
   seccionTrivia,
+  seccionContemporaneo,
 ];
 const escenasInicio = [
   seccionNoticiasPrincipales,
@@ -35,6 +37,7 @@ const escenasInicio = [
   seccionTopicos,
   seccionArte,
   seccionTrivia,
+  seccionContemporaneo,
 ];
 const escenasNoticias = [
   seccionActualidad,
@@ -391,6 +394,8 @@ fetch("https://lasilla-api.herokuapp.com/noticias/todas")
   })
   .then(() => {
     // Cargar noticias de Contemporanea
+    const spinnerVida = document.getElementById("spinnerVida");
+    const OpacityVida = document.getElementById("vida-cont");
     const vidaImg = document.getElementsByClassName("vida-img");
     const vidaTituloNot = document.getElementsByClassName("vida-titulo-not");
     const vidaAutor = document.getElementsByClassName("vida-autor");
@@ -419,6 +424,8 @@ fetch("https://lasilla-api.herokuapp.com/noticias/todas")
         8,
         10
       )}/${notaVida[0].fecha.slice(5, 7)}/${notaVida[0].fecha.slice(0, 4)}`;
+      spinnerVida.style.display = "none";
+      OpacityVida.style.opacity = "100%";
     }
   });
 
