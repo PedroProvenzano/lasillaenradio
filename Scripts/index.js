@@ -388,7 +388,57 @@ fetch("https://lasilla-api.herokuapp.com/noticias/todas")
     }
     seccionNoticiasPrincipales.style.opacity = "100%";
     spinner.style.display = "none";
+  })
+  .then(() => {
+    // Cargar noticias de Contemporanea
+    const vidaImg = document.getElementsByClassName("vida-img");
+    const vidaTituloNot = document.getElementsByClassName("vida-titulo-not");
+    const vidaAutor = document.getElementsByClassName("vida-autor");
+    const vidaFuente = document.getElementsByClassName("vida-fuente");
+    const vidaContenidoTxt = document.getElementsByClassName(
+      "vida-contenido-txt"
+    );
+    const vidaFecha = document.getElementsByClassName("vida-fecha");
+
+    const arrayOrden = ["Vida sana", "Medio ambiente", "Genero"];
+    // Handler
+    for (let i = 0; i < 3; i++) {
+      // Filtrar noticia
+      let notaVida = noticias.filter(
+        (obj) => obj.temaPrincipal == arrayOrden[i]
+      );
+      // Completar campos
+      // Imagen
+      let imgVida = JSON.parse(notaVida[0].imagenesUrl);
+      vidaImg[i].src = imgVida;
+      vidaTituloNot[i].innerText = notaVida[0].titulo;
+      vidaAutor[i].innerText = `Autor: ${notaVida[0].autor}`;
+      vidaFuente[i].innerText = `Fuente: ${notaVida[0].fuente}`;
+      vidaContenidoTxt[i].innerText = notaVida[0].contenido;
+      vidaFecha[i].innerText = `Fecha: ${notaVida[0].fecha.slice(
+        8,
+        10
+      )}/${notaVida[0].fecha.slice(5, 7)}/${notaVida[0].fecha.slice(0, 4)}`;
+    }
   });
+
+// Interactividad de noticias Contemporaneas
+const arrayTitulosVida = document.getElementsByClassName("vida-titulo");
+const arrayContenidoVida = document.getElementsByClassName("vida-contenido");
+for (let i = 0; i < 3; i++) {
+  arrayTitulosVida[i].addEventListener("click", () => {
+    for (let element of arrayTitulosVida) {
+      element.removeAttribute("style");
+    }
+    arrayTitulosVida[i].style.backgroundColor = "#ffa733";
+    arrayTitulosVida[i].style.color = "white";
+    arrayTitulosVida[i].style.borderBottom = "1px solid rgb(230, 230, 230)";
+    for (let element of arrayContenidoVida) {
+      element.style.display = "none";
+    }
+    arrayContenidoVida[i].style.display = "flex";
+  });
+}
 
 // Cargar imagen del dia
 const imagenDelDia = document.getElementById("arte-img");

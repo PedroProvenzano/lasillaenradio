@@ -1088,6 +1088,176 @@ header {
   background-color: rgba(173, 173, 173, 0.425);
 }
 
+.sectionVida {
+  width: 80vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 0 4vw 0;
+}
+
+.sectionVida .spinner-positionVida {
+  display: none;
+  position: relative;
+  top: 25vw;
+  width: 100px;
+  height: 100px;
+  font-size: 2rem;
+}
+
+.sectionVida .vida-cont {
+  border-radius: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  height: 50vw;
+}
+
+.sectionVida .vida-nav-cont {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 5%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.sectionVida .vida-nav-cont .vida-titulo {
+  background-color: white;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  font-size: 1.2vw;
+  font-weight: 600;
+  border: 1px outset black;
+  border-radius: 15px 15px 0 0;
+  height: 95%;
+  width: 15%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.sectionVida .vida-nav-cont .vida-titulo:hover {
+  cursor: pointer;
+  font-weight: 700;
+  background-color: #ffa733;
+  color: white;
+}
+
+.sectionVida .vida-contenido-cont-general {
+  background-color: #e6e6e6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 2vw;
+  overflow: auto;
+}
+
+.sectionVida .vida-contenido-cont-general .vida-contenido {
+  padding: 1vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: white;
+  border-left: 1.2vw dotted #e6e6e6;
+  width: 100%;
+  height: auto;
+}
+
+.sectionVida .vida-contenido-cont-general .vida-contenido h2 {
+  position: relative;
+  top: -10vw;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.568);
+  width: 80%;
+  height: auto;
+  min-height: 5vw;
+  font-size: 2vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.sectionVida .vida-contenido-cont-general .vida-contenido p {
+  width: 80%;
+}
+
+.sectionVida .vida-contenido-cont-general .vida-contenido img {
+  height: auto;
+  width: 80%;
+  margin-top: 1vw;
+}
+
+.sectionVida .vida-contenido-cont-general .vida-contenido .vida-contenido-txt {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 /* footer */
 .footer {
   display: -webkit-box;
@@ -1465,6 +1635,28 @@ header {
   }
   .section-noticia .contenido-noticia {
     font-size: 3.5vw;
+  }
+  .sectionVida .vida-nav-cont {
+    height: 10%;
+  }
+  .sectionVida .vida-nav-cont .vida-titulo {
+    width: 33%;
+    font-size: 3vw;
+  }
+  .sectionVida .vida-cont {
+    height: 100vw;
+  }
+  .sectionVida .vida-contenido-cont-general .vida-contenido img {
+    width: 97%;
+  }
+  .sectionVida .vida-contenido-cont-general .vida-contenido h2 {
+    width: 97%;
+    font-size: 4vw;
+    top: -18vw;
+    text-align: center;
+  }
+  .sectionVida .vida-contenido-cont-general .vida-contenido p {
+    font-size: 3vw;
   }
   .footer .contenedor-footer {
     -webkit-box-orient: vertical;
