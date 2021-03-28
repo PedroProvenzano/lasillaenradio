@@ -17,6 +17,7 @@ const seccionEspectaculo = document.getElementById("espectaculo");
 const seccionNoticia = document.getElementById("section-noticia");
 const seccionTrivia = document.getElementById("sectionTrivia");
 const seccionContemporaneo = document.getElementById("sectionVida");
+const seccionBuscador = document.getElementById("seccion-buscador");
 const escenasArray = [
   seccionNoticiasPrincipales,
   seccionBotonContacto,
@@ -30,6 +31,7 @@ const escenasArray = [
   seccionArte,
   seccionTrivia,
   seccionContemporaneo,
+  seccionBuscador,
 ];
 const escenasInicio = [
   seccionNoticiasPrincipales,
@@ -45,6 +47,7 @@ const escenasNoticias = [
   seccionDeporte,
   seccionStreaming,
   seccionEspectaculo,
+  seccionBuscador,
 ];
 // Botones
 // Escena NAV
@@ -245,6 +248,132 @@ function cargarNoticiasSeccion(topico, objetosDOM) {
   }
 }
 
+const buscadorInput = document.getElementById("buscador-input");
+const botonBuscar = document.getElementById("boton-buscar");
+
+const tituloBuscador = document.getElementById("buscador-titulo-port");
+const contenidoBuscador = document.getElementById("buscador-cont-port");
+const imgBuscador = document.getElementById("buscador-img-port");
+const contenedorNoticiasBuscador = document.getElementById(
+  "buscador-cont-noticias"
+);
+const arrayDomBuscador = [
+  tituloBuscador,
+  contenidoBuscador,
+  imgBuscador,
+  contenedorNoticiasBuscador,
+];
+
+buscadorInput.addEventListener("keyup", (e) => {
+  if (e.code === "Enter") {
+    e.preventDefault();
+    if (buscadorInput.value == "") {
+      return;
+    }
+    // Ejecutar la busqueda de noticias
+    buscador(buscadorInput.value, arrayDomBuscador);
+  }
+});
+
+botonBuscar.addEventListener("click", () => {
+  if (buscadorInput.value == "") {
+    return;
+  }
+  // Ejecutar la busqueda de noticias
+  buscador(buscadorInput.value, arrayDomBuscador);
+});
+
+// Funcion Buscador
+function buscador(searchWord, objetosDOM) {
+  let palabra = searchWord.toLowerCase();
+  let noticiasTopico = noticias.filter((obj) => obj.tags.includes(palabra));
+  if (noticiasTopico.length == 0) {
+    buscadorInput.style.backgroundColor = "red";
+    setTimeout(() => {
+      buscadorInput.removeAttribute("style");
+    }, 1000 * 2);
+    return;
+  }
+  noticiasTopico.sort(function (a, b) {
+    if (a.id > b.id) {
+      return -1;
+    }
+    if (a.id < b.id) {
+      return 1;
+    }
+    // a must be equal to b
+    return 0;
+  });
+  let primero = true;
+  let vecesNot = 0;
+  objetosDOM[3].innerHTML = "";
+  for (let i of noticiasTopico) {
+    if (vecesNot < 6) {
+      if (primero) {
+        objetosDOM[0].innerText = i.titulo;
+        objetosDOM[1].innerText = i.contenidoRes;
+        let urlIMG = JSON.parse(i.imagenesUrl);
+        objetosDOM[2].src = urlIMG[0] || urlIMG;
+
+        // check dim
+        if (window.screen.width > 570) {
+          if (objetosDOM[2].height > objetosDOM[2].width) {
+            objetosDOM[2].style.width = "auto";
+            objetosDOM[2].style.height = "40vw";
+          } else {
+            objetosDOM[2].style.width = "60vw";
+            objetosDOM[2].style.height = "auto";
+          }
+        } else {
+          if (objetosDOM[2].height > objetosDOM[2].width) {
+            objetosDOM[2].style.width = "auto";
+            objetosDOM[2].style.height = "70vw";
+          } else {
+            objetosDOM[2].style.width = "100vw";
+            objetosDOM[2].style.height = "auto";
+          }
+        }
+
+        primero = false;
+        objetosDOM[2].addEventListener("click", () => {
+          cargarNoticia(i);
+          document.body.scrollTop = 0;
+          document.documentElement.scrollTop = 0;
+        });
+      } else {
+        // Contenedor
+        let divCont = document.createElement("div");
+        divCont.setAttribute("class", "noticia");
+        // Imagen noticia
+        let imgNot = document.createElement("img");
+        let urlIMGnot = JSON.parse(i.imagenesUrl);
+        imgNot.src = urlIMGnot[0] || urlIMGnot;
+        divCont.append(imgNot);
+        // Contenido texto
+        let notTextCont = document.createElement("div");
+        notTextCont.setAttribute("class", "noticia-textos");
+        // Titulo
+        let tituloNot = document.createElement("h3");
+        tituloNot.innerText = i.titulo;
+        notTextCont.append(tituloNot);
+        // Contenido
+        let contenidoNot = document.createElement("p");
+        contenidoNot.innerText = i.contenidoRes;
+        notTextCont.append(contenidoNot);
+        divCont.append(notTextCont);
+        divCont.addEventListener("click", () => {
+          cargarNoticia(i);
+          document.body.scrollTop = 0;
+          document.documentElement.scrollTop = 0;
+        });
+        objetosDOM[3].append(divCont);
+      }
+      vecesNot++;
+    }
+  }
+  cambiarEscena(seccionBuscador);
+}
+
 botonInicio.addEventListener("click", irAlInicio);
 // Funciones
 // Boton de inicio
@@ -285,14 +414,16 @@ function reinciarBotones(botonActual) {
   }
 }
 // cambio de escena
-function cambiarEscena(escena, botonActual) {
+function cambiarEscena(escena, botonActual = "asd") {
   for (let i of escenasArray) {
     if (i != escena) {
       i.removeAttribute("style");
       i.style.display = "none";
     }
   }
-  botonActual.style.borderTop = "5rem #333333 solid";
+  if (botonActual != "asd") {
+    botonActual.style.borderTop = "5rem #333333 solid";
+  }
   // Reset botones
   reinciarBotones(botonActual);
   escena.style.display = "flex";
