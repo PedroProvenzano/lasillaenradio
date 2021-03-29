@@ -1330,6 +1330,9 @@ header {
 }
 
 @media (max-width: 570px) {
+  .sillaEnRadio {
+    font-size: 3vw;
+  }
   .spinner-position {
     left: 35%;
   }
