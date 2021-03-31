@@ -741,3 +741,15 @@ const contClima = document.getElementsByClassName("clima");
 if (window.screen.width <= 570) {
   contClima[0].style.display = "none";
 }
+
+// Publicidad
+
+const openGallo = document.getElementById("openGallo");
+openGallo.addEventListener("click", () => {
+  window.open("https://www.instagram.com/opengallo/");
+});
+
+const PerVoi = document.getElementById("PerVoi");
+PerVoi.addEventListener("click", () => {
+  window.open("https://www.instagram.com/fppervoi/");
+});

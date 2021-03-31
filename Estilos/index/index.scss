@@ -239,6 +239,7 @@ header {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  margin-top: 5vw;
   .spinner-positionArt {
     position: relative;
     top: 20vw;
@@ -394,6 +395,7 @@ header {
     }
   }
   .vida-contenido-cont-general {
+    border: 2px solid black;
     background-color: rgb(230, 230, 230);
     display: flex;
     flex-direction: column;
@@ -444,6 +446,41 @@ header {
   }
 }
 
+/* Publicidad */
+.bloque-pub {
+  user-select: none;
+  border-radius: 25px;
+  margin-bottom: 3vw;
+  width: 35vw;
+  height: 10vw;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  img {
+    margin-left: 2vw;
+    height: 100%;
+    width: auto;
+  }
+  .bloque-pub-texto {
+    p {
+      margin-bottom: 0.2vw !important;
+    }
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 60%;
+    height: 100%;
+    .pub-titulo {
+      font-size: 2vw;
+      font-weight: 600;
+    }
+  }
+}
+.bloque-pub:hover {
+  cursor: pointer;
+}
+
 /* footer */
 
 .footer {
@@ -486,11 +523,22 @@ header {
 .clima {
   margin: 0 12px 0 0 !important;
   border: none !important;
+  a {
+    color: white;
+  }
 }
-
+.hidden {
+  display: none;
+}
 // MOBILE
 
 @media (max-width: 570px) {
+  .hidden {
+    display: block;
+    color: white;
+    font-size: 3vw;
+    margin-bottom: 1rem;
+  }
   .sillaEnRadio {
     font-size: 3vw;
   }
@@ -794,6 +842,21 @@ header {
         p {
           font-size: 3vw;
         }
+      }
+    }
+  }
+  .bloque-pub {
+    width: 80vw;
+    height: 30vw;
+    img {
+      height: 80%;
+    }
+    .bloque-pub-texto {
+      .pub-titulo {
+        font-size: 5vw;
+      }
+      p {
+        font-size: 2.5vw;
       }
     }
   }

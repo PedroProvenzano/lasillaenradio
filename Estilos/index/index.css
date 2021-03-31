@@ -934,6 +934,7 @@ header {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  margin-top: 5vw;
 }
 
 .sectionArte .spinner-positionArt {
@@ -1177,6 +1178,7 @@ header {
 }
 
 .sectionVida .vida-contenido-cont-general {
+  border: 2px solid black;
   background-color: #e6e6e6;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1265,6 +1267,62 @@ header {
           align-items: center;
 }
 
+/* Publicidad */
+.bloque-pub {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  border-radius: 25px;
+  margin-bottom: 3vw;
+  width: 35vw;
+  height: 10vw;
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.bloque-pub img {
+  margin-left: 2vw;
+  height: 100%;
+  width: auto;
+}
+
+.bloque-pub .bloque-pub-texto {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 60%;
+  height: 100%;
+}
+
+.bloque-pub .bloque-pub-texto p {
+  margin-bottom: 0.2vw !important;
+}
+
+.bloque-pub .bloque-pub-texto .pub-titulo {
+  font-size: 2vw;
+  font-weight: 600;
+}
+
+.bloque-pub:hover {
+  cursor: pointer;
+}
+
 /* footer */
 .footer {
   display: -webkit-box;
@@ -1329,7 +1387,21 @@ header {
   border: none !important;
 }
 
+.clima a {
+  color: white;
+}
+
+.hidden {
+  display: none;
+}
+
 @media (max-width: 570px) {
+  .hidden {
+    display: block;
+    color: white;
+    font-size: 3vw;
+    margin-bottom: 1rem;
+  }
   .sillaEnRadio {
     font-size: 3vw;
   }
@@ -1667,6 +1739,19 @@ header {
   }
   .sectionVida .vida-contenido-cont-general .vida-contenido p {
     font-size: 3vw;
+  }
+  .bloque-pub {
+    width: 80vw;
+    height: 30vw;
+  }
+  .bloque-pub img {
+    height: 80%;
+  }
+  .bloque-pub .bloque-pub-texto .pub-titulo {
+    font-size: 5vw;
+  }
+  .bloque-pub .bloque-pub-texto p {
+    font-size: 2.5vw;
   }
   .footer .contenedor-footer {
     -webkit-box-orient: vertical;
