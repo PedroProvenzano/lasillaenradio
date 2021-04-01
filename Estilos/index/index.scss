@@ -504,7 +504,7 @@ header {
     justify-content: space-between;
 
     .footer-texto {
-      padding: 1rem;
+      padding-top: 0.8rem;
     }
     .firma {
       font-style: italic;
@@ -530,6 +530,23 @@ header {
 }
 .hidden {
   display: none;
+}
+.fundeu {
+  user-select: none;
+  display: flex;
+  align-items: center;
+  height: 1.5vw;
+  margin-bottom: 1rem;
+  img {
+    height: 100%;
+    width: auto;
+  }
+  p {
+    margin: 0 0 0 0.5vw;
+  }
+}
+.fundeu:hover {
+  cursor: pointer;
 }
 // MOBILE
 
@@ -859,6 +876,12 @@ header {
       p {
         font-size: 2.5vw;
       }
+    }
+  }
+  .fundeu {
+    height: 5vw;
+    img {
+      margin-right: 2vw;
     }
   }
   .footer {

@@ -1366,7 +1366,7 @@ header {
 }
 
 .footer .contenedor-footer .footer-texto {
-  padding: 1rem;
+  padding-top: 0.8rem;
 }
 
 .footer .contenedor-footer .firma {
@@ -1394,6 +1394,34 @@ header {
 
 .hidden {
   display: none;
+}
+
+.fundeu {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 1.5vw;
+  margin-bottom: 1rem;
+}
+
+.fundeu img {
+  height: 100%;
+  width: auto;
+}
+
+.fundeu p {
+  margin: 0 0 0 0.5vw;
+}
+
+.fundeu:hover {
+  cursor: pointer;
 }
 
 @media (max-width: 570px) {
@@ -1753,6 +1781,12 @@ header {
   }
   .bloque-pub .bloque-pub-texto p {
     font-size: 2.5vw;
+  }
+  .fundeu {
+    height: 5vw;
+  }
+  .fundeu img {
+    margin-right: 2vw;
   }
   .footer .contenedor-footer {
     -webkit-box-orient: vertical;

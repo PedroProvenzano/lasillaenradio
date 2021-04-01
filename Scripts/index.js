@@ -753,3 +753,8 @@ const PerVoi = document.getElementById("PerVoi");
 PerVoi.addEventListener("click", () => {
   window.open("https://www.instagram.com/fppervoi/");
 });
+
+const fundeu = document.getElementById("fundeu");
+fundeu.addEventListener("click", () => {
+  window.open("https://fundeu.fiile.org.ar/");
+});
