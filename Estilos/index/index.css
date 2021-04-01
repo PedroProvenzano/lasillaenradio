@@ -1155,7 +1155,7 @@ header {
           user-select: none;
   font-size: 1.2vw;
   font-weight: 600;
-  border: 1px outset black;
+  border: 1px outset #007706;
   border-radius: 15px 15px 0 0;
   height: 95%;
   width: 15%;
@@ -1178,8 +1178,8 @@ header {
 }
 
 .sectionVida .vida-contenido-cont-general {
-  border: 2px solid black;
-  background-color: #e6e6e6;
+  border: 2px solid #007706;
+  background-color: #f0f0f0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1269,6 +1269,7 @@ header {
 
 /* Publicidad */
 .bloque-pub {
+  background-color: rgba(0, 0, 0, 0.123);
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -1277,7 +1278,6 @@ header {
   margin-bottom: 3vw;
   width: 35vw;
   height: 10vw;
-  background-color: white;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1293,6 +1293,7 @@ header {
   margin-left: 2vw;
   height: 100%;
   width: auto;
+  border-radius: 100px;
 }
 
 .bloque-pub .bloque-pub-texto {

@@ -379,7 +379,7 @@ header {
       user-select: none;
       font-size: 1.2vw;
       font-weight: 600;
-      border: 1px outset black;
+      border: 1px outset rgb(0, 119, 6);
       border-radius: 15px 15px 0 0;
       height: 95%;
       width: 15%;
@@ -395,8 +395,8 @@ header {
     }
   }
   .vida-contenido-cont-general {
-    border: 2px solid black;
-    background-color: rgb(230, 230, 230);
+    border: 2px solid rgb(0, 119, 6);
+    background-color: rgb(240, 240, 240);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -448,12 +448,12 @@ header {
 
 /* Publicidad */
 .bloque-pub {
+  background-color: rgba(0, 0, 0, 0.123);
   user-select: none;
   border-radius: 25px;
   margin-bottom: 3vw;
   width: 35vw;
   height: 10vw;
-  background-color: white;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -461,6 +461,7 @@ header {
     margin-left: 2vw;
     height: 100%;
     width: auto;
+    border-radius: 100px;
   }
   .bloque-pub-texto {
     p {
