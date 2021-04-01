@@ -497,7 +497,7 @@ header {
   width: 100%;
   .contenedor-footer {
     width: 90%;
-    font-size: 0.7vw;
+    font-size: 1.2vw;
     display: flex;
     align-items: center;
     flex-direction: row;
@@ -505,9 +505,14 @@ header {
 
     .footer-texto {
       padding-top: 0.8rem;
+      .copyR {
+        font-size: 0.7vw;
+        margin-top: 1vw;
+      }
     }
     .firma {
       font-style: italic;
+      font-size: 0.7vw;
     }
   }
 }
@@ -535,13 +540,16 @@ header {
   user-select: none;
   display: flex;
   align-items: center;
-  height: 1.5vw;
-  margin-bottom: 1rem;
+  height: 5vw;
+  margin: 0 0 2vw 0;
+  background-color: rgba(0, 0, 0, 0.192);
+  border-radius: 25px;
   img {
     height: 100%;
     width: auto;
   }
   p {
+    font-size: 0.9vw;
     margin: 0 0 0 0.5vw;
   }
 }
@@ -761,8 +769,6 @@ header {
       width: 100vw;
       height: 100vw;
       margin-top: 4vw;
-      img {
-      }
       h3 {
         font-size: 4vw;
         max-width: 85%;
@@ -879,21 +885,27 @@ header {
     }
   }
   .fundeu {
-    height: 5vw;
+    height: 15vw;
+    p {
+      font-size: 3vw !important;
+    }
     img {
       margin-right: 2vw;
     }
   }
   .footer {
+    height: 250px;
     .contenedor-footer {
       flex-direction: column;
       .footer-texto {
+        width: 80%;
         padding: 0.5vw;
         p {
-          font-size: 3vw;
+          font-size: 4vw;
         }
         .firma {
           font-size: 2vw;
+          margin-bottom: 1vw;
         }
         .copyR {
           font-size: 2vw;

@@ -1349,7 +1349,7 @@ header {
 
 .footer .contenedor-footer {
   width: 90%;
-  font-size: 0.7vw;
+  font-size: 1.2vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1369,8 +1369,14 @@ header {
   padding-top: 0.8rem;
 }
 
+.footer .contenedor-footer .footer-texto .copyR {
+  font-size: 0.7vw;
+  margin-top: 1vw;
+}
+
 .footer .contenedor-footer .firma {
   font-style: italic;
+  font-size: 0.7vw;
 }
 
 .spinner-position {
@@ -1407,8 +1413,10 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 1.5vw;
-  margin-bottom: 1rem;
+  height: 5vw;
+  margin: 0 0 2vw 0;
+  background-color: rgba(0, 0, 0, 0.192);
+  border-radius: 25px;
 }
 
 .fundeu img {
@@ -1417,6 +1425,7 @@ header {
 }
 
 .fundeu p {
+  font-size: 0.9vw;
   margin: 0 0 0 0.5vw;
 }
 
@@ -1783,10 +1792,16 @@ header {
     font-size: 2.5vw;
   }
   .fundeu {
-    height: 5vw;
+    height: 15vw;
+  }
+  .fundeu p {
+    font-size: 3vw !important;
   }
   .fundeu img {
     margin-right: 2vw;
+  }
+  .footer {
+    height: 250px;
   }
   .footer .contenedor-footer {
     -webkit-box-orient: vertical;
@@ -1795,13 +1810,15 @@ header {
             flex-direction: column;
   }
   .footer .contenedor-footer .footer-texto {
+    width: 80%;
     padding: 0.5vw;
   }
   .footer .contenedor-footer .footer-texto p {
-    font-size: 3vw;
+    font-size: 4vw;
   }
   .footer .contenedor-footer .footer-texto .firma {
     font-size: 2vw;
+    margin-bottom: 1vw;
   }
   .footer .contenedor-footer .footer-texto .copyR {
     font-size: 2vw;
