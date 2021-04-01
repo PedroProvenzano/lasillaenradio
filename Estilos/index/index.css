@@ -1037,6 +1037,7 @@ header {
 
 .sectionTrivia .preguntaTrivia {
   font-size: 1.3vw;
+  width: 40%;
 }
 
 .sectionTrivia .contenedorTrivia {
@@ -1655,6 +1656,7 @@ header {
     font-size: 9vw;
   }
   .sectionTrivia .contenedorTrivia .preguntaTrivia {
+    width: 100%;
     font-size: 4vw;
   }
   .sectionTrivia .contenedorTrivia .trivia-op-cont {
