@@ -197,18 +197,24 @@ async function cargarNoticiasSeccion(topico, objetosDOM) {
               this.style.width = "auto";
               this.style.height = "40vw";
               objetosDOM[1].style.width = `${this.width}px`;
+              objetosDOM[0].style.width = `${this.width}px`;
             } else {
               this.style.width = "60vw";
               this.style.height = "auto";
               objetosDOM[1].style.width = "60vw";
+              objetosDOM[0].style.width = "60vw";
             }
           } else {
             if (this.naturalHeight > this.naturalWidth) {
               this.style.width = "auto";
               this.style.height = "70vw";
+              objetosDOM[1].style.width = `${this.width}px`;
+              objetosDOM[0].style.width = `${this.width}px`;
             } else {
               this.style.width = "100vw";
               this.style.height = "auto";
+              objetosDOM[0].style.width = "100vw";
+              objetosDOM[1].style.width = "100vw";
             }
           }
         };
