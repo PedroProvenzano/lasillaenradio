@@ -759,9 +759,9 @@ let Trivia = {
         this.inputsTrivia[i].click();
         for (let obj of this.contenedoresTrivia) {
           if (this.checkRespuesta(obj.innerText)) {
-            obj.style.backgroundColor = "rgb(148, 255, 133)";
+            obj.style.background = "rgb(148, 255, 133)";
           } else {
-            obj.style.backgroundColor = "rgb(255, 10, 10)";
+            obj.style.background = "rgb(255, 10, 10)";
           }
           obj.style.pointerEvents = "none";
         }
