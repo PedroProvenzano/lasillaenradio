@@ -207,7 +207,9 @@ async function cargarNoticiasSeccion(topico, objetosDOM) {
           } else {
             if (this.naturalHeight > this.naturalWidth) {
               this.style.width = "auto";
-              this.style.height = "70vw";
+              this.style.height = "100vw";
+              objetosDOM[1].style.top = "-40vw";
+              objetosDOM[0].style.top = "-40vw";
               objetosDOM[1].style.width = `${this.width}px`;
               objetosDOM[0].style.width = `${this.width}px`;
             } else {

@@ -70,10 +70,11 @@
       display: flex;
       flex-direction: row;
       align-items: center;
-      justify-content: center;
+      // justify-content: center;
       width: 100%;
       height: 200px;
       .imgDiv {
+        overflow: hidden;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -92,6 +93,7 @@
         justify-content: flex-start;
         p {
           margin-top: 3px;
+          height: auto;
         }
       }
     }
