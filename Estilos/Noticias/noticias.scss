@@ -74,9 +74,14 @@
       justify-content: center;
       width: 100%;
       height: 200px;
-      img {
-        width: 35%;
+      .imgDiv {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         height: 100%;
+        width: 35%;
+        background-color: rgba(0, 0, 0, 0.205);
       }
       .noticia-textos {
         padding: 1rem;

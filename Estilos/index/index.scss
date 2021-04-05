@@ -270,9 +270,9 @@ header {
     opacity: 0%;
     height: auto;
   }
-  img {
-    width: 80vw;
-  }
+  // img {
+  //   width: 80vw;
+  // }
   .cont-arte-txt {
     display: flex;
     flex-direction: column;
@@ -558,6 +558,15 @@ header {
 .fundeu:hover {
   cursor: pointer;
 }
+
+@media (max-width: 1500px) {
+  .bloque-pub-texto {
+    p {
+      font-size: 1vw;
+    }
+  }
+}
+
 // MOBILE
 
 @media (max-width: 570px) {
@@ -779,7 +788,6 @@ header {
       }
       p {
         font-size: 3vw;
-        width: 85%;
         top: -28vw;
       }
     }
@@ -791,8 +799,10 @@ header {
         flex-direction: column;
         width: 85vw;
         height: 100vw;
-        img {
+        .imgDiv {
+          background-color: rgba(0, 0, 0, 0.315);
           width: 100%;
+          height: 50vw;
         }
         .noticia-textos {
           width: 100%;

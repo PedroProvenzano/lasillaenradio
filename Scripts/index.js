@@ -82,7 +82,7 @@ const arrayDomActualidad = [
   contenedorNoticiasActualidad,
 ];
 
-botonActualidad.addEventListener("click", () => {
+botonActualidad.addEventListener("click", async () => {
   cargarNoticiasSeccion("actualidad", arrayDomActualidad);
   cambiarEscena(seccionActualidad, botonActualidad);
 });
@@ -101,7 +101,7 @@ const arrayDomCultura = [
   contenedorNoticiasCultura,
 ];
 
-botonCultura.addEventListener("click", () => {
+botonCultura.addEventListener("click", async () => {
   cargarNoticiasSeccion("cultura", arrayDomCultura);
   cambiarEscena(seccionCultura, botonCultura);
 });
@@ -120,7 +120,7 @@ const arrayDomDeporte = [
   contenedorNoticiasDeporte,
 ];
 
-botonDeporte.addEventListener("click", () => {
+botonDeporte.addEventListener("click", async () => {
   cargarNoticiasSeccion("deporte", arrayDomDeporte);
   cambiarEscena(seccionDeporte, botonDeporte);
 });
@@ -139,7 +139,7 @@ const arrayDomStreaming = [
   contenedorNoticiasStreaming,
 ];
 
-botonStreaming.addEventListener("click", () => {
+botonStreaming.addEventListener("click", async () => {
   cargarNoticiasSeccion("streaming", arrayDomStreaming);
   cambiarEscena(seccionStreaming, botonStreaming);
 });
@@ -158,13 +158,13 @@ const arrayDomEspectaculo = [
   contenedorNoticiasEspectaculo,
 ];
 
-botonEspectaculo.addEventListener("click", () => {
+botonEspectaculo.addEventListener("click", async () => {
   cargarNoticiasSeccion("espectaculo", arrayDomEspectaculo);
   cambiarEscena(seccionEspectaculo, botonEspectaculo);
 });
 
 // Funcion Cargar noticias seccion
-function cargarNoticiasSeccion(topico, objetosDOM) {
+async function cargarNoticiasSeccion(topico, objetosDOM) {
   let noticiasTopico = noticias.filter((obj) => obj.temaPrincipal == topico);
   if (noticiasTopico.length == 0) {
     return;
@@ -183,32 +183,35 @@ function cargarNoticiasSeccion(topico, objetosDOM) {
   let vecesNot = 0;
   objetosDOM[3].innerHTML = "";
   for (let i of noticiasTopico) {
-    if (vecesNot < 6) {
+    if (vecesNot < 5) {
       if (primero) {
         objetosDOM[0].innerText = i.titulo;
         objetosDOM[1].innerText = i.contenidoRes;
         let urlIMG = JSON.parse(i.imagenesUrl);
-        objetosDOM[2].src = urlIMG[0] || urlIMG;
-
-        // check dim
-        if (window.screen.width > 570) {
-          if (objetosDOM[2].height > objetosDOM[2].width) {
-            objetosDOM[2].style.width = "auto";
-            objetosDOM[2].style.height = "40vw";
+        objetosDOM[2].src = (await urlIMG[0]) || (await urlIMG);
+        objetosDOM[2].setAttribute("class", "imagenPortadaRedim");
+        objetosDOM[2].onload = function () {
+          if (window.screen.width > 570) {
+            console.log(`ancho ${this.width}, alto ${this.height}`);
+            if (this.naturalHeight > this.naturalWidth) {
+              this.style.width = "auto";
+              this.style.height = "40vw";
+              objetosDOM[1].style.width = `${this.width}px`;
+            } else {
+              this.style.width = "60vw";
+              this.style.height = "auto";
+              objetosDOM[1].style.width = "60vw";
+            }
           } else {
-            objetosDOM[2].style.width = "60vw";
-            objetosDOM[2].style.height = "auto";
+            if (this.naturalHeight > this.naturalWidth) {
+              this.style.width = "auto";
+              this.style.height = "70vw";
+            } else {
+              this.style.width = "100vw";
+              this.style.height = "auto";
+            }
           }
-        } else {
-          if (objetosDOM[2].height > objetosDOM[2].width) {
-            objetosDOM[2].style.width = "auto";
-            objetosDOM[2].style.height = "70vw";
-          } else {
-            objetosDOM[2].style.width = "100vw";
-            objetosDOM[2].style.height = "auto";
-          }
-        }
-
+        };
         primero = false;
         objetosDOM[2].addEventListener("click", () => {
           cargarNoticia(i);
@@ -220,10 +223,35 @@ function cargarNoticiasSeccion(topico, objetosDOM) {
         let divCont = document.createElement("div");
         divCont.setAttribute("class", "noticia");
         // Imagen noticia
+        let imgDiv = document.createElement("div");
+        imgDiv.setAttribute("class", "imgDiv");
+
         let imgNot = document.createElement("img");
-        let urlIMGnot = JSON.parse(i.imagenesUrl);
-        imgNot.src = urlIMGnot[0] || urlIMGnot;
-        divCont.append(imgNot);
+        imgNot.setAttribute("class", "imgNotRedim");
+        let urlIMGnot = await JSON.parse(i.imagenesUrl);
+        imgNot.onload = function () {
+          if (window.screen.width > 570) {
+            if (this.height < this.width) {
+              this.style.width = "100%";
+              this.style.height = "auto";
+            } else {
+              this.style.width = "auto";
+              this.style.height = "100%";
+            }
+          } else {
+            if (this.height < this.width) {
+              this.style.width = "100%";
+              this.style.height = "auto";
+            } else {
+              this.style.width = "auto";
+              this.style.height = "100%";
+            }
+          }
+        };
+        imgNot.src = (await urlIMGnot[0]) || (await urlIMGnot);
+
+        imgDiv.append(imgNot);
+        divCont.append(imgDiv);
         // Contenido texto
         let notTextCont = document.createElement("div");
         notTextCont.setAttribute("class", "noticia-textos");
@@ -246,6 +274,7 @@ function cargarNoticiasSeccion(topico, objetosDOM) {
       vecesNot++;
     }
   }
+  return "finish";
 }
 
 const buscadorInput = document.getElementById("buscador-input");
@@ -580,6 +609,18 @@ for (let i = 0; i < 3; i++) {
 
 // Cargar imagen del dia
 const imagenDelDia = document.getElementById("arte-img");
+const contArteTxt = document.getElementsByClassName("cont-arte-txt");
+imagenDelDia.onload = function () {
+  if (this.naturalWidth > this.naturalHeight) {
+    this.style.width = "50vw";
+    this.style.height = "auto";
+    contArteTxt[0].style.width = `${this.width}px`;
+  } else {
+    this.style.height = "50vh";
+    this.style.width = "auto";
+    contArteTxt[0].style.width = `${this.width}px`;
+  }
+};
 fetch("https://lasilla-api.herokuapp.com/imagen/todas")
   .then((res) => res.json())
   .then((res) => {
@@ -593,15 +634,7 @@ fetch("https://lasilla-api.herokuapp.com/imagen/todas")
     contenedorArte.style.opacity = "100%";
     spinnerArte.style.display = "none";
   })
-  .then(() => {
-    if (imagenDelDia.naturalWidth > imagenDelDia.naturalHeight) {
-      imagenDelDia.style.width = "50vw";
-      imagenDelDia.style.height = "auto";
-    } else {
-      imagenDelDia.style.height = "50vh";
-      imagenDelDia.style.width = "auto";
-    }
-  });
+  .then(() => {});
 
 // Seccion noticia seleccionada
 let imgNumber = 0;
