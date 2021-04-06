@@ -192,7 +192,6 @@ async function cargarNoticiasSeccion(topico, objetosDOM) {
         objetosDOM[2].setAttribute("class", "imagenPortadaRedim");
         objetosDOM[2].onload = function () {
           if (window.screen.width > 570) {
-            console.log(`ancho ${this.width}, alto ${this.height}`);
             if (this.naturalHeight > this.naturalWidth) {
               this.style.width = "auto";
               this.style.height = "40vw";
@@ -349,27 +348,41 @@ function buscador(searchWord, objetosDOM) {
       if (primero) {
         objetosDOM[0].innerText = i.titulo;
         objetosDOM[1].innerText = i.contenidoRes;
+        objetosDOM[2].setAttribute("class", "imagenPortadaRedim");
+        // imagen
+        objetosDOM[2].onload = function () {
+          if (window.screen.width > 570) {
+            if (this.naturalHeight > this.naturalWidth) {
+              this.style.width = "auto";
+              this.style.height = "40vw";
+              objetosDOM[1].style.width = `${this.width}px`;
+              objetosDOM[0].style.width = `${this.width}px`;
+            } else {
+              this.style.width = "60vw";
+              this.style.height = "auto";
+              objetosDOM[1].style.width = "60vw";
+              objetosDOM[0].style.width = "60vw";
+            }
+          } else {
+            if (this.naturalHeight > this.naturalWidth) {
+              this.style.width = "auto";
+              this.style.height = "100vw";
+              objetosDOM[1].style.top = "-40vw";
+              objetosDOM[0].style.top = "-40vw";
+              objetosDOM[1].style.width = `${this.width}px`;
+              objetosDOM[0].style.width = `${this.width}px`;
+            } else {
+              this.style.width = "100vw";
+              this.style.height = "auto";
+              objetosDOM[0].style.width = "100vw";
+              objetosDOM[1].style.width = "100vw";
+            }
+          }
+        };
         let urlIMG = JSON.parse(i.imagenesUrl);
         objetosDOM[2].src = urlIMG[0] || urlIMG;
 
         // check dim
-        if (window.screen.width > 570) {
-          if (objetosDOM[2].height > objetosDOM[2].width) {
-            objetosDOM[2].style.width = "auto";
-            objetosDOM[2].style.height = "40vw";
-          } else {
-            objetosDOM[2].style.width = "60vw";
-            objetosDOM[2].style.height = "auto";
-          }
-        } else {
-          if (objetosDOM[2].height > objetosDOM[2].width) {
-            objetosDOM[2].style.width = "auto";
-            objetosDOM[2].style.height = "70vw";
-          } else {
-            objetosDOM[2].style.width = "100vw";
-            objetosDOM[2].style.height = "auto";
-          }
-        }
 
         primero = false;
         objetosDOM[2].addEventListener("click", () => {
@@ -382,10 +395,32 @@ function buscador(searchWord, objetosDOM) {
         let divCont = document.createElement("div");
         divCont.setAttribute("class", "noticia");
         // Imagen noticia
+        let imgDiv = document.createElement("div");
+        imgDiv.setAttribute("class", "imgDiv");
         let imgNot = document.createElement("img");
+        imgNot.onload = function () {
+          if (window.screen.width > 570) {
+            if (this.height < this.width) {
+              this.style.width = "100%";
+              this.style.height = "auto";
+            } else {
+              this.style.width = "auto";
+              this.style.height = "100%";
+            }
+          } else {
+            if (this.height < this.width) {
+              this.style.width = "100%";
+              this.style.height = "auto";
+            } else {
+              this.style.width = "auto";
+              this.style.height = "100%";
+            }
+          }
+        };
         let urlIMGnot = JSON.parse(i.imagenesUrl);
         imgNot.src = urlIMGnot[0] || urlIMGnot;
-        divCont.append(imgNot);
+        imgDiv.append(imgNot);
+        divCont.append(imgDiv);
         // Contenido texto
         let notTextCont = document.createElement("div");
         notTextCont.setAttribute("class", "noticia-textos");
@@ -763,7 +798,7 @@ let Trivia = {
   },
   iniciarTrivia() {
     for (let i = 0; i < 3; i++) {
-      this.contenedoresTrivia[i].addEventListener("click", () => {
+      this.contenedoresTrivia[i].addEventListener("click", function () {
         this.inputsTrivia[i].click();
         for (let obj of this.contenedoresTrivia) {
           if (this.checkRespuesta(obj.innerText)) {
