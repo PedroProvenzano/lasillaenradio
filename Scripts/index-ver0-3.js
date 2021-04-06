@@ -799,3 +799,6 @@ const fundeu = document.getElementById("fundeu");
 fundeu.addEventListener("click", () => {
   window.open("https://fundeu.fiile.org.ar/");
 });
+
+// A;adir visita
+fetch("https://lasilla-api.herokuapp.com/visitas/add").then(() => {});
