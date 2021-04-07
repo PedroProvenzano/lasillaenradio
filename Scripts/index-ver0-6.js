@@ -844,3 +844,8 @@ fundeu.addEventListener("click", () => {
 
 // A;adir visita
 fetch("https://lasilla-api.herokuapp.com/visitas/add").then(() => {});
+
+// Iframe deal
+const iFrameRadio = document.getElementById("iframeRadio");
+iFrameRadio.scrolling = "no";
+iFrameRadio.frameBorder = "0";

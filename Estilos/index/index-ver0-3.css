@@ -601,6 +601,10 @@ a {
   margin-left: -78px;
 }
 
+.logo {
+  width: 250px;
+}
+
 main {
   background-image: url(../../imagenes/fondo.png);
   background-repeat: no-repeat;
@@ -1843,4 +1847,4 @@ header {
     font-size: 2vw;
   }
 }
-/*# sourceMappingURL=index-ver0-2.css.map */
+/*# sourceMappingURL=index-ver0-3.css.map */

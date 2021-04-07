@@ -9,7 +9,7 @@
       integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="Estilos/index/index-ver0-2.css" />
+    <link rel="stylesheet" href="Estilos/index/index-ver0-3.css" />
     <script
       src="https://kit.fontawesome.com/c19f763333.js"
       crossorigin="anonymous"
@@ -24,7 +24,7 @@
             <img
               src="imagenes/la-silla-noticias-logo.png"
               alt="logo-lasilla-noticias"
-              width="250px"
+              class="logo"
             />
           </a>
           <p class="slogan">Noticias concretas</p>
@@ -37,12 +37,9 @@
           </p>
           <iframe
             style="padding: 0px"
-            frameborder="0"
             src="https://player.raddios.com/multiplayer_get.php?r=38&amp;autoplay=1&amp;currentsong=0&amp;r_tipo=22&amp;lang=es"
-            width="undefined"
             height="50"
-            allowtransparency="true"
-            scrolling="no"
+            id="iframeRadio"
           ></iframe>
         </div>
       </div>
@@ -95,7 +92,7 @@
               src="..."
               class="card-img-top img-general-principal"
               id="img-not1"
-              alt=""
+              alt="imagen noticia principal 1"
             />
           </div>
           <div class="card-body">
@@ -113,7 +110,7 @@
               src="..."
               class="card-img-top img-general-secundaria"
               id="img-not2"
-              alt=""
+              alt="imagen noticia principal 2"
             />
           </div>
           <div class="card-body">
@@ -131,7 +128,7 @@
               src="..."
               class="card-img-top img-general-secundaria"
               id="img-not3"
-              alt=""
+              alt="imagen noticia principal 3"
             />
           </div>
           <div class="card-body">
@@ -149,7 +146,7 @@
               src="..."
               class="card-img-top img-general-principal"
               id="img-not4"
-              alt=""
+              alt="imagen noticia principal 4"
             />
           </div>
           <div class="card-body">
@@ -166,7 +163,10 @@
       <!-- Seccion de contemporaneo -->
       <section class="sectionVida" id="sectionVida">
         <div class="bloque-pub" id="openGallo">
-          <img src="./imagenes/openGallo/openGallo.png" alt="" />
+          <img
+            src="./imagenes/openGallo/openGallo.png"
+            alt="Open Gallo Banner"
+          />
           <div class="bloque-pub-texto">
             <p class="pub-titulo">Open Gallo</p>
             <p>
@@ -191,7 +191,11 @@
           </div>
           <div class="vida-contenido-cont-general">
             <div class="vida-contenido" id="vida-sana-contenido">
-              <img class="vida-img" src="./imagenes/imagenCarga.jpg" alt="" />
+              <img
+                class="vida-img"
+                src="./imagenes/imagenCarga.jpg"
+                alt="imagen de vida sana"
+              />
               <h2 class="vida-titulo-not">Titulo nota</h2>
               <p class="vida-autor">Autor</p>
               <p class="vida-fuente">Fuente</p>
@@ -203,7 +207,11 @@
               id="medio-amb-contenido"
               style="display: none"
             >
-              <img class="vida-img" src="./imagenes/imagenCarga.jpg" alt="" />
+              <img
+                class="vida-img"
+                src="./imagenes/imagenCarga.jpg"
+                alt="imagen de medio ambiente"
+              />
               <h2 class="vida-titulo-not">Titulo nota</h2>
               <p class="vida-autor">Autor</p>
               <p class="vida-fuente">Fuente</p>
@@ -215,7 +223,11 @@
               id="genero-contenido"
               style="display: none"
             >
-              <img class="vida-img" src="./imagenes/imagenCarga.jpg" alt="" />
+              <img
+                class="vida-img"
+                src="./imagenes/imagenCarga.jpg"
+                alt="imagen de genero"
+              />
               <h2 class="vida-titulo-not">Titulo nota</h2>
               <p class="vida-autor">Autor</p>
               <p class="vida-fuente">Fuente</p>
@@ -228,6 +240,7 @@
 
       <!--Section 2 (boton a contacto)-->
       <section class="section2" id="contacto">
+        <h2 class="HiddenObject">Contacto</h2>
         <div class="boton-contacto" id="boton-contacto">
           TU OPINIÓN EN UN CLICK
         </div>
@@ -238,7 +251,7 @@
         <div class="cont-head-form">
           <h3>Contacto</h3>
         </div>
-        <form class="form-cont" action="">
+        <form class="form-cont">
           <div class="form-cont-inputs">
             <input
               type="text"
@@ -288,18 +301,18 @@
             <img
               class="imagen-noticia scrollImg"
               src="./imagenes/imagenCarga.jpg"
-              alt=""
+              alt="imagen noticia"
             />
             <img
               class="imagen-noticia scrollImg"
               src="./imagenes/imagenNoticiaPortada.jpg"
-              alt=""
+              alt="imagen noticia"
               style="display: none"
             />
             <img
               class="imagen-noticia scrollImg"
               src="./imagenes/imagenNoticiaPrueba.png"
-              alt=""
+              alt="imagen noticia"
               style="display: none"
             />
           </div>
@@ -320,8 +333,9 @@
 
       <!-- Section Arte -->
       <section class="sectionArte" id="sectionArte">
+        <h2 class="HiddenObject">Arte</h2>
         <div class="bloque-pub" id="PerVoi">
-          <img src="./imagenes/openGallo/PerVoi.png" alt="" />
+          <img src="./imagenes/openGallo/PerVoi.png" alt="PerVoi Banner" />
           <div class="bloque-pub-texto">
             <p class="pub-titulo">PER VOI</p>
             <p>
@@ -340,7 +354,11 @@
           <div class="cont-arte-titulo">
             <p class="arte-titulo">Dato Art</p>
           </div>
-          <img src="./imagenes/imagenNoticiaPrueba.png" alt="" id="arte-img" />
+          <img
+            src="./imagenes/imagenNoticiaPrueba.png"
+            alt="imagen de arte"
+            id="arte-img"
+          />
           <div class="cont-arte-txt">
             <p id="arte-txt-desc">Descripcion del arte del día</p>
             <p id="arte-txt-autor">Autor: Ejemplo de nombre</p>
@@ -360,15 +378,15 @@
             ¿Quién fue el compositor de Té para tres?
           </p>
           <div class="trivia-op-cont">
-            <input name="trivia" type="radio" class="trivia" value="a" />
+            <input name="trivia" type="radio" class="trivia" value="a" id="a" />
             <label for="a" class="triviaLabel">Gustavo Cerati</label>
           </div>
           <div class="trivia-op-cont">
-            <input name="trivia" type="radio" class="trivia" value="b" />
+            <input name="trivia" type="radio" class="trivia" value="b" id="b" />
             <label for="b" class="triviaLabel">Luis Alberto Spinetta</label>
           </div>
           <div class="trivia-op-cont">
-            <input name="trivia" type="radio" class="trivia" value="c" />
+            <input name="trivia" type="radio" class="trivia" value="c" id="c" />
             <label for="c" class="triviaLabel">Charly García</label>
           </div>
         </form>
@@ -385,7 +403,6 @@
               <a>
                 <img
                   class="redondeo"
-                  width="200px"
                   src="imagenes/1x/marcos.jpeg"
                   alt="actualidad"
               /></a>
@@ -398,8 +415,7 @@
               <a>
                 <img
                   class="redondeo"
-                  width="200px"
-                  src="imagenes/1x/Maria julia rodriguez.jpeg"
+                  src="imagenes/1x/Maria-julia-rodriguez.jpeg"
                   alt="Redes"
               /></a>
             </div>
@@ -411,7 +427,6 @@
               <a>
                 <img
                   class="redondeo"
-                  width="200px"
                   src="imagenes/1x/juan.jpeg"
                   alt="deportes"
               /></a>
@@ -424,7 +439,6 @@
               <a>
                 <img
                   class="redondeo"
-                  width="195px"
                   src="imagenes/1x/aldana.jpeg"
                   alt="espectaculos"
               /></a>
@@ -437,8 +451,7 @@
               <a>
                 <img
                   class="redondeo"
-                  width="200px"
-                  src="imagenes/1x/daniela redes.jpeg"
+                  src="imagenes/1x/daniela-redes.jpeg"
                   alt="Redes"
               /></a>
             </div>
@@ -569,7 +582,7 @@
         </div>
         <div class="footer-texto">
           <div class="fundeu" id="fundeu">
-            <img src="./imagenes/openGallo/logofundeau.png" alt="" />
+            <img src="./imagenes/openGallo/logofundeau.png" alt="Logo Fundeu" />
             <p>https://fundeu.fiile.org.ar/</p>
           </div>
           <p class="firma">
@@ -580,7 +593,6 @@
           <div id="cont_92467cb641eb2f38b05a151e53ecec0c">
             <script
               id="climaScript"
-              type="text/javascript"
               async
               src="https://www.meteored.com.ar/wid_loader/92467cb641eb2f38b05a151e53ecec0c"
             ></script>
