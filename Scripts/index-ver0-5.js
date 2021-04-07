@@ -778,7 +778,7 @@ fetch("https://lasilla-api.herokuapp.com/trivia/todas")
     Trivia.solucion = res[0].solucion;
   })
   .then(() => {
-    Trivia.iniciarTrivia();
+    iniciarTrivia();
     Trivia.spinnerTrivia.style.display = "none";
     Trivia.contenedor.style.opacity = "100%";
   });
@@ -796,45 +796,23 @@ let Trivia = {
       return false;
     }
   },
-  iniciarTrivia() {
-    // 1
-    this.contenedoresTrivia[0].addEventListener("click", () => {
-      this.inputsTrivia[0].click();
-      for (let obj of this.contenedoresTrivia) {
-        if (this.checkRespuesta(obj.innerText)) {
-          obj.style.background = "rgb(148, 255, 133)";
-        } else {
-          obj.style.background = "rgb(255, 10, 10)";
-        }
-        obj.style.pointerEvents = "none";
-      }
-    });
-    // 2
-    this.contenedoresTrivia[1].addEventListener("click", () => {
-      this.inputsTrivia[1].click();
-      for (let obj of this.contenedoresTrivia) {
-        if (this.checkRespuesta(obj.innerText)) {
-          obj.style.background = "rgb(148, 255, 133)";
-        } else {
-          obj.style.background = "rgb(255, 10, 10)";
-        }
-        obj.style.pointerEvents = "none";
-      }
-    });
-    // 3
-    this.contenedoresTrivia[2].addEventListener("click", () => {
-      this.inputsTrivia[2].click();
-      for (let obj of this.contenedoresTrivia) {
-        if (this.checkRespuesta(obj.innerText)) {
-          obj.style.background = "rgb(148, 255, 133)";
-        } else {
-          obj.style.background = "rgb(255, 10, 10)";
-        }
-        obj.style.pointerEvents = "none";
-      }
-    });
-  },
 };
+
+function iniciarTrivia() {
+  for (let i = 0; i < 3; i++) {
+    Trivia.contenedoresTrivia[i].addEventListener("click", () => {
+      Trivia.inputsTrivia[i].click();
+      for (let obj of Trivia.contenedoresTrivia) {
+        if (Trivia.checkRespuesta(obj.innerText)) {
+          obj.style.background = "rgb(148, 255, 133)";
+        } else {
+          obj.style.background = "rgb(255, 10, 10)";
+        }
+        obj.style.pointerEvents = "none";
+      }
+    });
+  }
+}
 
 const contClima = document.getElementsByClassName("clima");
 if (window.screen.width <= 570) {
