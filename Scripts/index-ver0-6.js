@@ -797,13 +797,19 @@ let Trivia = {
     }
   },
 };
-
+const regexTriv = / /gi;
 function iniciarTrivia() {
   for (let i = 0; i < 3; i++) {
     Trivia.contenedoresTrivia[i].addEventListener("click", () => {
       Trivia.inputsTrivia[i].click();
       for (let obj of Trivia.contenedoresTrivia) {
-        if (Trivia.checkRespuesta(obj.innerText)) {
+        if (
+          Trivia.checkRespuesta(
+            obj.textContent
+              .replace(regexTriv, "")
+              .replace(/(?:\r\n|\r|\n)/g, "")
+          )
+        ) {
           obj.style.background = "rgb(148, 255, 133)";
         } else {
           obj.style.background = "rgb(255, 10, 10)";
