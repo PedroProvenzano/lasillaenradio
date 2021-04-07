@@ -797,19 +797,42 @@ let Trivia = {
     }
   },
   iniciarTrivia() {
-    for (let i = 0; i < 3; i++) {
-      this.contenedoresTrivia[i].addEventListener("click", function () {
-        this.inputsTrivia[i].click();
-        for (let obj of this.contenedoresTrivia) {
-          if (this.checkRespuesta(obj.innerText)) {
-            obj.style.background = "rgb(148, 255, 133)";
-          } else {
-            obj.style.background = "rgb(255, 10, 10)";
-          }
-          obj.style.pointerEvents = "none";
+    // 1
+    this.contenedoresTrivia[0].addEventListener("click", () => {
+      this.inputsTrivia[0].click();
+      for (let obj of this.contenedoresTrivia) {
+        if (this.checkRespuesta(obj.innerText)) {
+          obj.style.background = "rgb(148, 255, 133)";
+        } else {
+          obj.style.background = "rgb(255, 10, 10)";
         }
-      });
-    }
+        obj.style.pointerEvents = "none";
+      }
+    });
+    // 2
+    this.contenedoresTrivia[1].addEventListener("click", () => {
+      this.inputsTrivia[1].click();
+      for (let obj of this.contenedoresTrivia) {
+        if (this.checkRespuesta(obj.innerText)) {
+          obj.style.background = "rgb(148, 255, 133)";
+        } else {
+          obj.style.background = "rgb(255, 10, 10)";
+        }
+        obj.style.pointerEvents = "none";
+      }
+    });
+    // 3
+    this.contenedoresTrivia[2].addEventListener("click", () => {
+      this.inputsTrivia[2].click();
+      for (let obj of this.contenedoresTrivia) {
+        if (this.checkRespuesta(obj.innerText)) {
+          obj.style.background = "rgb(148, 255, 133)";
+        } else {
+          obj.style.background = "rgb(255, 10, 10)";
+        }
+        obj.style.pointerEvents = "none";
+      }
+    });
   },
 };
 
