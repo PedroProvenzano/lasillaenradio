@@ -313,11 +313,11 @@ header {
   }
   .preguntaTrivia {
     font-size: 1.3vw;
-    width: 40%;
   }
   .contenedorTrivia {
     opacity: 0%;
     display: flex;
+    width: 80vw;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -750,7 +750,6 @@ header {
         font-size: 9vw;
       }
       .preguntaTrivia {
-        width: 100%;
         font-size: 4vw;
       }
       .trivia-op-cont {

@@ -1049,7 +1049,6 @@ header {
 
 .sectionTrivia .preguntaTrivia {
   font-size: 1.3vw;
-  width: 40%;
 }
 
 .sectionTrivia .contenedorTrivia {
@@ -1057,6 +1056,7 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: 80vw;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -1674,7 +1674,6 @@ header {
     font-size: 9vw;
   }
   .sectionTrivia .contenedorTrivia .preguntaTrivia {
-    width: 100%;
     font-size: 4vw;
   }
   .sectionTrivia .contenedorTrivia .trivia-op-cont {
@@ -1847,4 +1846,4 @@ header {
     font-size: 2vw;
   }
 }
-/*# sourceMappingURL=index-ver0-3.css.map */
+/*# sourceMappingURL=index-ver0-4.css.map */
