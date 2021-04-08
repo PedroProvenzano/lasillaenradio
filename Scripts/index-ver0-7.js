@@ -775,7 +775,9 @@ fetch("https://lasilla-api.herokuapp.com/trivia/todas")
     triviaLabels[0].innerText = res[0].respuestaUno;
     triviaLabels[1].innerText = res[0].respuestaDos;
     triviaLabels[2].innerText = res[0].respuestaTres;
-    Trivia.solucion = res[0].solucion;
+    Trivia.solucion = res[0].solucion
+      .replace(regexTriv, "")
+      .replace(/(?:\r\n|\r|\n)/g, "");
   })
   .then(() => {
     iniciarTrivia();
