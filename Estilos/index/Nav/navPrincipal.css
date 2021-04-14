@@ -59,6 +59,14 @@
   overflow: hidden;
 }
 
+.contenedor-barra-navegacion .barra-navegacion .boton-cont-nav .boton-cont-nav-sub {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 50%;
+  height: 100%;
+}
+
 .contenedor-barra-navegacion .barra-navegacion .boton-cont-nav .boton-nav {
   width: 100%;
   position: relative;

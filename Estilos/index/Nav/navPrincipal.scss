@@ -30,6 +30,11 @@ $max-width: 90%;
       font-size: 1vw;
       user-select: none;
       overflow: hidden;
+      .boton-cont-nav-sub {
+        display: flex;
+        width: 50%;
+        height: 100%;
+      }
       .boton-nav {
         width: 100%;
         position: relative;
