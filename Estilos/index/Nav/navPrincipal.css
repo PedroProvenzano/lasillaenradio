@@ -1,4 +1,5 @@
 .contenedor-barra-navegacion {
+  overflow: hidden;
   background-color: #ffa733;
   width: 100%;
   display: -webkit-box;
@@ -50,22 +51,12 @@
   height: 100%;
   width: 50vw;
   max-width: 50vw;
-  font-size: 1.5vw;
+  font-size: 1vw;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
   overflow: hidden;
-}
-
-.contenedor-barra-navegacion .barra-navegacion .boton-cont-nav #boton-inicio {
-  margin-right: 2rem;
-  position: relative;
-  top: -3rem;
-}
-
-.contenedor-barra-navegacion .barra-navegacion .boton-cont-nav #boton-inicio:hover {
-  cursor: pointer;
 }
 
 .contenedor-barra-navegacion .barra-navegacion .boton-cont-nav .boton-nav {
@@ -111,6 +102,14 @@
       -ms-flex-align: center;
           align-items: center;
   width: 25vw;
+}
+
+.contenedor-barra-navegacion .barra-navegacion .redes-cont-nav #boton-inicio {
+  color: #212915;
+  font-size: 2vw;
+  position: relative;
+  top: 3rem;
+  cursor: pointer;
 }
 
 .contenedor-barra-navegacion .barra-navegacion .buscador-input {

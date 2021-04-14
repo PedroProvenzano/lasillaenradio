@@ -18,6 +18,7 @@ const seccionNoticia = document.getElementById("section-noticia");
 const seccionTrivia = document.getElementById("sectionTrivia");
 const seccionContemporaneo = document.getElementById("sectionVida");
 const seccionBuscador = document.getElementById("seccion-buscador");
+const seccionEntrevistas = document.getElementById("entrevistas");
 const escenasArray = [
   seccionNoticiasPrincipales,
   seccionBotonContacto,
@@ -32,6 +33,7 @@ const escenasArray = [
   seccionTrivia,
   seccionContemporaneo,
   seccionBuscador,
+  seccionEntrevistas,
 ];
 const escenasInicio = [
   seccionNoticiasPrincipales,
@@ -48,6 +50,7 @@ const escenasNoticias = [
   seccionStreaming,
   seccionEspectaculo,
   seccionBuscador,
+  seccionEntrevistas,
 ];
 // Botones
 // Escena NAV
@@ -57,12 +60,14 @@ const botonCultura = document.getElementById("boton-cultura");
 const botonDeporte = document.getElementById("boton-deporte");
 const botonStreaming = document.getElementById("boton-streaming");
 const botonEspectaculo = document.getElementById("boton-espectaculo");
+const botonEntrevistas = document.getElementById("boton-entrevistas");
 const botonArray = [
   botonActualidad,
   botonCultura,
   botonDeporte,
   botonStreaming,
   botonEspectaculo,
+  botonEntrevistas,
 ];
 // Valores
 
@@ -162,6 +167,50 @@ botonEspectaculo.addEventListener("click", async () => {
   cargarNoticiasSeccion("espectaculo", arrayDomEspectaculo);
   cambiarEscena(seccionEspectaculo, botonEspectaculo);
 });
+
+// Entrevistas
+botonEntrevistas.addEventListener("click", async () => {
+  cambiarEscena(seccionEntrevistas, botonEntrevistas);
+  getVideosHandler();
+});
+const contenedorVideos = document.getElementById("contenedor-videos");
+async function getVideosHandler() {
+  fetch(
+    `https://www.googleapis.com/youtube/v3/playlistItems?part=contentDetails&part=snippet&playlistId=PLhVVuQDrmmvhHk4B4RSB6ohdi5k1jr8NC&key=AIzaSyDOyvrBMukXKGNuwEC2bcB3b3EdMt2CYxA`
+  )
+    .then((data) => data.json())
+    .then((data) => {
+      contenedorVideos.innerHTML = "";
+      for (let item of data.items) {
+        // Contenedor
+        let divCont = document.createElement("div");
+        divCont.setAttribute("class", "video");
+        // Titulo
+        let h3Titulo = document.createElement("h3");
+        h3Titulo.innerText = item.snippet.title;
+        divCont.append(h3Titulo);
+        // IFrame
+        let iframe = document.createElement("iframe");
+        iframe.setAttribute(
+          "src",
+          `https://www.youtube.com/embed/${item.contentDetails.videoId}`
+        );
+        iframe.setAttribute("title", item.snippet.title);
+        iframe.setAttribute("frameborder", "0");
+        iframe.setAttribute(
+          "allow",
+          "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        );
+        iframe.setAttribute("allowfullscreen", "true");
+        divCont.append(iframe);
+        // Descripcion
+        let pDesc = document.createElement("p");
+        pDesc.innerText = item.snippet.description;
+        divCont.append(pDesc);
+        contenedorVideos.append(divCont);
+      }
+    });
+}
 
 // Funcion Cargar noticias seccion
 async function cargarNoticiasSeccion(topico, objetosDOM) {
@@ -480,8 +529,8 @@ function reinciarBotones(botonActual) {
     }
     if (botonActual != botonInicio) {
       botonInicio.style.top = "0";
-      botonInicio.style.width = "auto";
-      botonInicio.style.margin = "0 10px 0 10px";
+      // botonInicio.style.width = "auto";
+      // botonInicio.style.margin = "0 10px 0 10px";
     }
   }
 }

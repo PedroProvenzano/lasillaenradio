@@ -4,6 +4,7 @@ $secondary-color: #ffa733;
 $max-width: 90%;
 
 .contenedor-barra-navegacion {
+  overflow: hidden;
   background-color: $secondary-color;
   width: 100%;
   display: flex;
@@ -26,17 +27,9 @@ $max-width: 90%;
       height: 100%;
       width: 50vw;
       max-width: 50vw;
-      font-size: 1.5vw;
+      font-size: 1vw;
       user-select: none;
       overflow: hidden;
-      #boton-inicio {
-        margin-right: 2rem;
-        position: relative;
-        top: -3rem;
-      }
-      #boton-inicio:hover {
-        cursor: pointer;
-      }
       .boton-nav {
         width: 100%;
         position: relative;
@@ -61,6 +54,13 @@ $max-width: 90%;
       justify-content: space-around;
       align-items: center;
       width: 25vw;
+      #boton-inicio {
+        color: rgb(33, 41, 21);
+        font-size: 2vw;
+        position: relative;
+        top: 3rem;
+        cursor: pointer;
+      }
     }
     .buscador-input {
       border-radius: 5%;
