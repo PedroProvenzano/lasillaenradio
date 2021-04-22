@@ -244,6 +244,23 @@ header {
   justify-content: center;
   flex-direction: column;
   margin-top: 5vw;
+  margin-bottom: 5vw;
+  .contenedor-arte-noticias {
+    .card5,
+    .card6 {
+      width: 25%;
+      height: 90%;
+      .card-text {
+        height: 5vw;
+        overflow-y: scroll;
+      }
+    }
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 80vw;
+  }
   .spinner-positionArt {
     position: relative;
     top: 20vw;
@@ -354,13 +371,14 @@ header {
 .sectionVida {
   width: 80vw;
   display: flex; // none
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   margin: 0 0 4vw 0;
   .spinner-positionVida {
     position: relative;
-    top: 25vw;
+    top: 0vw;
+    left: 35vw;
     width: 100px;
     height: 100px;
     font-size: 2rem;
@@ -369,14 +387,14 @@ header {
     border-radius: 15px;
     display: flex;
     flex-direction: column;
-    width: 100%;
-    height: 50vw;
+    width: 50%;
+    height: 40vw;
     transition: opacity 200ms;
     opacity: 0%;
   }
   .vida-nav-cont {
     display: flex;
-    width: 100%;
+    width: 90%;
     height: 5%;
     align-items: center;
     .vida-titulo {
@@ -387,7 +405,7 @@ header {
       border: 1px outset rgb(0, 119, 6);
       border-radius: 15px 15px 0 0;
       height: 95%;
-      width: 15%;
+      width: 30%;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -405,7 +423,7 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
+    width: 90%;
     height: 100%;
     padding: 2vw;
     overflow: auto;
@@ -424,7 +442,7 @@ header {
         top: -10vw;
         color: white;
         background-color: rgba(0, 0, 0, 0.568);
-        width: 80%;
+        width: 90%;
         height: auto;
         min-height: 5vw;
         font-size: 2vw;
@@ -434,11 +452,11 @@ header {
         justify-content: center;
       }
       p {
-        width: 80%;
+        width: 90%;
       }
       img {
         height: auto;
-        width: 80%;
+        width: 90%;
         margin-top: 1vw;
       }
       .vida-contenido-txt {
@@ -447,6 +465,48 @@ header {
         justify-content: center;
         align-items: center;
       }
+    }
+  }
+}
+
+// Dato meme
+.dato-meme {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  // justify-content: center;
+  height: 40vw;
+  .dato-meme-text {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 5%;
+    p {
+      font-weight: 600;
+      border: 2px solid rgb(0, 119, 6);
+      border-radius: 15px 15px 0 0;
+      text-align: center;
+      border-bottom: 0;
+      width: 12vw;
+      height: 100%;
+      margin: 0;
+      user-select: none;
+      font-size: 1.2vw;
+    }
+  }
+  .dato-meme-img {
+    background-color: rgb(230, 230, 230);
+    border: 2px solid rgb(0, 119, 6);
+    width: 100%;
+    height: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img {
+      display: none;
+      width: 100%;
     }
   }
 }
@@ -761,6 +821,19 @@ header {
   }
   .sectionArte {
     margin-top: 10vw;
+    .contenedor-arte-noticias {
+      .card5,
+      .card6 {
+        width: 100%;
+        padding: 5vw;
+        .card-text {
+          height: 25vw;
+          overflow-y: scroll;
+        }
+      }
+      width: 100vw;
+      flex-direction: column;
+    }
     .contenedor-arte {
       .cont-arte-titulo {
         width: 24vw;
@@ -896,6 +969,7 @@ header {
     }
   }
   .sectionVida {
+    flex-direction: column;
     .vida-nav-cont {
       height: 10%;
       .vida-titulo {
@@ -904,7 +978,11 @@ header {
       }
     }
     .vida-cont {
+      align-items: center;
+      justify-content: center;
       height: 100vw;
+      width: 90vw;
+      margin-bottom: 2rem;
     }
     .vida-contenido-cont-general {
       .vida-contenido {
@@ -920,6 +998,22 @@ header {
         p {
           font-size: 3vw;
         }
+      }
+    }
+
+    // Dato meme
+    .dato-meme {
+      width: 100%;
+      height: 100vw;
+      .dato-meme-text {
+        height: 7%;
+        p {
+          width: 40vw;
+          font-size: 4vw;
+        }
+      }
+      .dato-meme-img {
+        height: 93%;
       }
     }
   }

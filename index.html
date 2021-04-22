@@ -9,7 +9,8 @@
       integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="Estilos/index/index-ver0-5.css" />
+    <link rel="stylesheet" href="Estilos/index/index-ver0-6.css" />
+    <link rel="stylesheet" href="./Estilos/Banners/Banners.css" />
     <script
       src="https://kit.fontawesome.com/c19f763333.js"
       crossorigin="anonymous"
@@ -164,23 +165,52 @@
           </div>
         </div>
       </section>
+      <div class="banner-fondo" id="institutoCard">
+        <div class="banner">
+          <div class="banner-parte-uno">
+            <img
+              src="./imagenes/Logo_cardenas_200x200.png"
+              alt="Logo Cardenas"
+            />
+            <div class="texto-uno">
+              <div>
+                <p>Instituto secundario</p>
+                <span>(A-694)</span>
+              </div>
+              <p>Dr. EMILIO F. CARDENAS</p>
+              <p>Títulos Oficiales / Enseñanza Laica</p>
+              <p>ABIERTA LA INSCRIPCION PARA EL AÑO 2022</p>
+            </div>
+          </div>
+          <div class="banner-parte-dos">
+            <div>
+              <p>
+                BACHILLER EN ECONOMIA y ADMINISTRACION Turno Mañana 7,50 a 13hs.
+                <br />
+                Duración 5 años
+              </p>
+            </div>
+            <div>
+              <p>
+                PERITO MERCANTIL con ADMINISTRACION de EMPRESAS Turno
+                Vespertino: 18 a 21:50hs.<br />
+                Duración 4 años
+              </p>
+            </div>
+          </div>
+          <div class="banner-parte-tres">
+            <p>Cuotas accesibles en sus dos planes</p>
+            <p>CUENCA 862 - CABA. 5059-3737 - 15 3363 1841</p>
+            <p>INFORMES E INSCRIPCIÓN A TRAVÉS DE:</p>
+            <p>www.institutoemiliocardenas.com.ar</p>
+            <p>institutocardenas@hotmail.com</p>
+            <p>@institutoemiliocardenas</p>
+          </div>
+        </div>
+      </div>
 
       <!-- Seccion de contemporaneo -->
       <section class="sectionVida" id="sectionVida">
-        <div class="bloque-pub" id="openGallo">
-          <img
-            src="./imagenes/openGallo/openGallo.png"
-            alt="Open Gallo Banner"
-          />
-          <div class="bloque-pub-texto">
-            <p class="pub-titulo">Open Gallo</p>
-            <p>
-              Canchas de Fútbol 5-6-7 /Escuela de Fútbol Masculino y Femenino/
-              Gimnasio/ Salón de Danzas/ Estacionamiento Propio/ Bar
-            </p>
-            <p>4862-9392/9386 4865-4057</p>
-          </div>
-        </div>
         <div
           class="spinner-border spinner-positionVida"
           id="spinnerVida"
@@ -239,6 +269,15 @@
               <p class="vida-contenido-txt">contenido de vida sana</p>
               <p class="vida-fecha">Fecha</p>
             </div>
+          </div>
+        </div>
+        <div class="dato-meme">
+          <div class="dato-meme-text">
+            <p>Dato Meme</p>
+            <p>Por Daniel Sanchez</p>
+          </div>
+          <div class="dato-meme-img">
+            <img id="img-meme" src="./imagenes/datomeme.jpeg" alt="dato meme" />
           </div>
         </div>
       </section>
@@ -355,18 +394,56 @@
           id="spinnerArte"
           role="status"
         ></div>
-        <div class="contenedor-arte" id="contenedor-arte">
-          <div class="cont-arte-titulo">
-            <p class="arte-titulo">Dato Art</p>
+        <div class="contenedor-arte-noticias">
+          <div class="card5">
+            <div class="card-cont-img">
+              <img
+                src="..."
+                class="card-img-top img-general-principal"
+                id="img-not5"
+                alt="imagen noticia principal 5"
+              />
+            </div>
+            <div class="card-body">
+              <h5 class="card-title" id="tit-not5">Titulo principal</h5>
+              <p class="card-text" id="cont-not5">Cargando noticia...</p>
+              <div class="card-cont-boton-autor">
+                <a id="btn-not5" class="btn btn-primary">Leer nota!</a>
+                <p id="aut-not5">Cargando autor...</p>
+              </div>
+            </div>
           </div>
-          <img
-            src="./imagenes/imagenNoticiaPrueba.png"
-            alt="imagen de arte"
-            id="arte-img"
-          />
-          <div class="cont-arte-txt">
-            <p id="arte-txt-desc">Descripcion del arte del día</p>
-            <p id="arte-txt-autor">Autor: Ejemplo de nombre</p>
+          <div class="contenedor-arte" id="contenedor-arte">
+            <div class="cont-arte-titulo">
+              <p class="arte-titulo">Dato Art</p>
+            </div>
+            <img
+              src="./imagenes/imagenNoticiaPrueba.png"
+              alt="imagen de arte"
+              id="arte-img"
+            />
+            <div class="cont-arte-txt">
+              <p id="arte-txt-desc">Descripcion del arte del día</p>
+              <p id="arte-txt-autor">Autor: Ejemplo de nombre</p>
+            </div>
+          </div>
+          <div class="card6">
+            <div class="card-cont-img">
+              <img
+                src="..."
+                class="card-img-top img-general-principal"
+                id="img-not6"
+                alt="imagen noticia principal 6"
+              />
+            </div>
+            <div class="card-body">
+              <h5 class="card-title" id="tit-not6">Titulo principal</h5>
+              <p class="card-text" id="cont-not6">Cargando noticia...</p>
+              <div class="card-cont-boton-autor">
+                <a id="btn-not6" class="btn btn-primary">Leer nota!</a>
+                <p id="aut-not6">Cargando autor...</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -636,7 +713,7 @@
       integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
       crossorigin="anonymous"
     ></script>
-    <script src="./Scripts/index-ver0-7.js"></script>
+    <script src="./Scripts/index-ver0-8.js"></script>
     <script src="./Scripts/contacto.js"></script>
   </body>
 </html>

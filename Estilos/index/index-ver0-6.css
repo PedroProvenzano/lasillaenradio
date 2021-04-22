@@ -959,6 +959,36 @@ header {
       -ms-flex-direction: column;
           flex-direction: column;
   margin-top: 5vw;
+  margin-bottom: 5vw;
+}
+
+.sectionArte .contenedor-arte-noticias {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 80vw;
+}
+
+.sectionArte .contenedor-arte-noticias .card5,
+.sectionArte .contenedor-arte-noticias .card6 {
+  width: 25%;
+  height: 90%;
+}
+
+.sectionArte .contenedor-arte-noticias .card5 .card-text,
+.sectionArte .contenedor-arte-noticias .card6 .card-text {
+  height: 5vw;
+  overflow-y: scroll;
 }
 
 .sectionArte .spinner-positionArt {
@@ -1120,10 +1150,10 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1135,7 +1165,8 @@ header {
 
 .sectionVida .spinner-positionVida {
   position: relative;
-  top: 25vw;
+  top: 0vw;
+  left: 35vw;
   width: 100px;
   height: 100px;
   font-size: 2rem;
@@ -1150,8 +1181,8 @@ header {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 100%;
-  height: 50vw;
+  width: 50%;
+  height: 40vw;
   -webkit-transition: opacity 200ms;
   transition: opacity 200ms;
   opacity: 0%;
@@ -1161,7 +1192,7 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 100%;
+  width: 90%;
   height: 5%;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -1179,7 +1210,7 @@ header {
   border: 1px outset #007706;
   border-radius: 15px 15px 0 0;
   height: 95%;
-  width: 15%;
+  width: 30%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1211,7 +1242,7 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 100%;
+  width: 90%;
   height: 100%;
   padding: 2vw;
   overflow: auto;
@@ -1243,7 +1274,7 @@ header {
   top: -10vw;
   color: white;
   background-color: rgba(0, 0, 0, 0.568);
-  width: 80%;
+  width: 90%;
   height: auto;
   min-height: 5vw;
   font-size: 2vw;
@@ -1263,12 +1294,12 @@ header {
 }
 
 .sectionVida .vida-contenido-cont-general .vida-contenido p {
-  width: 80%;
+  width: 90%;
 }
 
 .sectionVida .vida-contenido-cont-general .vida-contenido img {
   height: auto;
-  width: 80%;
+  width: 90%;
   margin-top: 1vw;
 }
 
@@ -1286,6 +1317,72 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.dato-meme {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 40vw;
+}
+
+.dato-meme .dato-meme-text {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 5%;
+}
+
+.dato-meme .dato-meme-text p {
+  font-weight: 600;
+  border: 2px solid #007706;
+  border-radius: 15px 15px 0 0;
+  text-align: center;
+  border-bottom: 0;
+  width: 12vw;
+  height: 100%;
+  margin: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  font-size: 1.2vw;
+}
+
+.dato-meme .dato-meme-img {
+  background-color: #e6e6e6;
+  border: 2px solid #007706;
+  width: 100%;
+  height: 95%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.dato-meme .dato-meme-img img {
+  display: none;
+  width: 100%;
 }
 
 /* Publicidad */
@@ -1709,6 +1806,23 @@ header {
   .sectionArte {
     margin-top: 10vw;
   }
+  .sectionArte .contenedor-arte-noticias {
+    width: 100vw;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .sectionArte .contenedor-arte-noticias .card5,
+  .sectionArte .contenedor-arte-noticias .card6 {
+    width: 100%;
+    padding: 5vw;
+  }
+  .sectionArte .contenedor-arte-noticias .card5 .card-text,
+  .sectionArte .contenedor-arte-noticias .card6 .card-text {
+    height: 25vw;
+    overflow-y: scroll;
+  }
   .sectionArte .contenedor-arte .cont-arte-titulo {
     width: 24vw;
     height: 7vw;
@@ -1839,6 +1953,12 @@ header {
   .section-noticia .contenido-noticia {
     font-size: 3.5vw;
   }
+  .sectionVida {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
   .sectionVida .vida-nav-cont {
     height: 10%;
   }
@@ -1847,7 +1967,15 @@ header {
     font-size: 3vw;
   }
   .sectionVida .vida-cont {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     height: 100vw;
+    width: 90vw;
+    margin-bottom: 2rem;
   }
   .sectionVida .vida-contenido-cont-general .vida-contenido img {
     width: 97%;
@@ -1860,6 +1988,20 @@ header {
   }
   .sectionVida .vida-contenido-cont-general .vida-contenido p {
     font-size: 3vw;
+  }
+  .sectionVida .dato-meme {
+    width: 100%;
+    height: 100vw;
+  }
+  .sectionVida .dato-meme .dato-meme-text {
+    height: 7%;
+  }
+  .sectionVida .dato-meme .dato-meme-text p {
+    width: 40vw;
+    font-size: 4vw;
+  }
+  .sectionVida .dato-meme .dato-meme-img {
+    height: 93%;
   }
   .bloque-pub {
     width: 80vw;
@@ -1939,4 +2081,4 @@ header {
     height: 60%;
   }
 }
-/*# sourceMappingURL=index-ver0-5.css.map */
+/*# sourceMappingURL=index-ver0-6.css.map */

@@ -19,6 +19,7 @@ const seccionTrivia = document.getElementById("sectionTrivia");
 const seccionContemporaneo = document.getElementById("sectionVida");
 const seccionBuscador = document.getElementById("seccion-buscador");
 const seccionEntrevistas = document.getElementById("entrevistas");
+const bannerCard = document.getElementById("institutoCard");
 const escenasArray = [
   seccionNoticiasPrincipales,
   seccionBotonContacto,
@@ -34,6 +35,7 @@ const escenasArray = [
   seccionContemporaneo,
   seccionBuscador,
   seccionEntrevistas,
+  bannerCard,
 ];
 const escenasInicio = [
   seccionNoticiasPrincipales,
@@ -42,6 +44,7 @@ const escenasInicio = [
   seccionArte,
   seccionTrivia,
   seccionContemporaneo,
+  bannerCard,
 ];
 const escenasNoticias = [
   seccionActualidad,
@@ -586,11 +589,29 @@ let importanteCuatro = {
   btnNot: document.getElementById("btn-not4"),
 };
 
+let importanteCinco = {
+  imgNot: document.getElementById("img-not5"),
+  titNot: document.getElementById("tit-not5"),
+  contNot: document.getElementById("cont-not5"),
+  autNot: document.getElementById("aut-not5"),
+  btnNot: document.getElementById("btn-not5"),
+};
+
+let importanteSeis = {
+  imgNot: document.getElementById("img-not6"),
+  titNot: document.getElementById("tit-not6"),
+  contNot: document.getElementById("cont-not6"),
+  autNot: document.getElementById("aut-not6"),
+  btnNot: document.getElementById("btn-not6"),
+};
+
 let ArrayObjetosNoticias = [
   importanteUno,
   importanteDos,
   importanteTres,
   importanteCuatro,
+  importanteCinco,
+  importanteSeis,
 ];
 
 // Conseguir noticias
@@ -878,9 +899,8 @@ if (window.screen.width <= 570) {
 
 // Publicidad
 
-const openGallo = document.getElementById("openGallo");
-openGallo.addEventListener("click", () => {
-  window.open("https://www.instagram.com/opengallo/");
+bannerCard.addEventListener("click", () => {
+  window.open("https://www.instagram.com/institutoemiliocardenas");
 });
 
 const PerVoi = document.getElementById("PerVoi");
@@ -900,3 +920,21 @@ fetch("https://lasilla-api.herokuapp.com/visitas/add").then(() => {});
 const iFrameRadio = document.getElementById("iframeRadio");
 iFrameRadio.scrolling = "no";
 iFrameRadio.frameBorder = "0";
+
+// Memes
+const imgMeme = document.getElementById("img-meme");
+fetch("https://lasilla-api.herokuapp.com/meme/todas")
+  .then((data) => data.json())
+  .then((data) => {
+    imgMeme.onload = function () {
+      if (this.naturalHeight > this.naturalWidth) {
+        this.style.width = "auto";
+        this.style.height = "100%";
+      } else {
+        this.style.width = "100%";
+        this.style.height = "auto";
+      }
+    };
+    imgMeme.src = data[0].imgUrl;
+  })
+  .then(() => (imgMeme.style.display = "block"));
