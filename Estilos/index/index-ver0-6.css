@@ -1319,8 +1319,12 @@ header {
           align-items: center;
 }
 
+.cont-meme-publi {
+  height: 40vw;
+}
+
 .dato-meme {
-  width: 50%;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1331,11 +1335,11 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 40vw;
+  height: 30vw;
 }
 
 .dato-meme .dato-meme-text {
-  width: 100%;
+  width: 70%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1345,16 +1349,16 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 5%;
+  height: 8%;
 }
 
 .dato-meme .dato-meme-text p {
   font-weight: 600;
-  border: 2px solid #007706;
+  border: 1px solid #007706;
   border-radius: 15px 15px 0 0;
   text-align: center;
   border-bottom: 0;
-  width: 12vw;
+  width: 100%;
   height: 100%;
   margin: 0;
   -webkit-user-select: none;
@@ -1367,8 +1371,8 @@ header {
 .dato-meme .dato-meme-img {
   background-color: #e6e6e6;
   border: 2px solid #007706;
-  width: 100%;
-  height: 95%;
+  width: 70%;
+  height: 70%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1382,7 +1386,7 @@ header {
 
 .dato-meme .dato-meme-img img {
   display: none;
-  width: 100%;
+  width: 50%;
 }
 
 /* Publicidad */
@@ -1989,16 +1993,30 @@ header {
   .sectionVida .vida-contenido-cont-general .vida-contenido p {
     font-size: 3vw;
   }
+  .sectionVida .cont-meme-publi {
+    width: 80vw;
+    height: 120vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
   .sectionVida .dato-meme {
     width: 100%;
-    height: 100vw;
+    height: 70vw;
   }
   .sectionVida .dato-meme .dato-meme-text {
-    height: 7%;
+    height: 10%;
   }
   .sectionVida .dato-meme .dato-meme-text p {
-    width: 40vw;
-    font-size: 4vw;
+    width: 100%;
+    font-size: 3vw;
   }
   .sectionVida .dato-meme .dato-meme-img {
     height: 93%;

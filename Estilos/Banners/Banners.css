@@ -11,8 +11,8 @@
   background-image: url("../../imagenes/fondoBanner.png");
   background-repeat: no-repeat;
   background-size: cover;
-  width: 40vw;
-  height: 40vh;
+  width: 30vw;
+  height: 35vh;
   border-radius: 20px;
   margin-bottom: 3rem;
   -webkit-user-select: none;
@@ -33,8 +33,8 @@
       -ms-flex-direction: column;
           flex-direction: column;
   background-color: #e8cddd;
-  width: 70%;
-  height: 90%;
+  width: 95%;
+  height: 95%;
 }
 
 .banner-fondo .banner img {
@@ -93,7 +93,7 @@
 
 .banner-fondo .banner .banner-parte-uno .texto-uno p:nth-child(2) {
   color: #38207f;
-  font-size: 1.2vw;
+  font-size: 1vw;
   font-weight: 700;
   margin: 0;
 }
@@ -171,14 +171,14 @@
 .banner-fondo .banner .banner-parte-tres p:nth-child(1) {
   color: #c9392d;
   font-weight: 800;
-  font-size: 0.8vw;
+  font-size: 0.7vw;
   margin: 0;
 }
 
 .banner-fondo .banner .banner-parte-tres p:nth-child(2) {
   color: #515253;
   font-weight: 800;
-  font-size: 1vw;
+  font-size: 0.8vw;
   margin: 0;
 }
 
@@ -206,7 +206,7 @@
   }
   .banner-fondo .banner {
     width: 98%;
-    height: 80%;
+    height: 90%;
   }
   .banner-fondo .banner .banner-parte-uno .texto-uno div p {
     font-size: 3.5vw;
@@ -215,16 +215,16 @@
     font-size: 3vw;
   }
   .banner-fondo .banner .banner-parte-uno .texto-uno p:nth-child(2) {
-    font-size: 4vw;
+    font-size: 3.5vw;
   }
   .banner-fondo .banner .banner-parte-uno .texto-uno p:nth-child(3) {
-    font-size: 3.5vw;
+    font-size: 3vw;
   }
   .banner-fondo .banner .banner-parte-uno .texto-uno p:nth-child(4) {
-    font-size: 3.5vw;
+    font-size: 3vw;
   }
   .banner-fondo .banner .banner-parte-dos div p {
-    font-size: 55%;
+    font-size: 45%;
   }
   .banner-fondo .banner .banner-parte-tres {
     height: 50%;
