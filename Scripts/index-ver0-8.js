@@ -725,7 +725,7 @@ const imagenDelDia = document.getElementById("arte-img");
 const contArteTxt = document.getElementsByClassName("cont-arte-txt");
 imagenDelDia.onload = function () {
   if (this.naturalWidth > this.naturalHeight) {
-    this.style.width = "50vw";
+    this.style.width = "35vw";
     this.style.height = "auto";
     contArteTxt[0].style.width = `${this.width}px`;
   } else {
