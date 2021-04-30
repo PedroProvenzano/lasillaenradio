@@ -1409,6 +1409,7 @@ header {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  cursor: pointer;
 }
 
 .bloque-pub img {
@@ -1442,8 +1443,58 @@ header {
   font-weight: 600;
 }
 
-.bloque-pub:hover {
+.bloque-pub-oliv {
+  background-color: rgba(0, 0, 0, 0.123);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  border-radius: 25px;
+  margin-bottom: 3vw;
+  width: 35vw;
+  height: 10vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   cursor: pointer;
+}
+
+.bloque-pub-oliv img {
+  margin-left: 1vw;
+  height: auto;
+  width: 30%;
+  border-radius: 100px;
+}
+
+.bloque-pub-oliv .bloque-pub-texto {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 60%;
+  height: 100%;
+}
+
+.bloque-pub-oliv .bloque-pub-texto p {
+  font-size: 0.7vw;
+  margin-bottom: 0.2vw !important;
+}
+
+.bloque-pub-oliv .bloque-pub-texto .pub-titulo {
+  font-size: 1.6vw;
+  font-weight: 600;
 }
 
 /* footer */
@@ -2033,6 +2084,16 @@ header {
   }
   .bloque-pub .bloque-pub-texto p {
     font-size: 2.5vw;
+  }
+  .bloque-pub-oliv {
+    width: 80vw;
+    height: 35vw;
+  }
+  .bloque-pub-oliv .bloque-pub-texto .pub-titulo {
+    font-size: 4vw;
+  }
+  .bloque-pub-oliv .bloque-pub-texto p {
+    font-size: 2vw;
   }
   .fundeu {
     height: 15vw;

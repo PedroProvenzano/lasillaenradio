@@ -913,6 +913,11 @@ fundeu.addEventListener("click", () => {
   window.open("https://fundeu.fiile.org.ar/");
 });
 
+const Olivia = document.getElementById("Olivia");
+Olivia.addEventListener("click", () => {
+  window.open("https://www.instagram.com/editorialolivia/");
+});
+
 // A;adir visita
 fetch("https://lasilla-api.herokuapp.com/visitas/add").then(() => {});
 
