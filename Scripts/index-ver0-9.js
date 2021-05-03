@@ -724,13 +724,19 @@ for (let i = 0; i < 3; i++) {
 const imagenDelDia = document.getElementById("arte-img");
 const contArteTxt = document.getElementsByClassName("cont-arte-txt");
 imagenDelDia.onload = function () {
-  if (this.naturalWidth > this.naturalHeight) {
-    this.style.width = "35vw";
-    this.style.height = "auto";
-    contArteTxt[0].style.width = `${this.width}px`;
+  if (window.screen.width > 570) {
+    if (this.naturalWidth > this.naturalHeight) {
+      this.style.width = "35vw";
+      this.style.height = "auto";
+      contArteTxt[0].style.width = `${this.width}px`;
+    } else {
+      this.style.height = "50vh";
+      this.style.width = "auto";
+      contArteTxt[0].style.width = `${this.width}px`;
+    }
   } else {
-    this.style.height = "50vh";
-    this.style.width = "auto";
+    this.style.width = "100vw";
+    this.style.height = "auto";
     contArteTxt[0].style.width = `${this.width}px`;
   }
 };
