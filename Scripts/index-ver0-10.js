@@ -931,6 +931,8 @@ fetch("https://lasilla-api.herokuapp.com/visitas/add").then(() => {});
 const iFrameRadio = document.getElementById("iframeRadio");
 iFrameRadio.scrolling = "no";
 iFrameRadio.frameBorder = "0";
+// Posible fix?
+iFrameRadio.src = iFrameRadio.src;
 
 // Memes
 const imgMeme = document.getElementById("img-meme");
