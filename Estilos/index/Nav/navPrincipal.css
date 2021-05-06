@@ -31,7 +31,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 96%;
+  width: 80vw;
   height: 50px;
 }
 
@@ -52,6 +52,7 @@
   width: 50vw;
   max-width: 50vw;
   font-size: 1vw;
+  font-weight: 600;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -109,7 +110,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 25vw;
+  width: 13vw;
 }
 
 .contenedor-barra-navegacion .barra-navegacion .redes-cont-nav #boton-inicio {

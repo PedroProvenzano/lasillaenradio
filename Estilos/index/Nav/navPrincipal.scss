@@ -16,7 +16,7 @@ $max-width: 90%;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    width: 96%;
+    width: 80vw;
     height: 50px;
 
     .boton-cont-nav {
@@ -28,6 +28,7 @@ $max-width: 90%;
       width: 50vw;
       max-width: 50vw;
       font-size: 1vw;
+      font-weight: 600;
       user-select: none;
       overflow: hidden;
       .boton-cont-nav-sub {
@@ -58,7 +59,7 @@ $max-width: 90%;
       flex-direction: row;
       justify-content: space-around;
       align-items: center;
-      width: 25vw;
+      width: 13vw;
       #boton-inicio {
         color: rgb(33, 41, 21);
         font-size: 2vw;

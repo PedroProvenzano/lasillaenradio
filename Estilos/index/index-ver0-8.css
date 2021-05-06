@@ -32,7 +32,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 96%;
+  width: 80vw;
   height: 50px;
 }
 
@@ -53,6 +53,7 @@
   width: 50vw;
   max-width: 50vw;
   font-size: 1vw;
+  font-weight: 600;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -110,7 +111,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 25vw;
+  width: 13vw;
 }
 
 .contenedor-barra-navegacion .barra-navegacion .redes-cont-nav #boton-inicio {
@@ -579,7 +580,18 @@ a {
   text-decoration: none;
 }
 
+.avido {
+  height: 85%;
+  border-radius: 5px;
+}
+
+.avido-mobile {
+  display: none;
+}
+
 .logo-cont {
+  -ms-flex-item-align: center;
+      align-self: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -587,15 +599,21 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding: 0.5rem;
   width: 20vw;
+  position: relative;
+  top: 0;
+  left: 5vw;
 }
 
 .logo-cont p {
-  margin: 0 0 0 12px;
+  margin: 0px;
   color: white;
   font-size: 0.8vw;
 }
@@ -604,8 +622,6 @@ a {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-  margin-top: -6px;
-  margin-left: -78px;
 }
 
 .logo {
@@ -658,7 +674,7 @@ header {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  width: 90%;
+  width: 80vw;
   height: 150px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
@@ -710,6 +726,21 @@ header {
 
 .radioCont iframe {
   width: 250px;
+}
+
+.radioCont .radio-cont {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 /* Seccion 1 = tarjetas */
@@ -1689,6 +1720,8 @@ header {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    top: 0;
+    left: 0;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -1703,14 +1736,48 @@ header {
     font-size: 2vw;
     margin: 0;
   }
+  .avido {
+    display: none;
+  }
+  .avido-mobile {
+    height: 10vh;
+    margin-bottom: 10px;
+    display: block;
+    border-radius: 5px;
+  }
   .radioCont {
     height: auto;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100vw;
   }
-  .radioCont p {
+  .radioCont .radio-cont {
+    height: 10vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .radioCont .radio-cont p {
     font-size: 2vw;
-    margin: 1vw 0 1vw 0;
+    margin: 0;
   }
-  .radioCont iframe {
+  .radioCont .radio-cont iframe {
     width: 60vw;
     height: 50px;
   }
@@ -2160,4 +2227,4 @@ header {
     height: 60%;
   }
 }
-/*# sourceMappingURL=index-ver0-7.css.map */
+/*# sourceMappingURL=index-ver0-8.css.map */

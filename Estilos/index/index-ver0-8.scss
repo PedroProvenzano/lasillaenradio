@@ -18,21 +18,33 @@ $max-width: 90%;
 a {
   text-decoration: none;
 }
+.avido {
+  height: 85%;
+  border-radius: 5px;
+}
+.avido-mobile {
+  display: none;
+}
 .logo-cont {
+  align-self: center;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
+  justify-content: center;
   padding: 0.5rem;
   width: 20vw;
+  position: relative;
+  top: 0;
+  left: 5vw;
   p {
-    margin: 0 0 0 12px;
+    margin: 0px;
     color: white;
     font-size: 0.8vw;
   }
   .slogan {
     align-self: center;
-    margin-top: -6px;
-    margin-left: -78px;
+    // margin-top: -6px;
+    // margin-left: -78px;
   }
 }
 .logo {
@@ -61,7 +73,7 @@ header {
 .header-container {
   display: flex;
   flex-direction: row;
-  width: $max-width;
+  width: 80vw;
   height: 150px;
   justify-content: space-between;
   align-items: center;
@@ -93,6 +105,12 @@ header {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  .radio-cont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
 }
 /* Seccion 1 = tarjetas */
 .section1 {
@@ -724,6 +742,8 @@ header {
   .logo-cont {
     width: 100vw;
     display: flex;
+    top: 0;
+    left: 0;
     justify-content: center;
     align-items: center;
     .slogan {
@@ -734,15 +754,35 @@ header {
     font-size: 2vw;
     margin: 0;
   }
+  .avido {
+    display: none;
+  }
+  .avido-mobile {
+    height: 10vh;
+    margin-bottom: 10px;
+    display: block;
+    border-radius: 5px;
+  }
   .radioCont {
     height: auto;
-    p {
-      font-size: 2vw;
-      margin: 1vw 0 1vw 0;
-    }
-    iframe {
-      width: 60vw;
-      height: 50px;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100vw;
+    .radio-cont {
+      height: 10vh;
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+      justify-content: space-evenly;
+      p {
+        font-size: 2vw;
+        margin: 0;
+      }
+      iframe {
+        width: 60vw;
+        height: 50px;
+      }
     }
   }
   .contenedor-barra-navegacion .barra-navegacion .redes-cont-nav #boton-inicio {
