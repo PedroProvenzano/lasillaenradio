@@ -8,6 +8,7 @@
   background-size: cover;
   width: 30vw;
   height: 35vh;
+  min-height: 315px;
   border-radius: 20px;
   margin-bottom: 3rem;
   user-select: none;
@@ -133,6 +134,7 @@
 @media (max-width: 570px) {
   .banner-fondo {
     width: 100vw;
+    min-height: none;
     .banner {
       width: 98%;
       height: 90%;

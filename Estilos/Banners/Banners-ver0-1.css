@@ -13,6 +13,7 @@
   background-size: cover;
   width: 30vw;
   height: 35vh;
+  min-height: 315px;
   border-radius: 20px;
   margin-bottom: 3rem;
   -webkit-user-select: none;
@@ -203,6 +204,7 @@
 @media (max-width: 570px) {
   .banner-fondo {
     width: 100vw;
+    min-height: none;
   }
   .banner-fondo .banner {
     width: 98%;
@@ -244,4 +246,4 @@
     font-size: 2vw;
   }
 }
-/*# sourceMappingURL=Banners.css.map */
+/*# sourceMappingURL=Banners-ver0-1.css.map */
