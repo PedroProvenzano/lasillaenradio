@@ -20,6 +20,7 @@ const seccionContemporaneo = document.getElementById("sectionVida");
 const seccionBuscador = document.getElementById("seccion-buscador");
 const seccionEntrevistas = document.getElementById("entrevistas");
 const bannerCard = document.getElementById("institutoCard");
+const contenedorBanners = document.getElementById("contenedor-banners");
 const escenasArray = [
   seccionNoticiasPrincipales,
   seccionBotonContacto,
@@ -35,7 +36,7 @@ const escenasArray = [
   seccionContemporaneo,
   seccionBuscador,
   seccionEntrevistas,
-  bannerCard,
+  contenedorBanners,
 ];
 const escenasInicio = [
   seccionNoticiasPrincipales,
@@ -44,7 +45,7 @@ const escenasInicio = [
   seccionArte,
   seccionTrivia,
   seccionContemporaneo,
-  bannerCard,
+  contenedorBanners,
 ];
 const escenasNoticias = [
   seccionActualidad,
@@ -673,9 +674,8 @@ fetch("https://lasilla-api.herokuapp.com/noticias/todas")
     const vidaTituloNot = document.getElementsByClassName("vida-titulo-not");
     const vidaAutor = document.getElementsByClassName("vida-autor");
     const vidaFuente = document.getElementsByClassName("vida-fuente");
-    const vidaContenidoTxt = document.getElementsByClassName(
-      "vida-contenido-txt"
-    );
+    const vidaContenidoTxt =
+      document.getElementsByClassName("vida-contenido-txt");
     const vidaFecha = document.getElementsByClassName("vida-fecha");
 
     const arrayOrden = ["Vida sana", "Medio ambiente", "Genero"];
@@ -922,6 +922,11 @@ fundeu.addEventListener("click", () => {
 const Olivia = document.getElementById("Olivia");
 Olivia.addEventListener("click", () => {
   window.open("https://www.instagram.com/editorialolivia/");
+});
+
+const MariaJulia = document.getElementById("mariajuliarodriguez");
+MariaJulia.addEventListener("click", () => {
+  window.open("https://www.instagram.com/mjrodriguezcuentos/");
 });
 
 // A;adir visita

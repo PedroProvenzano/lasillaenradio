@@ -1,3 +1,18 @@
+.contenedor-banners {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 60vw;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.contenedor-banners .mariajuliarodriguez {
+  height: 35vh;
+  min-height: 315px;
+  cursor: pointer;
+}
+
 .banner-fondo {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -202,9 +217,30 @@
 }
 
 @media (max-width: 570px) {
+  .contenedor-banners {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100vw;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    margin-bottom: 1rem;
+  }
+  .contenedor-banners .mariajuliarodriguez {
+    height: auto;
+    width: 100vw;
+    min-height: 0;
+    cursor: pointer;
+  }
   .banner-fondo {
     width: 100vw;
     min-height: 0;
+    margin-bottom: 1rem;
   }
   .banner-fondo .banner {
     width: 98%;
