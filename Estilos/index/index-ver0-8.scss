@@ -43,6 +43,9 @@ a {
   }
   .slogan {
     align-self: center;
+    text-align: center;
+    color: white;
+    font-size: 1rem;
     // margin-top: -6px;
     // margin-left: -78px;
   }
@@ -748,6 +751,8 @@ header {
     align-items: center;
     .slogan {
       margin: 0;
+      color: white;
+      font-size: 0.8rem;
     }
   }
   .logo-cont p {

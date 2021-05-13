@@ -622,6 +622,9 @@ a {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+  text-align: center;
+  color: white;
+  font-size: 1rem;
 }
 
 .logo {
@@ -1731,6 +1734,8 @@ header {
   }
   .logo-cont .slogan {
     margin: 0;
+    color: white;
+    font-size: 0.8rem;
   }
   .logo-cont p {
     font-size: 2vw;
