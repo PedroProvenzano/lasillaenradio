@@ -582,7 +582,8 @@ a {
 
 .avido {
   height: 85%;
-  border-radius: 5px;
+  border-radius: 50%;
+  background-color: #ffffff;
 }
 
 .avido-mobile {
@@ -1748,7 +1749,8 @@ header {
     height: 10vh;
     margin-bottom: 10px;
     display: block;
-    border-radius: 5px;
+    border-radius: 50%;
+    background-color: #ffffff;
   }
   .radioCont {
     height: auto;
@@ -2232,4 +2234,4 @@ header {
     height: 60%;
   }
 }
-/*# sourceMappingURL=index-ver0-9.css.map */
+/*# sourceMappingURL=index-ver0-10.css.map */

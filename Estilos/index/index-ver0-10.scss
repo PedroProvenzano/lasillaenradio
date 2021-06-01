@@ -20,7 +20,8 @@ a {
 }
 .avido {
   height: 85%;
-  border-radius: 5px;
+  border-radius: 50%;
+  background-color: #ffffff;
 }
 .avido-mobile {
   display: none;
@@ -766,7 +767,8 @@ header {
     height: 10vh;
     margin-bottom: 10px;
     display: block;
-    border-radius: 5px;
+    border-radius: 50%;
+    background-color: #ffffff;
   }
   .radioCont {
     height: auto;
