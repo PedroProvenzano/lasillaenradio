@@ -1683,6 +1683,15 @@ header {
   height: 60%;
 }
 
+.chat-noticia {
+  width: 80vw;
+}
+
+.chat-fb-title {
+  text-align: left;
+  margin-top: 2rem;
+}
+
 @media (max-width: 1500px) {
   .bloque-pub-texto p {
     font-size: 1vw;
@@ -2234,4 +2243,4 @@ header {
     height: 60%;
   }
 }
-/*# sourceMappingURL=index-ver0-10.css.map */
+/*# sourceMappingURL=index-ver0-11.css.map */

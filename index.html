@@ -19,7 +19,7 @@
       integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="Estilos/index/index-ver0-10.css" />
+    <link rel="stylesheet" href="Estilos/index/index-ver0-11.css" />
     <link rel="stylesheet" href="./Estilos/Banners/Banners-ver0-2.css" />
     <script
       src="https://kit.fontawesome.com/c19f763333.js"
@@ -41,6 +41,8 @@
     </script>
   </head>
   <body>
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v11.0" nonce="OVotZml3"></script>
     <header>
       <div class="header-container">
         <img
@@ -471,6 +473,11 @@
         <p class="fecha-noticia" id="fecha-noticia">
           Cargando fecha de noticia...
         </p>
+
+        <h3 class="chat-fb-title">Tu opinión sobre esta nota</h3> 
+        <div class="chat-noticia" id="chat-noticia">
+          <div id="comentarios-fb" data-href="https://www.lasillaenradio.com.ar" class="fb-comments" data-width="100%" data-numposts="5" data-lazy="true"></div>
+        </div>
       </section>
 
       <!-- Section Arte -->
@@ -833,7 +840,7 @@
       integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
       crossorigin="anonymous"
     ></script>
-    <script src="./Scripts/index-ver0-10.js"></script>
+    <script src="./Scripts/index-ver0-11.js"></script>
     <script src="./Scripts/contacto.js"></script>
   </body>
 </html>

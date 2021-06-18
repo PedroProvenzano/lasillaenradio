@@ -74,7 +74,6 @@ const botonArray = [
   botonEntrevistas,
 ];
 // Valores
-
 // Eventos
 
 // Actualidad
@@ -794,6 +793,8 @@ flechaDer.addEventListener("click", () => {
   imgNumb.innerText = `${imgNumber + 1}/${arrayImgNoticia.length}`;
 });
 
+const regexFb = / /gi; 
+const urlWeb = 'https://www.lasillaenradio.com.ar/';
 // Cargar noticia
 function cargarNoticia(noticia) {
   // Traer donde autocompleta
@@ -806,6 +807,7 @@ function cargarNoticia(noticia) {
   const fuenteNoticia = document.getElementById("fuente-noticia");
   const fechaNoticia = document.getElementById("fecha-noticia");
   const contImagenes = document.getElementById("grid-img-cont");
+  const fbChat = document.getElementById("chat-noticia");
 
   tituloNoticia.innerText = noticia.titulo;
   contenidoNoticia.innerText = noticia.contenido;
@@ -828,6 +830,11 @@ function cargarNoticia(noticia) {
     imgChild.src = i;
     contImagenes.append(imgChild);
   }
+
+  // Fb Comment
+  let fbindex = noticia.titulo.replace(regexFb,"");
+  document.getElementById('chat-noticia').innerHTML=`<div id="comentarios-fb" data-href="${urlWeb}${fbindex}" class="fb-comments" data-width="100%" data-numposts="5" data-lazy="true"></div>`; 
+  FB.XFBML.parse(document.getElementById('chat-noticia'));
 
   imgNumb.innerText = `1/${arrayImg.length}`;
   for (let i of escenasArray) {
