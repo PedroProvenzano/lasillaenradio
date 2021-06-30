@@ -582,7 +582,6 @@ a {
 
 .avido {
   height: 85%;
-  border-radius: 50%;
   background-color: #ffffff;
 }
 
@@ -1758,7 +1757,6 @@ header {
     height: 10vh;
     margin-bottom: 10px;
     display: block;
-    border-radius: 50%;
     background-color: #ffffff;
   }
   .radioCont {
