@@ -793,8 +793,8 @@ flechaDer.addEventListener("click", () => {
   imgNumb.innerText = `${imgNumber + 1}/${arrayImgNoticia.length}`;
 });
 
-const regexFb = / /gi; 
-const urlWeb = 'https://www.lasillaenradio.com.ar/';
+const regexFb = / /gi;
+const urlWeb = "https://www.lasillaenradio.com.ar/";
 // Cargar noticia
 function cargarNoticia(noticia) {
   // Traer donde autocompleta
@@ -832,16 +832,20 @@ function cargarNoticia(noticia) {
   }
 
   // Fb Comment
-  let fbindex = noticia.titulo.replace(regexFb,"");
-  document.getElementById('chat-noticia').innerHTML=`<div id="comentarios-fb" data-href="${urlWeb}${fbindex}" class="fb-comments" data-width="100%" data-numposts="5" data-lazy="true"></div>`; 
-  FB.XFBML.parse(document.getElementById('chat-noticia'));
+  if (FB) {
+    let fbindex = noticia.titulo.replace(regexFb, "");
+    document.getElementById(
+      "chat-noticia"
+    ).innerHTML = `<div id="comentarios-fb" data-href="${urlWeb}${fbindex}" class="fb-comments" data-width="100%" data-numposts="5" data-lazy="true"></div>`;
+    FB.XFBML.parse(document.getElementById("chat-noticia"));
 
-  imgNumb.innerText = `1/${arrayImg.length}`;
-  for (let i of escenasArray) {
-    if (i.id != "section-noticia") {
-      i.style.display = "none";
-    } else {
-      i.style.display = "flex";
+    imgNumb.innerText = `1/${arrayImg.length}`;
+    for (let i of escenasArray) {
+      if (i.id != "section-noticia") {
+        i.style.display = "none";
+      } else {
+        i.style.display = "flex";
+      }
     }
   }
 }
