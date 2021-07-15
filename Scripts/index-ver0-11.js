@@ -615,7 +615,7 @@ let ArrayObjetosNoticias = [
 ];
 
 // Conseguir noticias
-fetch("https://lasilla-api.herokuapp.com/noticias/todas")
+fetch("https://datonews-api.herokuapp.com/noticias/todas")
   .then((res) => res.json())
   .then((res) => {
     noticias = res;
@@ -692,10 +692,11 @@ fetch("https://lasilla-api.herokuapp.com/noticias/todas")
       vidaAutor[i].innerText = `Autor: ${notaVida[0].autor}`;
       vidaFuente[i].innerText = `Fuente: ${notaVida[0].fuente}`;
       vidaContenidoTxt[i].innerText = notaVida[0].contenido;
-      vidaFecha[i].innerText = `Fecha: ${notaVida[0].fecha.slice(
+      console.log(notaVida[0].date);
+      vidaFecha[i].innerText = `Fecha: ${notaVida[0].date.slice(
         8,
         10
-      )}/${notaVida[0].fecha.slice(5, 7)}/${notaVida[0].fecha.slice(0, 4)}`;
+      )}/${notaVida[0].date.slice(5, 7)}/${notaVida[0].date.slice(0, 4)}`;
       spinnerVida.style.display = "none";
       OpacityVida.style.opacity = "100%";
     }
@@ -739,7 +740,7 @@ imagenDelDia.onload = function () {
     contArteTxt[0].style.width = `${this.width}px`;
   }
 };
-fetch("https://lasilla-api.herokuapp.com/imagen/todas")
+fetch("https://datonews-api.herokuapp.com/imagen/todas")
   .then((res) => res.json())
   .then((res) => {
     const descImagenDia = document.getElementById("arte-txt-desc");
@@ -813,10 +814,10 @@ function cargarNoticia(noticia) {
   contenidoNoticia.innerText = noticia.contenido;
   autorNoticia.innerText = `Autor: ${noticia.autor}`;
   fuenteNoticia.innerText = `Fuente: ${noticia.fuente}`;
-  fechaNoticia.innerText = `Fecha: ${noticia.fecha.slice(
+  fechaNoticia.innerText = `Fecha: ${noticia.date.slice(
     8,
     10
-  )}/${noticia.fecha.slice(5, 7)}/${noticia.fecha.slice(0, 4)}`;
+  )}/${noticia.date.slice(5, 7)}/${noticia.date.slice(0, 4)}`;
   let arrayImg = JSON.parse(noticia.imagenesUrl);
   let isFirst = true;
   contImagenes.innerHTML = "";
@@ -853,7 +854,7 @@ function cargarNoticia(noticia) {
 // Trivia
 
 // Cargar trivia
-fetch("https://lasilla-api.herokuapp.com/trivia/todas")
+fetch("https://datonews-api.herokuapp.com/trivia/todas")
   .then((res) => res.json())
   .then(async (res) => {
     const preguntaTrivia = document.getElementById("preguntaTrivia");
@@ -941,7 +942,7 @@ MariaJulia.addEventListener("click", () => {
 });
 
 // A;adir visita
-fetch("https://lasilla-api.herokuapp.com/visitas/add").then(() => {});
+fetch("https://datonews-api.herokuapp.com/visitas/add").then(() => {});
 
 // Iframe deal
 const iFrameRadio = document.getElementById("iframeRadio");
@@ -952,7 +953,7 @@ iFrameRadio.src = iFrameRadio.src;
 
 // Memes
 const imgMeme = document.getElementById("img-meme");
-fetch("https://lasilla-api.herokuapp.com/meme/todas")
+fetch("https://datonews-api.herokuapp.com/meme/todas")
   .then((data) => data.json())
   .then((data) => {
     imgMeme.onload = function () {
