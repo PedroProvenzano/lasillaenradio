@@ -222,10 +222,10 @@ async function cargarNoticiasSeccion(topico, objetosDOM) {
     return;
   }
   noticiasTopico.sort(function (a, b) {
-    if (a.id > b.id) {
+    if (a.date > b.date) {
       return -1;
     }
-    if (a.id < b.id) {
+    if (a.date < b.date) {
       return 1;
     }
     // a must be equal to b
@@ -948,7 +948,7 @@ fetch("https://datonews-api.herokuapp.com/visitas/add").then(() => {});
 const iFrameRadio = document.getElementById("iframeRadio");
 iFrameRadio.scrolling = "no";
 iFrameRadio.frameBorder = "0";
-// Posible fix?
+// Posible fix? SI
 iFrameRadio.src = iFrameRadio.src;
 
 // Memes
@@ -959,9 +959,9 @@ fetch("https://datonews-api.herokuapp.com/meme/todas")
     imgMeme.onload = function () {
       if (this.naturalHeight > this.naturalWidth) {
         this.style.width = "auto";
-        this.style.height = "100%";
+        this.style.height = "80%";
       } else {
-        this.style.width = "100%";
+        this.style.width = "80%";
         this.style.height = "auto";
       }
     };
