@@ -15,6 +15,14 @@ $max-width: 90%;
   box-sizing: border-box;
 }
 
+.logo-text {
+  font-family: "Montserrat", sans-serif;
+  text-decoration: none;
+  background: -webkit-linear-gradient(45deg, #eee, #ffa733 40%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 a {
   text-decoration: none;
 }

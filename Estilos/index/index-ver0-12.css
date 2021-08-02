@@ -576,6 +576,14 @@ i:hover {
           box-sizing: border-box;
 }
 
+.logo-text {
+  font-family: "Montserrat", sans-serif;
+  text-decoration: none;
+  background: -webkit-linear-gradient(45deg, #eee, #ffa733 40%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 a {
   text-decoration: none;
 }
@@ -2241,4 +2249,4 @@ header {
     height: 60%;
   }
 }
-/*# sourceMappingURL=index-ver0-11.css.map */
+/*# sourceMappingURL=index-ver0-12.css.map */
