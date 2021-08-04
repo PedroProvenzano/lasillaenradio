@@ -501,6 +501,7 @@ header {
 // Dato meme
 .cont-meme-publi {
   height: 40vw;
+  width: 40vw;
 }
 .dato-meme {
   width: 100%;
@@ -1110,6 +1111,7 @@ header {
       height: 70vw;
       .dato-meme-text {
         height: 10%;
+        width: 100%;
         p {
           width: 100%;
           font-size: 3vw;
@@ -1117,6 +1119,7 @@ header {
       }
       .dato-meme-img {
         height: 93%;
+        width: 100%;
       }
     }
   }
