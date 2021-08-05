@@ -960,11 +960,14 @@ fetch("https://datonews-api.herokuapp.com/meme/todas")
       console.log(this.naturalHeight);
       console.log(this.naturalWidth);
       if (this.naturalHeight > this.naturalWidth) {
-        this.style.width = "100%";
-        this.style.height = "auto";
-      } else {
         this.style.width = "auto";
         this.style.height = "100%";
+      } else if (this.naturalHeight === this.naturalWidth) {
+        this.style.width = "auto";
+        this.style.height = "100%";
+      } else {
+        this.style.width = "100%";
+        this.style.height = "auto";
       }
     };
     imgMeme.src = data[0].imgUrl;
