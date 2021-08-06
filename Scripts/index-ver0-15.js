@@ -614,11 +614,39 @@ let ArrayObjetosNoticias = [
   importanteSeis,
 ];
 
+// Noticia curiosidad
+const tarjetaCuriosidad = {
+  imagen: document.getElementById("img-not-curio"),
+  titulo: document.getElementById("tit-not-curio"),
+  contenido: document.getElementById("cont-not-curio"),
+  autor: document.getElementById("aut-not-curio"),
+  boton: document.getElementById("btn-not-curio"),
+};
+
+const cargarTarjetaCuriosidad = async () => {
+  console.log("cargando noticias");
+  const noticiaCuriosidad = await noticias.filter(
+    (e) => e.temaPrincipal === "curiosidades"
+  );
+  console.log(noticiaCuriosidad);
+  let urlIMG = JSON.parse(noticiaCuriosidad[0].imagenesUrl);
+  tarjetaCuriosidad.imagen.src = (await urlIMG[0]) || (await urlIMG);
+  tarjetaCuriosidad.titulo.innerText = noticiaCuriosidad[0].titulo;
+  tarjetaCuriosidad.contenido.innerText = noticiaCuriosidad[0].contenidoRes;
+  tarjetaCuriosidad.autor.innerText = noticiaCuriosidad[0].autor;
+  tarjetaCuriosidad.boton.addEventListener("click", () => {
+    cargarNoticia(noticiaCuriosidad[0]);
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  });
+};
+
 // Conseguir noticias
 fetch("https://datonews-api.herokuapp.com/noticias/todas")
   .then((res) => res.json())
   .then((res) => {
     noticias = res;
+    cargarTarjetaCuriosidad();
 
     // Agregar noticias importantes a seccion 1
     let iterNum = 1;

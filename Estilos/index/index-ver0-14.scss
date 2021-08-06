@@ -363,7 +363,7 @@ header {
   .contenedorTrivia {
     opacity: 0%;
     display: flex;
-    width: 80vw;
+    width: 40vw;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -725,6 +725,19 @@ header {
   margin-top: 2rem;
 }
 
+.contenedor-trivia-noticia {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 80vw;
+  height: 30vh;
+  margin-bottom: 10rem;
+  .contenedor-noticia-curiosidades {
+    width: 20vw;
+  }
+}
+
 @media (max-width: 1500px) {
   .bloque-pub-texto {
     p {
@@ -952,7 +965,7 @@ header {
   .sectionTrivia {
     width: 100vw;
     .contenedorTrivia {
-      width: 80vw;
+      width: 90%;
       h2 {
         font-size: 9vw;
       }
@@ -1201,6 +1214,16 @@ header {
         width: 100%;
         height: 60%;
       }
+    }
+  }
+  .contenedor-trivia-noticia {
+    margin: 2rem 0 0 0;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 100vw;
+    height: 100vh;
+    .contenedor-noticia-curiosidades {
+      width: 90%;
     }
   }
 }

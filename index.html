@@ -580,24 +580,65 @@
           id="spinnerTrivia"
           role="status"
         ></div>
-        <form class="contenedorTrivia" id="TriviaForm">
-          <h2>Trivia</h2>
-          <p class="preguntaTrivia" id="preguntaTrivia">
-            ¿Quién fue el compositor de Té para tres?
-          </p>
-          <div class="trivia-op-cont">
-            <input name="trivia" type="radio" class="trivia" value="a" id="a" />
-            <label for="a" class="triviaLabel">Gustavo Cerati</label>
+        <div class="contenedor-trivia-noticia">
+          <form class="contenedorTrivia" id="TriviaForm">
+            <h2>Trivia</h2>
+            <p class="preguntaTrivia" id="preguntaTrivia">
+              ¿Quién fue el compositor de Té para tres?
+            </p>
+            <div class="trivia-op-cont">
+              <input
+                name="trivia"
+                type="radio"
+                class="trivia"
+                value="a"
+                id="a"
+              />
+              <label for="a" class="triviaLabel">Gustavo Cerati</label>
+            </div>
+            <div class="trivia-op-cont">
+              <input
+                name="trivia"
+                type="radio"
+                class="trivia"
+                value="b"
+                id="b"
+              />
+              <label for="b" class="triviaLabel">Luis Alberto Spinetta</label>
+            </div>
+            <div class="trivia-op-cont">
+              <input
+                name="trivia"
+                type="radio"
+                class="trivia"
+                value="c"
+                id="c"
+              />
+              <label for="c" class="triviaLabel">Charly García</label>
+            </div>
+          </form>
+          <div class="contenedor-noticia-curiosidades">
+            <div class="card-curiosidades">
+              <div class="card-cont-img">
+                <img
+                  title="Imagen principal numero seis"
+                  src="..."
+                  class="card-img-top img-general-principal"
+                  id="img-not-curio"
+                  alt="imagen noticia principal 6"
+                />
+              </div>
+              <div class="card-body">
+                <h5 class="card-title" id="tit-not-curio">Titulo principal</h5>
+                <p class="card-text" id="cont-not-curio">Cargando noticia...</p>
+                <div class="card-cont-boton-autor">
+                  <a id="btn-not-curio" class="btn btn-primary">Leer nota!</a>
+                  <p id="aut-not-curio">Cargando autor...</p>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="trivia-op-cont">
-            <input name="trivia" type="radio" class="trivia" value="b" id="b" />
-            <label for="b" class="triviaLabel">Luis Alberto Spinetta</label>
-          </div>
-          <div class="trivia-op-cont">
-            <input name="trivia" type="radio" class="trivia" value="c" id="c" />
-            <label for="c" class="triviaLabel">Charly García</label>
-          </div>
-        </form>
+        </div>
       </section>
 
       <!--Section 3 (botones con topicos)-->

@@ -1135,7 +1135,7 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 80vw;
+  width: 40vw;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -1699,6 +1699,29 @@ header {
   margin-top: 2rem;
 }
 
+.contenedor-trivia-noticia {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 80vw;
+  height: 30vh;
+  margin-bottom: 10rem;
+}
+
+.contenedor-trivia-noticia .contenedor-noticia-curiosidades {
+  width: 20vw;
+}
+
 @media (max-width: 1500px) {
   .bloque-pub-texto p {
     font-size: 1vw;
@@ -1987,7 +2010,7 @@ header {
     width: 100vw;
   }
   .sectionTrivia .contenedorTrivia {
-    width: 80vw;
+    width: 90%;
   }
   .sectionTrivia .contenedorTrivia h2 {
     font-size: 9vw;
@@ -2249,6 +2272,20 @@ header {
   .contenedor-videos .video iframe {
     width: 100%;
     height: 60%;
+  }
+  .contenedor-trivia-noticia {
+    margin: 2rem 0 0 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    width: 100vw;
+    height: 100vh;
+  }
+  .contenedor-trivia-noticia .contenedor-noticia-curiosidades {
+    width: 90%;
   }
 }
 /*# sourceMappingURL=index-ver0-14.css.map */
