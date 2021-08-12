@@ -987,14 +987,15 @@ fetch("https://datonews-api.herokuapp.com/meme/todas")
     imgMeme.onload = function () {
       console.log(this.naturalHeight);
       console.log(this.naturalWidth);
+      console.log(this.naturalHeight > this.naturalWidth);
       if (this.naturalHeight > this.naturalWidth) {
         this.style.width = "auto";
-        this.style.height = "100%";
+        this.style.height = "70%";
       } else if (this.naturalHeight === this.naturalWidth) {
         this.style.width = "auto";
-        this.style.height = "100%";
+        this.style.height = "70%";
       } else {
-        this.style.width = "100%";
+        this.style.width = "70%";
         this.style.height = "auto";
       }
     };
