@@ -1722,6 +1722,25 @@ header {
   width: 20vw;
 }
 
+.PASODesk {
+  width: 10vw;
+  text-align: center;
+}
+
+.PASODesk p {
+  color: white;
+}
+
+.PASODesk a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+}
+
+.PASOMov {
+  display: none;
+}
+
 @media (max-width: 1500px) {
   .bloque-pub-texto p {
     font-size: 1vw;
@@ -1729,6 +1748,9 @@ header {
 }
 
 @media (max-width: 570px) {
+  .PASODesk {
+    display: none;
+  }
   .hidden {
     display: block;
     color: white;
@@ -1789,6 +1811,22 @@ header {
     margin-bottom: 10px;
     display: block;
     background-color: #ffffff;
+  }
+  .PASOMov {
+    display: block;
+    text-align: center;
+    height: 10vh;
+  }
+  .PASOMov p {
+    color: white;
+    font-size: 15px;
+    margin-bottom: 0;
+  }
+  .PASOMov a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    font-size: 15px;
   }
   .radioCont {
     height: auto;
@@ -2019,8 +2057,8 @@ header {
     font-size: 4vw;
   }
   .sectionTrivia .contenedorTrivia .trivia-op-cont {
-    width: 70%;
-    height: 10vw;
+    width: 100%;
+    height: 15vw;
     font-size: 3vw;
   }
   .section3 .titulo-section3 {
@@ -2288,4 +2326,4 @@ header {
     width: 90%;
   }
 }
-/*# sourceMappingURL=index-ver0-15.css.map */
+/*# sourceMappingURL=index-ver0-16.css.map */

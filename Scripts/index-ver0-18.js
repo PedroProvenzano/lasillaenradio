@@ -631,6 +631,27 @@ const cargarTarjetaCuriosidad = async () => {
   console.log(noticiaCuriosidad);
   let urlIMG = JSON.parse(noticiaCuriosidad[0].imagenesUrl);
   tarjetaCuriosidad.imagen.src = (await urlIMG[0]) || (await urlIMG);
+  if (window.screen.width > 570) {
+    if (300 > tarjetaCuriosidad.imagen.height) {
+      tarjetaCuriosidad.imagen.style.height = "15vw";
+      tarjetaCuriosidad.imagen.style.width = "auto";
+      tarjetaCuriosidad.imagen.style.maxWidth = "100%";
+    } else {
+      tarjetaCuriosidad.imagen.style.height = "auto";
+      tarjetaCuriosidad.imagen.style.width = "100%";
+      tarjetaCuriosidad.imagen.style.maxWidth = "100%";
+    }
+  } else {
+    if (300 > tarjetaCuriosidad.imagen.height) {
+      tarjetaCuriosidad.imagen.style.height = "50vw";
+      tarjetaCuriosidad.imagen.style.width = "auto";
+      tarjetaCuriosidad.imagen.style.maxWidth = "100%";
+    } else {
+      tarjetaCuriosidad.imagen.style.height = "auto";
+      tarjetaCuriosidad.imagen.style.width = "100%";
+      tarjetaCuriosidad.imagen.style.maxWidth = "100%";
+    }
+  }
   tarjetaCuriosidad.titulo.innerText = noticiaCuriosidad[0].titulo;
   tarjetaCuriosidad.contenido.innerText = noticiaCuriosidad[0].contenidoRes;
   tarjetaCuriosidad.autor.innerText = noticiaCuriosidad[0].autor;
