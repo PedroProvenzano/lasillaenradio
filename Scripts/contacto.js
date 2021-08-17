@@ -52,7 +52,7 @@ botonFormEnviar.addEventListener("click", () => {
   };
 
   // Fetch POST formulario
-  fetch("https://lasilla-api.herokuapp.com/mensajes/enviar", {
+  fetch("https://datonews-api.herokuapp.com/mensajes/enviar", {
     method: "POST",
     body: JSON.stringify(bodyCont),
     headers: {
