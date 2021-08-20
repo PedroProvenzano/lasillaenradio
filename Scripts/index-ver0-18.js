@@ -179,7 +179,7 @@ botonEntrevistas.addEventListener("click", async () => {
 const contenedorVideos = document.getElementById("contenedor-videos");
 async function getVideosHandler() {
   fetch(
-    `https://www.googleapis.com/youtube/v3/playlistItems?part=contentDetails&part=snippet&playlistId=PLhVVuQDrmmvhHk4B4RSB6ohdi5k1jr8NC&key=AIzaSyDOyvrBMukXKGNuwEC2bcB3b3EdMt2CYxA`
+    `https://www.googleapis.com/youtube/v3/playlistItems?part=contentDetails&maxResults=10&part=snippet&playlistId=PLhVVuQDrmmvhHk4B4RSB6ohdi5k1jr8NC&key=AIzaSyDOyvrBMukXKGNuwEC2bcB3b3EdMt2CYxA`
   )
     .then((data) => data.json())
     .then((data) => {
