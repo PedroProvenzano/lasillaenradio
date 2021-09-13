@@ -1115,6 +1115,7 @@ header {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  min-height: 500px;
 }
 
 .sectionTrivia .spinner-positionTrivia {
@@ -1188,6 +1189,7 @@ header {
 }
 
 .sectionVida {
+  height: auto;
   width: 80vw;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1361,8 +1363,35 @@ header {
           align-items: center;
 }
 
+.sectionVida .card7 {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin-top: 2rem;
+  width: 70%;
+  height: auto;
+}
+
+.sectionVida .card7 .card-text {
+  height: 5vw;
+  overflow-y: scroll;
+}
+
 .cont-meme-publi {
-  height: 40vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
   width: 40vw;
 }
 
@@ -1378,7 +1407,7 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 29vw;
+  height: 25vw;
 }
 
 .dato-meme .dato-meme-text {
@@ -1748,6 +1777,13 @@ header {
 }
 
 @media (max-width: 570px) {
+  .sectionVida .card7 {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+  .sectionVida .card7 .card-text {
+    height: 10vw;
+  }
   .PASODesk {
     display: none;
   }
@@ -1924,7 +1960,7 @@ header {
   .section1 .card3,
   .section1 .card4 {
     width: 80vw;
-    height: 120vw;
+    height: 140vw;
   }
   .section1 .card1 .card-title,
   .section1 .card2 .card-title,
@@ -2196,7 +2232,8 @@ header {
   }
   .sectionVida .cont-meme-publi {
     width: 80vw;
-    height: 120vw;
+    height: 155vw;
+    min-height: 600px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2326,4 +2363,4 @@ header {
     width: 90%;
   }
 }
-/*# sourceMappingURL=index-ver0-16.css.map */
+/*# sourceMappingURL=index-ver0-17.css.map */

@@ -614,6 +614,53 @@ let ArrayObjetosNoticias = [
   importanteSeis,
 ];
 
+// Noticia Economia y finanzas
+const tarjetaEcoFin = {
+  imagen: document.getElementById("img-not-ecofin"),
+  titulo: document.getElementById("tit-not-ecofin"),
+  contenido: document.getElementById("cont-not-ecofin"),
+  autor: document.getElementById("aut-not-ecofin"),
+  boton: document.getElementById("btn-not-ecofin"),
+};
+
+const cargarTarjetaEsp = async (tarjeta, tematica) => {
+  const noticiaFiltrada = await noticias.filter(
+    (e) => e.temaPrincipal === tematica
+  );
+  console.log(noticiaFiltrada);
+  let urlIMG = JSON.parse(noticiaFiltrada[0].imagenesUrl);
+  tarjeta.imagen.src = (await urlIMG[0]) || (await urlIMG);
+  if (window.screen.width > 570) {
+    if (300 > tarjeta.imagen.height) {
+      tarjeta.imagen.style.height = "15vw";
+      tarjeta.imagen.style.width = "auto";
+      tarjeta.imagen.style.maxWidth = "100%";
+    } else {
+      tarjeta.imagen.style.height = "auto";
+      tarjeta.imagen.style.width = "100%";
+      tarjeta.imagen.style.maxWidth = "100%";
+    }
+  } else {
+    if (300 > tarjeta.imagen.height) {
+      tarjeta.imagen.style.height = "50vw";
+      tarjeta.imagen.style.width = "auto";
+      tarjeta.imagen.style.maxWidth = "100%";
+    } else {
+      tarjeta.imagen.style.height = "auto";
+      tarjeta.imagen.style.width = "100%";
+      tarjeta.imagen.style.maxWidth = "100%";
+    }
+  }
+  tarjeta.titulo.innerText = noticiaFiltrada[0].titulo;
+  tarjeta.contenido.innerText = noticiaFiltrada[0].contenidoRes;
+  tarjeta.autor.innerText = noticiaFiltrada[0].autor;
+  tarjeta.boton.addEventListener("click", () => {
+    cargarNoticia(noticiaFiltrada[0]);
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  });
+};
+
 // Noticia curiosidad
 const tarjetaCuriosidad = {
   imagen: document.getElementById("img-not-curio"),
@@ -668,6 +715,7 @@ fetch("https://datonews-api.herokuapp.com/noticias/todas")
   .then((res) => {
     noticias = res;
     cargarTarjetaCuriosidad();
+    cargarTarjetaEsp(tarjetaEcoFin, "ecofin");
 
     // Agregar noticias importantes a seccion 1
     let iterNum = 1;
@@ -978,11 +1026,6 @@ PerVoi.addEventListener("click", () => {
 const fundeu = document.getElementById("fundeu");
 fundeu.addEventListener("click", () => {
   window.open("https://fundeu.fiile.org.ar/");
-});
-
-const Olivia = document.getElementById("Olivia");
-Olivia.addEventListener("click", () => {
-  window.open("https://www.instagram.com/editorialolivia/");
 });
 
 const MariaJulia = document.getElementById("mariajuliarodriguez");

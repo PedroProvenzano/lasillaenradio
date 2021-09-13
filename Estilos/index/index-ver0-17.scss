@@ -349,6 +349,7 @@ header {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  min-height: 500px;
   .spinner-positionTrivia {
     position: relative;
     top: 5vw;
@@ -398,6 +399,7 @@ header {
 
 // Seccion Contemporaneo
 .sectionVida {
+  height: auto;
   width: 80vw;
   display: flex; // none
   flex-direction: row;
@@ -496,11 +498,25 @@ header {
       }
     }
   }
+  .card7 {
+    align-self: center;
+    margin-top: 2rem;
+    width: 70%;
+    height: auto;
+    .card-text {
+      height: 5vw;
+      overflow-y: scroll;
+    }
+  }
 }
 
 // Dato meme
 .cont-meme-publi {
-  height: 40vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
   width: 40vw;
 }
 .dato-meme {
@@ -509,7 +525,7 @@ header {
   flex-direction: column;
   align-items: center;
   // justify-content: center;
-  height: 29vw;
+  height: 25vw;
   .dato-meme-text {
     width: 70%;
     display: flex;
@@ -767,6 +783,15 @@ header {
 // MOBILE
 
 @media (max-width: 570px) {
+  .sectionVida {
+    .card7 {
+      width: 100%;
+      margin-bottom: 2rem;
+      .card-text {
+        height: 10vw;
+      }
+    }
+  }
   .PASODesk {
     display: none;
   }
@@ -901,7 +926,7 @@ header {
     .card3,
     .card4 {
       width: 80vw;
-      height: 120vw;
+      height: 140vw;
       .card-title {
         font-size: 5vw;
       }
@@ -1150,7 +1175,8 @@ header {
     // Dato meme
     .cont-meme-publi {
       width: 80vw;
-      height: 120vw;
+      height: 155vw;
+      min-height: 600px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
