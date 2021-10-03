@@ -908,8 +908,10 @@ function cargarNoticia(noticia) {
   const youtubeNoticia = document.getElementById("youtube-noticia");
   const fbChat = document.getElementById("chat-noticia");
   console.log(noticia);
-  if (noticia.youtubeUrl !== "vacio") {
+  if (noticia.youtubeUrl !== "vacio" && noticia.youtubeUrl !== undefined) {
     youtubeNoticia.innerHTML = `<iframe width="100%" height="100%" src="${noticia.youtubeUrl}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+  } else {
+    youtubeNoticia.remove();
   }
 
   tituloNoticia.innerText = noticia.titulo;
