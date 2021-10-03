@@ -30,6 +30,10 @@ a {
   height: 85%;
   background-color: #ffffff;
 }
+#youtube-noticia {
+  width: 80%;
+  height: 650px;
+}
 .avido-mobile {
   display: none;
 }
@@ -783,6 +787,10 @@ header {
 // MOBILE
 
 @media (max-width: 570px) {
+  #youtube-noticia {
+    width: 100%;
+    height: 200px;
+  }
   .sectionVida {
     .card7 {
       width: 100%;
@@ -1259,6 +1267,7 @@ header {
     min-height: 50vh;
     height: auto;
     display: flex;
+    flex-direction: column;
     flex-wrap: nowrap;
     justify-content: center;
     align-items: center;

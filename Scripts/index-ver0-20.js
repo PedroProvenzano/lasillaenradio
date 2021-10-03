@@ -905,7 +905,12 @@ function cargarNoticia(noticia) {
   const fuenteNoticia = document.getElementById("fuente-noticia");
   const fechaNoticia = document.getElementById("fecha-noticia");
   const contImagenes = document.getElementById("grid-img-cont");
+  const youtubeNoticia = document.getElementById("youtube-noticia");
   const fbChat = document.getElementById("chat-noticia");
+  console.log(noticia);
+  if (noticia.youtubeUrl !== "vacio") {
+    youtubeNoticia.innerHTML = `<iframe width="100%" height="100%" src="${noticia.youtubeUrl}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+  }
 
   tituloNoticia.innerText = noticia.titulo;
   contenidoNoticia.innerText = noticia.contenido;
