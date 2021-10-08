@@ -44,10 +44,7 @@ a {
   align-items: center;
   justify-content: center;
   padding: 0.5rem;
-  width: 29vw;
-  position: relative;
-  top: 0;
-  left: 5vw;
+  width: 33vw;
   p {
     margin: 0px;
     color: white;
@@ -88,7 +85,7 @@ header {
 .header-container {
   display: flex;
   flex-direction: row;
-  width: 80vw;
+  width: 100vw;
   height: 150px;
   justify-content: space-between;
   align-items: center;
@@ -120,6 +117,7 @@ header {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  width: 33vw;
   .radio-cont {
     display: flex;
     flex-direction: column;
@@ -645,12 +643,12 @@ header {
   top: 0rem;
   width: 100%;
   .contenedor-footer {
-    width: 90%;
+    width: 100%;
     font-size: 1.2vw;
     display: flex;
     align-items: center;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
 
     .footer-texto {
       padding-top: 0.8rem;
@@ -760,11 +758,13 @@ header {
 
 // Paso
 .PASODesk {
-  width: 10vw;
+  width: 33vw;
   text-align: center;
-
+  font-family: "Montserrat", sans-serif;
   p {
+    font-weight: 600;
     color: white;
+    font-size: 1.2rem;
   }
   a {
     text-decoration: none;
@@ -780,6 +780,11 @@ header {
   .bloque-pub-texto {
     p {
       font-size: 1vw;
+    }
+  }
+  .PASODesk {
+    p {
+      font-size: 1rem;
     }
   }
 }
@@ -1243,9 +1248,12 @@ header {
     }
   }
   .footer {
-    height: 250px;
+    height: 150px;
     .contenedor-footer {
       flex-direction: column;
+      justify-content: space-evenly;
+      height: 100%;
+      width: 100%;
       .footer-texto {
         width: 80%;
         padding: 0.5vw;
@@ -1257,7 +1265,7 @@ header {
           margin-bottom: 1vw;
         }
         .copyR {
-          font-size: 2vw;
+          font-size: 3vw;
         }
       }
     }
