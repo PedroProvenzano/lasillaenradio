@@ -19,6 +19,7 @@ const seccionTrivia = document.getElementById("sectionTrivia");
 const seccionContemporaneo = document.getElementById("sectionVida");
 const seccionBuscador = document.getElementById("seccion-buscador");
 const seccionEntrevistas = document.getElementById("entrevistas");
+const seccionActualidadFront = document.getElementById("actualidad-front");
 const bannerCard = document.getElementById("institutoCard");
 const contenedorBanners = document.getElementById("contenedor-banners");
 const escenasArray = [
@@ -34,6 +35,7 @@ const escenasArray = [
   seccionArte,
   seccionTrivia,
   seccionContemporaneo,
+  seccionActualidadFront,
   seccionBuscador,
   seccionEntrevistas,
   contenedorBanners,
@@ -45,6 +47,7 @@ const escenasInicio = [
   seccionArte,
   seccionTrivia,
   seccionContemporaneo,
+  seccionActualidadFront,
   contenedorBanners,
 ];
 const escenasNoticias = [
@@ -179,7 +182,7 @@ botonEntrevistas.addEventListener("click", async () => {
 const contenedorVideos = document.getElementById("contenedor-videos");
 async function getVideosHandler() {
   fetch(
-    `https://www.googleapis.com/youtube/v3/playlistItems?part=contentDetails&maxResults=10&part=snippet&playlistId=PLhVVuQDrmmvhHk4B4RSB6ohdi5k1jr8NC&key=AIzaSyDOyvrBMukXKGNuwEC2bcB3b3EdMt2CYxA`
+    `https://www.googleapis.com/youtube/v3/playlistItems?part=contentDetails&maxResults=20&part=snippet&playlistId=PLhVVuQDrmmvhHk4B4RSB6ohdi5k1jr8NC&key=AIzaSyDOyvrBMukXKGNuwEC2bcB3b3EdMt2CYxA`
   )
     .then((data) => data.json())
     .then((data) => {
@@ -623,11 +626,26 @@ const tarjetaEcoFin = {
   boton: document.getElementById("btn-not-ecofin"),
 };
 
+// Noticia Actualidad Frontal
+let actualidadFrontUno = {
+  imagen: document.getElementById("img-not-act-one"),
+  titulo: document.getElementById("tit-not-act-one"),
+  contenido: document.getElementById("cont-not-act-one"),
+  autor: document.getElementById("aut-not-act-one"),
+  boton: document.getElementById("btn-not-act-one"),
+};
+let actualidadFrontDos = {
+  imagen: document.getElementById("img-not-act-two"),
+  titulo: document.getElementById("tit-not-act-two"),
+  contenido: document.getElementById("cont-not-act-two"),
+  autor: document.getElementById("aut-not-act-two"),
+  boton: document.getElementById("btn-not-act-two"),
+};
+
 const cargarTarjetaEsp = async (tarjeta, tematica) => {
   const noticiaFiltrada = await noticias.filter(
     (e) => e.temaPrincipal === tematica
   );
-  console.log(noticiaFiltrada);
   let urlIMG = JSON.parse(noticiaFiltrada[0].imagenesUrl);
   tarjeta.imagen.src = (await urlIMG[0]) || (await urlIMG);
   if (window.screen.width > 570) {
@@ -671,11 +689,9 @@ const tarjetaCuriosidad = {
 };
 
 const cargarTarjetaCuriosidad = async () => {
-  console.log("cargando noticias");
   const noticiaCuriosidad = await noticias.filter(
     (e) => e.temaPrincipal === "curiosidades"
   );
-  console.log(noticiaCuriosidad);
   let urlIMG = JSON.parse(noticiaCuriosidad[0].imagenesUrl);
   tarjetaCuriosidad.imagen.src = (await urlIMG[0]) || (await urlIMG);
   if (window.screen.width > 570) {
@@ -716,6 +732,8 @@ fetch("https://datonews-api.herokuapp.com/noticias/todas")
     noticias = res;
     cargarTarjetaCuriosidad();
     cargarTarjetaEsp(tarjetaEcoFin, "ecofin");
+    cargarTarjetaEsp(actualidadFrontUno, "actualidad-front-uno");
+    cargarTarjetaEsp(actualidadFrontDos, "actualidad-front-dos");
 
     // Agregar noticias importantes a seccion 1
     let iterNum = 1;
@@ -789,7 +807,6 @@ fetch("https://datonews-api.herokuapp.com/noticias/todas")
       vidaAutor[i].innerText = `Autor: ${notaVida[0].autor}`;
       vidaFuente[i].innerText = `Fuente: ${notaVida[0].fuente}`;
       vidaContenidoTxt[i].innerText = notaVida[0].contenido;
-      console.log(notaVida[0].date);
       vidaFecha[i].innerText = `Fecha: ${notaVida[0].date.slice(
         8,
         10
@@ -907,7 +924,6 @@ function cargarNoticia(noticia) {
   const contImagenes = document.getElementById("grid-img-cont");
   const youtubeNoticia = document.getElementById("youtube-noticia");
   const fbChat = document.getElementById("chat-noticia");
-  console.log(noticia);
   if (noticia.youtubeUrl !== "vacio" && noticia.youtubeUrl !== undefined) {
     youtubeNoticia.innerHTML = `<iframe width="100%" height="100%" src="${noticia.youtubeUrl}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="true"></iframe>`;
   } else {
@@ -1058,9 +1074,6 @@ fetch("https://datonews-api.herokuapp.com/meme/todas")
   .then((data) => data.json())
   .then((data) => {
     imgMeme.onload = function () {
-      console.log(this.naturalHeight);
-      console.log(this.naturalWidth);
-      console.log(this.naturalHeight > this.naturalWidth);
       if (this.naturalHeight > this.naturalWidth) {
         this.style.width = "auto";
         this.style.height = "70%";
