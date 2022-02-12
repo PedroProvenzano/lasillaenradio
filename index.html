@@ -25,7 +25,7 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="Estilos/index/index-ver0-21.css" />
+    <link rel="stylesheet" href="Estilos/index/index-ver0-22.css" />
     <link rel="stylesheet" href="./Estilos/Banners/Banners-ver0-3.css" />
     <script
       src="https://kit.fontawesome.com/c19f763333.js"
@@ -58,7 +58,7 @@
     <header>
       <div class="header-container">
         <div class="PASODesk">
-          <p>HACÉ PUBLICIDAD</p>
+          <p class="heartbeat">HACÉ PUBLICIDAD</p>
           <p>11-6112-2292</p>
         </div>
         <div class="logo-cont">
@@ -70,8 +70,17 @@
             El magazine web de @lasillaenradio
           </h1>
         </div>
-        <div class="radioCont">
-          <div class="radio-cont">
+        <!-- <div class="radioCont"> -->
+        <div class="canalYoutube">
+          <p>Suscribite a nuestro canal de YouTube!</p>
+          <a
+            class="btn--wiggle"
+            title="Youtube de LaSillaEnRadio"
+            href="https://www.youtube.com/channel/UCxnXkeHoxiMUk2R90bNTsGw"
+            target="_blank"
+            ><i class="fab fa-youtube"></i
+          ></a>
+          <!-- <div class="radio-cont">
             <p>
               Por aquí escuchas
               <span class="sillaEnRadio">La Silla En Radio</span> , miércoles
@@ -83,7 +92,7 @@
               height="50"
               id="iframeRadio"
             ></iframe>
-          </div>
+          </div> -->
         </div>
       </div>
     </header>
@@ -221,6 +230,15 @@
           </div>
         </div>
       </section>
+
+      <!--Section 2 (boton a contacto)-->
+      <section class="section2" id="contacto">
+        <h2 class="HiddenObject">Contacto</h2>
+        <div class="boton-contacto" id="boton-contacto">
+          TU MENSAJE EN UN CLICK
+        </div>
+      </section>
+
       <div class="contenedor-banners" id="contenedor-banners">
         <div class="banner-fondo" id="institutoCard">
           <div class="banner">
@@ -373,14 +391,6 @@
               </div>
             </div>
           </div>
-        </div>
-      </section>
-
-      <!--Section 2 (boton a contacto)-->
-      <section class="section2" id="contacto">
-        <h2 class="HiddenObject">Contacto</h2>
-        <div class="boton-contacto" id="boton-contacto">
-          TU MENSAJE EN UN CLICK
         </div>
       </section>
 
@@ -886,6 +896,10 @@
     <footer class="footer">
       <div class="contenedor-footer">
         <div class="footer-texto">
+          <div class="PASODesk mobilePASODesk">
+            <p class="heartbeat">HACÉ PUBLICIDAD</p>
+            <p>11-6112-2292</p>
+          </div>
           <div class="fundeu" id="fundeu">
             <img
               title="Logo Fundeu"
@@ -925,7 +939,7 @@
       integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
       crossorigin="anonymous"
     ></script>
-    <script src="./Scripts/index-ver0-23.js"></script>
+    <script src="./Scripts/index-ver0-24.js"></script>
     <script src="./Scripts/contacto.js"></script>
   </body>
 </html>

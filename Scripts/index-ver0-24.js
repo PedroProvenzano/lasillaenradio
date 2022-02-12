@@ -22,6 +22,7 @@ const seccionEntrevistas = document.getElementById("entrevistas");
 const seccionActualidadFront = document.getElementById("actualidad-front");
 const bannerCard = document.getElementById("institutoCard");
 const contenedorBanners = document.getElementById("contenedor-banners");
+const youtubeNoticia = document.getElementById("youtube-noticia");
 const escenasArray = [
   seccionNoticiasPrincipales,
   seccionBotonContacto,
@@ -505,6 +506,7 @@ botonInicio.addEventListener("click", irAlInicio);
 // Funciones
 // Boton de inicio
 function irAlInicio() {
+  youtubeNoticia.innerHTML = "";
   botonInicio.removeAttribute("style");
   for (let i of escenasInicio) {
     i.removeAttribute("style");
@@ -542,6 +544,7 @@ function reinciarBotones(botonActual) {
 }
 // cambio de escena
 function cambiarEscena(escena, botonActual = "asd") {
+  youtubeNoticia.innerHTML = "";
   for (let i of escenasArray) {
     if (i != escena) {
       i.removeAttribute("style");
@@ -922,13 +925,15 @@ function cargarNoticia(noticia) {
   const fuenteNoticia = document.getElementById("fuente-noticia");
   const fechaNoticia = document.getElementById("fecha-noticia");
   const contImagenes = document.getElementById("grid-img-cont");
-  const youtubeNoticia = document.getElementById("youtube-noticia");
+
   const fbChat = document.getElementById("chat-noticia");
+  console.log(noticia);
   if (noticia.youtubeUrl !== "vacio" && noticia.youtubeUrl !== undefined) {
     youtubeNoticia.innerHTML = `<iframe width="100%" height="100%" src="${noticia.youtubeUrl}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="true"></iframe>`;
+    youtubeNoticia.style.display = "block";
   } else {
     if (youtubeNoticia != null) {
-      youtubeNoticia.remove();
+      youtubeNoticia.style.display = "none";
     }
   }
 
