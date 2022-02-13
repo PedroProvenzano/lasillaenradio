@@ -655,6 +655,10 @@ i:hover {
   animation: heartbeat 1.5s ease-in-out infinite both;
 }
 
+.texto-publicidad {
+  color: #ffa733 !important;
+}
+
 @-webkit-keyframes wiggle {
   0% {
     -webkit-transform: rotate(-3deg);
@@ -937,6 +941,7 @@ header {
 .card4 {
   width: 80%;
   height: 40vh;
+  min-height: 400px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1351,6 +1356,7 @@ header {
 
 .sectionVida {
   height: auto;
+  padding: 2rem;
   width: 80vw;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2238,7 +2244,8 @@ header {
   .section1 .card3,
   .section1 .card4 {
     width: 80vw;
-    height: 140vw;
+    height: 40vh;
+    min-height: 500px;
   }
   .section1 .card1 .card-title,
   .section1 .card2 .card-title,
@@ -2670,4 +2677,4 @@ header {
     max-height: 100px;
   }
 }
-/*# sourceMappingURL=index-ver0-21.css.map */
+/*# sourceMappingURL=index-ver0-23.css.map */

@@ -1067,11 +1067,11 @@ MariaJulia.addEventListener("click", () => {
 fetch("https://datonews-api.herokuapp.com/visitas/add").then(() => {});
 
 // Iframe deal
-const iFrameRadio = document.getElementById("iframeRadio");
-iFrameRadio.scrolling = "no";
-iFrameRadio.frameBorder = "0";
+//const iFrameRadio = document.getElementById("iframeRadio");
+//iFrameRadio.scrolling = "no";
+//iFrameRadio.frameBorder = "0";
 // Posible fix? SI
-iFrameRadio.src = iFrameRadio.src;
+//iFrameRadio.src = iFrameRadio.src;
 
 // Memes
 const imgMeme = document.getElementById("img-meme");
@@ -1081,13 +1081,16 @@ fetch("https://datonews-api.herokuapp.com/meme/todas")
     imgMeme.onload = function () {
       if (this.naturalHeight > this.naturalWidth) {
         this.style.width = "auto";
-        this.style.height = "70%";
+        this.style.maxWidth = "100%";
+        this.style.height = "100%";
       } else if (this.naturalHeight === this.naturalWidth) {
         this.style.width = "auto";
-        this.style.height = "70%";
+        this.style.maxWidth = "100%";
+        this.style.height = "100%";
       } else {
-        this.style.width = "70%";
+        this.style.width = "100%";
         this.style.height = "auto";
+        this.style.maxHeight = "100%";
       }
     };
     imgMeme.src = data[0].imgUrl;

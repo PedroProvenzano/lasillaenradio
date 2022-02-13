@@ -95,6 +95,9 @@ $max-width: 90%;
   -webkit-animation: heartbeat 1.5s ease-in-out infinite both;
   animation: heartbeat 1.5s ease-in-out infinite both;
 }
+.texto-publicidad {
+  color: #ffa733 !important;
+}
 
 @keyframes wiggle {
   0% {
@@ -264,6 +267,7 @@ header {
 .card4 {
   width: 80%;
   height: 40vh;
+  min-height: 400px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -520,6 +524,7 @@ header {
 // Seccion Contemporaneo
 .sectionVida {
   height: auto;
+  padding: 2rem;
   width: 80vw;
   display: flex; // none
   flex-direction: row;
@@ -1129,7 +1134,8 @@ header {
     .card3,
     .card4 {
       width: 80vw;
-      height: 140vw;
+      height: 40vh;
+      min-height: 500px;
       .card-title {
         font-size: 5vw;
       }
