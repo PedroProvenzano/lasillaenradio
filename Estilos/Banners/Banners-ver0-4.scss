@@ -4,8 +4,9 @@
   width: 60vw;
   justify-content: space-around;
   .mariajuliarodriguez {
-    height: 35vh;
-    min-height: 315px;
+    height: 37vh;
+    min-height: 330px;
+    min-width: 350px;
     cursor: pointer;
     width: 30vw;
   }
@@ -18,8 +19,9 @@
   background-repeat: no-repeat;
   background-size: cover;
   width: 30vw;
-  height: 35vh;
-  min-height: 315px;
+  height: 37vh;
+  min-height: 330px;
+  min-width: 350px;
   border-radius: 20px;
   margin-bottom: 3rem;
   user-select: none;
@@ -209,5 +211,11 @@
         }
       }
     }
+  }
+}
+
+@media (max-width: 570px) {
+  .banner-fondo {
+    height: 30vh;
   }
 }
