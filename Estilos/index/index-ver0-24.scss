@@ -129,7 +129,13 @@ $max-width: 90%;
   margin: 0;
   box-sizing: border-box;
 }
-
+.montecastro {
+  text-align: center;
+}
+.montecastroLogo {
+  max-width: 450px;
+  width: 50%;
+}
 .logo-text {
   font-family: "Montserrat", sans-serif;
   text-decoration: none;
@@ -223,7 +229,7 @@ header {
 .radioCont,
 .canalYoutube {
   p {
-    color: white;
+    color: #ffa733;
   }
   iframe {
     width: 250px;
@@ -233,6 +239,7 @@ header {
   align-items: center;
   justify-content: center;
   width: 33vw;
+  text-align: center;
   .radio-cont {
     display: flex;
     flex-direction: column;
@@ -903,7 +910,7 @@ header {
   p {
     font-family: "Montserrat", sans-serif;
     font-weight: 600;
-    color: white;
+    color: #ffa733;
     font-size: 1rem;
     margin-bottom: 0;
   }
@@ -1516,5 +1523,8 @@ header {
     .card-body .card-text {
       max-height: 100px;
     }
+  }
+  .montecastroLogo {
+    width: 45%;
   }
 }
