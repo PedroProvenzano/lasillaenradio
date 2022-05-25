@@ -144,6 +144,12 @@
   }
 }
 
+.pervoi-equilibrista {
+  display: flex;
+  justify-content: space-around;
+  width: 80%;
+}
+
 @media (max-width: 570px) {
   .contenedor-banners {
     display: flex;
@@ -211,6 +217,11 @@
         }
       }
     }
+  }
+  .pervoi-equilibrista {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
   }
 }
 
