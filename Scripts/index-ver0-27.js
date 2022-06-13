@@ -182,7 +182,31 @@ botonEntrevistas.addEventListener("click", async () => {
 });
 const contenedorVideos = document.getElementById("contenedor-videos");
 async function getVideosHandler() {
-  fetch(
+  fetch("https://datonews-api.herokuapp.com/entrevistas/todas")
+    .then((res) => res.json())
+    .then((res) => {
+      contenedorVideos.innerHTML = "";
+      res.forEach(({ imgUrl, src }) => {
+        const tagDiv = document.createElement("div");
+        tagDiv.setAttribute("class", "video");
+
+        const tagImg = document.createElement("img");
+        tagImg.src = imgUrl;
+        tagImg.setAttribute("alt", "Foto del entrevistado");
+        tagDiv.appendChild(tagImg);
+
+        const tagIframe = document.createElement("iframe");
+        tagIframe.src = src;
+        tagIframe.setAttribute("width", "100%");
+        tagIframe.setAttribute("height", "65px");
+        tagIframe.setAttribute("scrolling", "no");
+        tagIframe.setAttribute("frameborder", "no");
+        tagDiv.appendChild(tagIframe);
+
+        contenedorVideos.appendChild(tagDiv);
+      });
+    });
+  /*fetch(
     `https://www.googleapis.com/youtube/v3/playlistItems?part=contentDetails&maxResults=20&part=snippet&playlistId=PLhVVuQDrmmvhHk4B4RSB6ohdi5k1jr8NC&key=AIzaSyDOyvrBMukXKGNuwEC2bcB3b3EdMt2CYxA`
   )
     .then((data) => data.json())
@@ -217,6 +241,8 @@ async function getVideosHandler() {
         contenedorVideos.append(divCont);
       }
     });
+    */
+  // RadioCut interviews
 }
 
 // Funcion Cargar noticias seccion
