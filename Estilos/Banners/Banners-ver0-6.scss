@@ -149,6 +149,12 @@
   justify-content: space-around;
   width: 80%;
 }
+.srta-abella {
+  display: flex;
+  justify-content: center;
+  width: 80%;
+  margin-bottom: 2rem;
+}
 
 @media (max-width: 570px) {
   .contenedor-banners {
@@ -219,6 +225,11 @@
     }
   }
   .pervoi-equilibrista {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+  .srta-abella {
     width: 100%;
     flex-direction: column;
     align-items: center;

@@ -1084,6 +1084,11 @@ ElEquilibrista.addEventListener("click", () => {
   window.open("https://www.instagram.com/elequilibrista.comidas/");
 });
 
+const SrtaAbella = document.getElementById("SrtaAbella");
+SrtaAbella.addEventListener("click", () => {
+  window.open("https://www.instagram.com/srta.abellamuniecos/");
+});
+
 const fundeu = document.getElementById("fundeu");
 fundeu.addEventListener("click", () => {
   window.open("https://fundeu.fiile.org.ar/");

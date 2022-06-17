@@ -228,6 +228,17 @@
   width: 80%;
 }
 
+.srta-abella {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 80%;
+  margin-bottom: 2rem;
+}
+
 @media (max-width: 570px) {
   .contenedor-banners {
     display: -webkit-box;
@@ -303,6 +314,16 @@
         -ms-flex-align: center;
             align-items: center;
   }
+  .srta-abella {
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 @media (max-width: 570px) {
@@ -310,4 +331,4 @@
     height: 30vh;
   }
 }
-/*# sourceMappingURL=Banners-ver0-5.css.map */
+/*# sourceMappingURL=Banners-ver0-6.css.map */
