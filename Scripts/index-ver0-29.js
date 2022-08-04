@@ -186,7 +186,8 @@ async function getVideosHandler() {
     .then((res) => res.json())
     .then((res) => {
       contenedorVideos.innerHTML = "";
-      res.forEach(({ imgUrl, src }) => {
+      const revers = res.reverse();
+      revers.forEach(({ imgUrl, src }) => {
         const tagDiv = document.createElement("div");
         tagDiv.setAttribute("class", "video");
 
