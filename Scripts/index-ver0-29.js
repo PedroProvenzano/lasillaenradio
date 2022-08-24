@@ -20,7 +20,8 @@ const seccionContemporaneo = document.getElementById("sectionVida");
 const seccionBuscador = document.getElementById("seccion-buscador");
 const seccionEntrevistas = document.getElementById("entrevistas");
 const seccionActualidadFront = document.getElementById("actualidad-front");
-const bannerCard = document.getElementById("institutoCard");
+const bannerCard = document.getElementById("emiliocardenas1");
+const bannerCard2 = document.getElementById("emiliocardenas2");
 const contenedorBanners = document.getElementById("contenedor-banners");
 const youtubeNoticia = document.getElementById("youtube-noticia");
 const escenasArray = [
@@ -1075,6 +1076,10 @@ bannerCard.addEventListener("click", () => {
   window.open("https://www.instagram.com/institutoemiliocardenas");
 });
 
+bannerCard2.addEventListener("click", () => {
+  window.open("https://www.instagram.com/institutoemiliocardenas");
+});
+
 const PerVoi = document.getElementById("PerVoi");
 PerVoi.addEventListener("click", () => {
   window.open("https://www.instagram.com/fppervoi/");
@@ -1093,11 +1098,6 @@ SrtaAbella.addEventListener("click", () => {
 const fundeu = document.getElementById("fundeu");
 fundeu.addEventListener("click", () => {
   window.open("https://fundeu.fiile.org.ar/");
-});
-
-const MariaJulia = document.getElementById("mariajuliarodriguez");
-MariaJulia.addEventListener("click", () => {
-  window.open("https://www.instagram.com/mjrodriguezcuentos/");
 });
 
 // A;adir visita
