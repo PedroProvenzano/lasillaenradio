@@ -1,3 +1,2 @@
-@import url(c:\Users\Pedro Provenzano\Desktop\Trabajo\Proyecto Silla\lasillaenradio\Estilos\index\index.css);
-@import c:\Users\Pedro Provenzano\Desktop\Trabajo\Proyecto Silla\lasillaenradio\Estilos\mobile\mobile.css only screen and (max-width: 480px);
-/*# sourceMappingURL=general.css.map */
+@import "./index/index.css";
+@import "./mobile/mobile.css" only screen and (max-width: 480px);/*# sourceMappingURL=general.css.map */

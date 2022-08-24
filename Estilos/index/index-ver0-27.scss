@@ -333,11 +333,12 @@ header {
   justify-content: center;
   align-items: center;
   margin-bottom: 4rem;
+  margin-top: 4rem;
   width: 60vw;
   padding: 1%;
   background-color: $secondary-color;
   clip-path: polygon(26% 0, 78% 0, 75% 100%, 22% 100%);
-  max-height: 40px;
+  max-height: 80px;
 }
 
 .boton-contacto a {
@@ -1224,6 +1225,7 @@ header {
     }
   }
   .section2 {
+    margin-top: 1rem;
     width: 100vw;
     height: 15vw;
     clip-path: polygon(16% 0, 88% 0, 85% 100%, 12% 100%);

@@ -1,51 +1,25 @@
 .section-noticia {
   display: none;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   margin: 2rem 0 4rem 0;
 }
-
 .section-noticia .titulo-noticia {
   font-size: 2rem;
   width: 90%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
 }
-
 .section-noticia .cont-imagen-noticia {
   margin: 1rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   width: 80%;
 }
-
 .section-noticia .cont-imagen-noticia .imagen-noticia {
   height: 500px;
   width: auto;
@@ -55,38 +29,26 @@
       -ms-user-select: none;
           user-select: none;
 }
-
 .section-noticia .autor-noticia {
   font-style: italic;
   width: 80%;
 }
-
 .section-noticia .contenido-noticia {
   background-color: white;
   padding: 10px;
   width: 80%;
   font-size: 1.2rem;
 }
-
 .section-noticia .fecha-noticia {
   width: 80%;
 }
 
 .contenedor-imagenes {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 
 .flecha-izq:hover,
@@ -97,5 +59,4 @@
 #img-numb {
   font-size: 1.5rem;
   font-weight: 600;
-}
-/*# sourceMappingURL=Seleccionada.css.map */
+}/*# sourceMappingURL=Seleccionada.css.map */
