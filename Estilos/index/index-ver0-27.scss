@@ -484,6 +484,7 @@ header {
 //  Trivia
 .sectionTrivia {
   display: flex;
+  text-align: center;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -531,6 +532,14 @@ header {
     .trivia-op-cont:hover {
       cursor: pointer;
       background-color: rgba(173, 173, 173, 0.425);
+    }
+  }
+  .triviaDescripcionCont{
+    display: none;
+    margin-top: 1rem;
+    width: 80%;
+    .triviaDescripcion {
+      font-size: 1vw;
     }
   }
 }

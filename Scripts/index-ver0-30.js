@@ -1018,6 +1018,7 @@ fetch("https://datonews-api.herokuapp.com/trivia/todas")
     triviaLabels[0].innerText = res[0].respuestaUno;
     triviaLabels[1].innerText = res[0].respuestaDos;
     triviaLabels[2].innerText = res[0].respuestaTres;
+    Trivia.descriptionTrivia.innerText = res[0].description;
     Trivia.solucion = res[0].solucion
       .replace(regexTriv, "")
       .replace(/(?:\r\n|\r|\n)/g, "");
@@ -1033,6 +1034,8 @@ let Trivia = {
   spinnerTrivia: document.getElementById("spinnerTrivia"),
   contenedoresTrivia: document.getElementsByClassName("trivia-op-cont"),
   inputsTrivia: document.getElementsByClassName("trivia"),
+  descriptionTrivia: document.getElementById("triviaDescripcion"),
+  descriptionContTrivia: document.getElementById("triviaDescriptionCont"),
   solucion: "Gustavo Cerati",
   checkRespuesta(respuesta) {
     if (respuesta == this.solucion) {
@@ -1042,10 +1045,12 @@ let Trivia = {
     }
   },
 };
+
 const regexTriv = / /gi;
 function iniciarTrivia() {
   for (let i = 0; i < 3; i++) {
     Trivia.contenedoresTrivia[i].addEventListener("click", () => {
+      Trivia.descriptionContTrivia.style.display = "flex";
       Trivia.inputsTrivia[i].click();
       for (let obj of Trivia.contenedoresTrivia) {
         if (
