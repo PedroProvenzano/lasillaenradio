@@ -1,6 +1,6 @@
 // Variables
 let noticias = [];
-
+let URL_FETCH = "https://datonews.onrender.com/";
 // Escenas
 const spinner = document.getElementById("spinner");
 const seccionNoticiasPrincipales = document.getElementById(
@@ -183,7 +183,7 @@ botonEntrevistas.addEventListener("click", async () => {
 });
 const contenedorVideos = document.getElementById("contenedor-videos");
 async function getVideosHandler() {
-  fetch("https://datonews-api.herokuapp.com/entrevistas/todas")
+  fetch(`${URL_FETCH}entrevistas/todas`)
     .then((res) => res.json())
     .then((res) => {
       contenedorVideos.innerHTML = "";
@@ -757,7 +757,7 @@ const cargarTarjetaCuriosidad = async () => {
 };
 
 // Conseguir noticias
-fetch("https://datonews-api.herokuapp.com/noticias/todas")
+fetch(`${URL_FETCH}noticias/todas`)
   .then((res) => res.json())
   .then((res) => {
     noticias = res;
@@ -885,7 +885,7 @@ imagenDelDia.onload = function () {
     contArteTxt[0].style.width = `${this.width}px`;
   }
 };
-fetch("https://datonews-api.herokuapp.com/imagen/todas")
+fetch(`${URL_FETCH}imagen/todas`)
   .then((res) => res.json())
   .then((res) => {
     const descImagenDia = document.getElementById("arte-txt-desc");
@@ -1009,7 +1009,7 @@ function cargarNoticia(noticia) {
 // Trivia
 
 // Cargar trivia
-fetch("https://datonews-api.herokuapp.com/trivia/todas")
+fetch(`${URL_FETCH}trivia/todas`)
   .then((res) => res.json())
   .then(async (res) => {
     const preguntaTrivia = document.getElementById("preguntaTrivia");
@@ -1106,7 +1106,7 @@ fundeu.addEventListener("click", () => {
 });
 
 // A;adir visita
-fetch("https://datonews-api.herokuapp.com/visitas/add").then(() => {});
+fetch(`${URL_FETCH}visitas/add`).then(() => {});
 
 // Iframe deal
 //const iFrameRadio = document.getElementById("iframeRadio");
@@ -1117,7 +1117,7 @@ fetch("https://datonews-api.herokuapp.com/visitas/add").then(() => {});
 
 // Memes
 const imgMeme = document.getElementById("img-meme");
-fetch("https://datonews-api.herokuapp.com/meme/todas")
+fetch(`${URL_FETCH}meme/todas`)
   .then((data) => data.json())
   .then((data) => {
     imgMeme.onload = function () {
