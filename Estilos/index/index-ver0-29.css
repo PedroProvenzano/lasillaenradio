@@ -876,6 +876,7 @@ header {
 
 .sectionTrivia {
   display: flex;
+  margin-top: 5vw;
   text-align: center;
   flex-direction: column;
   align-items: center;
@@ -1999,4 +2000,4 @@ header {
   .montecastroLogo {
     width: 45%;
   }
-}/*# sourceMappingURL=index-ver0-28.css.map */
+}/*# sourceMappingURL=index-ver0-29.css.map */
