@@ -1105,7 +1105,7 @@ bannerCard.addEventListener("click", () => {
 });
 
 bannerCard2.addEventListener("click", () => {
-  window.open("https://www.instagram.com/institutoemiliocardenas");
+  window.open("https://www.instagram.com/claudio.kappel");
 });
 /*
 const PerVoi = document.getElementById("PerVoi");
