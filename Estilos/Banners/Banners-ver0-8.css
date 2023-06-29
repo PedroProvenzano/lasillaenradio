@@ -150,6 +150,7 @@
 .pervoi-equilibrista {
   display: flex;
   justify-content: space-around;
+  align-items: center;
   width: 80%;
 }
 
@@ -224,6 +225,8 @@
     width: 100%;
     flex-direction: column;
     align-items: center;
+    justify-content: space-around;
+    min-height: 90vh;
   }
   .srta-abella {
     width: 100%;
@@ -235,4 +238,4 @@
   .banner-fondo {
     height: 30vh;
   }
-}/*# sourceMappingURL=Banners-ver0-7.css.map */
+}/*# sourceMappingURL=Banners-ver0-8.css.map */

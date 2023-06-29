@@ -809,6 +809,7 @@ header {
   margin-bottom: 5vw;
 }
 .sectionArte .contenedor-arte-noticias {
+  margin-bottom: 2rem;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -1700,6 +1701,7 @@ header {
     margin-top: 10vw;
   }
   .sectionArte .contenedor-arte-noticias {
+    margin-bottom: 2rem;
     width: 100vw;
     flex-direction: column;
   }
@@ -2000,4 +2002,4 @@ header {
   .montecastroLogo {
     width: 45%;
   }
-}/*# sourceMappingURL=index-ver0-29.css.map */
+}/*# sourceMappingURL=index-ver0-30.css.map */
