@@ -1108,6 +1108,48 @@ header {
   display: none;
 }
 
+.dato-humor {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 25vw;
+}
+.dato-humor .dato-humor-text {
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 8%;
+}
+.dato-humor .dato-humor-text p {
+  font-weight: 600;
+  border: 1px solid rgb(0, 119, 6);
+  border-radius: 15px 15px 0 0;
+  text-align: center;
+  border-bottom: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  font-size: 1.2vw;
+}
+.dato-humor .dato-humor-img {
+  background-color: rgb(230, 230, 230);
+  border: 2px solid rgb(0, 119, 6);
+  width: 70%;
+  height: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.dato-humor .dato-humor-img img {
+  height: 100%;
+}
+
 /* Publicidad */
 .bloque-pub {
   background-color: rgba(0, 0, 0, 0.123);
@@ -1895,6 +1937,22 @@ header {
     height: 93%;
     width: 100%;
   }
+  .dato-humor {
+    width: 100%;
+    height: 80vw;
+  }
+  .dato-humor .dato-humor-text {
+    height: 10%;
+    width: 100%;
+  }
+  .dato-humor .dato-humor-text p {
+    width: 100%;
+    font-size: 3vw;
+  }
+  .dato-humor .dato-humor-img {
+    height: 93%;
+    width: 100%;
+  }
   .bloque-pub {
     width: 80vw;
     height: 30vw;
@@ -2002,4 +2060,4 @@ header {
   .montecastroLogo {
     width: 45%;
   }
-}/*# sourceMappingURL=index-ver0-30.css.map */
+}/*# sourceMappingURL=index-ver0-31.css.map */
