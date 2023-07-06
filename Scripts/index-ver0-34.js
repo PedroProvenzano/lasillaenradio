@@ -1,6 +1,7 @@
 // Variables
 let noticias = [];
-let URL_FETCH = "http://3.16.139.229:3000/";
+let URL_FETCH =
+  "https://ec2-3-20-141-209.us-east-2.compute.amazonaws.com:3000/";
 // Escenas
 const spinner = document.getElementById("spinner");
 const seccionNoticiasPrincipales = document.getElementById(
