@@ -1,6 +1,6 @@
 // Variables
 let noticias = [];
-let URL_FETCH = "https://datonews.onrender.com/";
+let URL_FETCH = "http://3.16.139.229:3000/";
 // Escenas
 const spinner = document.getElementById("spinner");
 const seccionNoticiasPrincipales = document.getElementById(
