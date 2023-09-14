@@ -11,6 +11,11 @@
     height: 80%;
   }
 }
+.laAcademia {
+  width: 40%;
+  max-width: 400px;
+  margin-bottom: 2rem;
+}
 .banner-fondo {
   display: flex;
   align-items: center;
@@ -154,10 +159,13 @@
   display: flex;
   justify-content: center;
   width: 80%;
-  margin-bottom: 2rem;
+  margin-bottom: 5rem;
 }
 
 @media (max-width: 570px) {
+  .laAcademia {
+    width: 100%;
+  }
   .contenedor-banners {
     display: flex;
     flex-direction: column;
