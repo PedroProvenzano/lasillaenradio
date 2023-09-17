@@ -1118,9 +1118,9 @@ ElEquilibrista.addEventListener("click", () => {
   window.open("https://www.instagram.com/elequilibrista.comidas/");
 });
 
-const SrtaAbella = document.getElementById("SrtaAbella");
+const SrtaAbella = document.getElementById("laAcademia");
 SrtaAbella.addEventListener("click", () => {
-  window.open("https://www.instagram.com/srta.abellamuniecos/");
+  window.open("https://www.instagram.com/academia.limpieza/");
 });
 
 const fundeu = document.getElementById("fundeu");
