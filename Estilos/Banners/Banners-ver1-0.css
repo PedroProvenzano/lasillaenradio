@@ -11,6 +11,30 @@
   height: 80%;
 }
 
+.cont-equilibrista-joyero {
+  padding: 0 10rem;
+  display: flex;
+  width: 80vw;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.cont-equilibrista-joyero .joyero {
+  height: 400px;
+}
+.cont-equilibrista-joyero .joyero img {
+  height: 80%;
+}
+.cont-equilibrista-joyero .joyero img:hover {
+  cursor: pointer;
+}
+.cont-equilibrista-joyero .joyero div {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
 .laAcademia {
   width: 40%;
   max-width: 400px;
@@ -242,9 +266,16 @@
     flex-direction: column;
     align-items: center;
   }
+  .cont-equilibrista-joyero {
+    flex-direction: column;
+    width: 100vw;
+  }
+  .cont-equilibrista-joyero .joyero {
+    margin-bottom: 2rem;
+  }
 }
 @media (max-width: 570px) {
   .banner-fondo {
     height: 30vh;
   }
-}/*# sourceMappingURL=Banners-ver0-9.css.map */
+}/*# sourceMappingURL=Banners-ver1-0.css.map */

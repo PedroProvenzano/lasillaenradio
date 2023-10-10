@@ -11,6 +11,26 @@
     height: 80%;
   }
 }
+.cont-equilibrista-joyero {
+  padding: 0 10rem;
+  display: flex;
+  width: 80vw;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  .joyero {
+    height: 400px;
+    img {
+      height: 80%;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+    div {
+      user-select: none;
+    }
+  }
+}
 .laAcademia {
   width: 40%;
   max-width: 400px;
@@ -246,6 +266,13 @@
     width: 100%;
     flex-direction: column;
     align-items: center;
+  }
+  .cont-equilibrista-joyero{
+    flex-direction: column;
+    width: 100vw;
+    .joyero{
+      margin-bottom: 2rem;
+    }
   }
 }
 

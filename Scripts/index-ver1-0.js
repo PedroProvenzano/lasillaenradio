@@ -1118,6 +1118,11 @@ ElEquilibrista.addEventListener("click", () => {
   window.open("https://www.instagram.com/elequilibrista.comidas/");
 });
 
+const ElJoyero = document.getElementById("ElJoyero");
+ElJoyero.addEventListener("click", () => {
+  window.open("https://www.instagram.com/eljoyero.argentino/");
+});
+
 const SrtaAbella = document.getElementById("laAcademia");
 SrtaAbella.addEventListener("click", () => {
   window.open("https://www.instagram.com/academia.limpieza/");

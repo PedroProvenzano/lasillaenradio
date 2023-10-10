@@ -1157,17 +1157,15 @@ header {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-  border-radius: 25px;
-  margin-bottom: 3vw;
-  width: 35vw;
-  height: 10vw;
+  border-radius: 100px;
+  width: 25vw;
+  height: 8vw;
   display: flex;
   align-items: center;
   justify-content: space-between;
   cursor: pointer;
 }
 .bloque-pub img {
-  margin-left: 2vw;
   height: 100%;
   width: auto;
   border-radius: 100px;
@@ -1183,7 +1181,7 @@ header {
   margin-bottom: 0.2vw !important;
 }
 .bloque-pub .bloque-pub-texto .pub-titulo {
-  font-size: 2vw;
+  font-size: 1.5vw;
   font-weight: 600;
 }
 
@@ -1955,10 +1953,10 @@ header {
   }
   .bloque-pub {
     width: 80vw;
-    height: 30vw;
+    height: 20vw;
   }
   .bloque-pub img {
-    height: 80%;
+    height: 100%;
   }
   .bloque-pub .bloque-pub-texto .pub-titulo {
     font-size: 5vw;
@@ -2060,4 +2058,4 @@ header {
   .montecastroLogo {
     width: 45%;
   }
-}/*# sourceMappingURL=index-ver0-31.css.map */
+}/*# sourceMappingURL=index-ver1-0.css.map */
