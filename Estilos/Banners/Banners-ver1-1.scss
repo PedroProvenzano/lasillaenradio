@@ -185,6 +185,7 @@
 @media (max-width: 570px) {
   .laAcademia {
     width: 100%;
+    margin-top: 2rem;
   }
   .contenedor-banners {
     display: flex;
@@ -268,6 +269,7 @@
     align-items: center;
   }
   .cont-equilibrista-joyero{
+    padding: 0;
     flex-direction: column;
     width: 100vw;
     .joyero{

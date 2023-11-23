@@ -1118,6 +1118,11 @@ ElEquilibrista.addEventListener("click", () => {
   window.open("https://www.instagram.com/elequilibrista.comidas/");
 });
 
+const Entrenamiento = document.getElementById("entrenamiento");
+Entrenamiento.addEventListener("click", () => {
+  window.open("https://www.instagram.com/suarezlaurafitness/");
+});
+
 const ElJoyero = document.getElementById("ElJoyero");
 ElJoyero.addEventListener("click", () => {
   window.open("https://www.instagram.com/eljoyero.argentino/");

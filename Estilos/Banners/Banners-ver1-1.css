@@ -194,6 +194,7 @@
 @media (max-width: 570px) {
   .laAcademia {
     width: 100%;
+    margin-top: 2rem;
   }
   .contenedor-banners {
     display: flex;
@@ -267,6 +268,7 @@
     align-items: center;
   }
   .cont-equilibrista-joyero {
+    padding: 0;
     flex-direction: column;
     width: 100vw;
   }
@@ -278,4 +280,4 @@
   .banner-fondo {
     height: 30vh;
   }
-}/*# sourceMappingURL=Banners-ver1-0.css.map */
+}/*# sourceMappingURL=Banners-ver1-1.css.map */
