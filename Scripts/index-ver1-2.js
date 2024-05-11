@@ -22,6 +22,7 @@ const seccionEntrevistas = document.getElementById("entrevistas");
 const seccionActualidadFront = document.getElementById("actualidad-front");
 const bannerCard = document.getElementById("emiliocardenas1");
 const bannerCard2 = document.getElementById("emiliocardenas2");
+const bannerCard3 = document.getElementById("quesabrosas");
 const contenedorBanners = document.getElementById("contenedor-banners");
 const youtubeNoticia = document.getElementById("youtube-noticia");
 const escenasArray = [
@@ -1106,6 +1107,9 @@ bannerCard.addEventListener("click", () => {
 
 bannerCard2.addEventListener("click", () => {
   window.open("https://www.instagram.com/claudio.kappel");
+});
+bannerCard3.addEventListener("click", () => {
+  window.open("https://www.instagram.com/que.sabrosas");
 });
 /*
 const PerVoi = document.getElementById("PerVoi");
