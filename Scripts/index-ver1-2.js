@@ -1117,11 +1117,6 @@ PerVoi.addEventListener("click", () => {
   window.open("https://www.instagram.com/fppervoi/");
 });
 */
-const ElEquilibrista = document.getElementById("ElEquilibrista");
-ElEquilibrista.addEventListener("click", () => {
-  window.open("https://www.instagram.com/elequilibrista.comidas/");
-});
-
 const Entrenamiento = document.getElementById("entrenamiento");
 Entrenamiento.addEventListener("click", () => {
   window.open("https://www.instagram.com/suarezlaurafitness/");
