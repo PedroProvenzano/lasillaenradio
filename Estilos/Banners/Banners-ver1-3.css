@@ -5,7 +5,7 @@
   justify-content: space-around;
 }
 .contenedor-banners .emiliocardenas1 {
-  height: 100%;
+  height: 80%;
 }
 .contenedor-banners .emiliocardenas2 {
   height: 80%;
@@ -28,7 +28,7 @@
   margin-bottom: 2rem;
 }
 .cont-equilibrista-joyero .joyero {
-  height: 400px;
+  height: 550px;
 }
 .cont-equilibrista-joyero .joyero img {
   height: 80%;
@@ -213,7 +213,7 @@
     margin-bottom: 1rem;
   }
   .contenedor-banners .emiliocardenas1 {
-    height: 50%;
+    height: 35%;
   }
   .contenedor-banners .emiliocardenas2 {
     margin-top: 1rem;
@@ -288,4 +288,4 @@
   .banner-fondo {
     height: 30vh;
   }
-}/*# sourceMappingURL=Banners-ver1-2.css.map */
+}/*# sourceMappingURL=Banners-ver1-3.css.map */

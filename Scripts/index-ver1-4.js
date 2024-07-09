@@ -1124,7 +1124,7 @@ Entrenamiento.addEventListener("click", () => {
 
 const ElJoyero = document.getElementById("ElJoyero");
 ElJoyero.addEventListener("click", () => {
-  window.open("https://www.instagram.com/eljoyero.argentino/");
+  window.open("https://www.instagram.com/viverolacasajardin/");
 });
 
 const SrtaAbella = document.getElementById("laAcademia");
@@ -1135,6 +1135,11 @@ SrtaAbella.addEventListener("click", () => {
 const fundeu = document.getElementById("fundeu");
 fundeu.addEventListener("click", () => {
   window.open("https://fundeu.fiile.org.ar/");
+});
+
+const pizzerialucita = document.getElementById("pizzerialucita");
+pizzerialucita.addEventListener("click", () => {
+  window.open("https://www.instagram.com/lucita_pizzeria/");
 });
 
 // A;adir visita
