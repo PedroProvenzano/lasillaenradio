@@ -1127,11 +1127,6 @@ ElJoyero.addEventListener("click", () => {
   window.open("https://www.instagram.com/viverolacasajardin/");
 });
 
-const SrtaAbella = document.getElementById("laAcademia");
-SrtaAbella.addEventListener("click", () => {
-  window.open("https://www.instagram.com/academia.limpieza/");
-});
-
 const fundeu = document.getElementById("fundeu");
 fundeu.addEventListener("click", () => {
   window.open("https://fundeu.fiile.org.ar/");
