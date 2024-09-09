@@ -23,6 +23,7 @@ const seccionActualidadFront = document.getElementById("actualidad-front");
 const bannerCard = document.getElementById("emiliocardenas1");
 const bannerCard2 = document.getElementById("emiliocardenas2");
 const bannerCard3 = document.getElementById("quesabrosas");
+const bannerCard4 = document.getElementById("greysviajes");
 const contenedorBanners = document.getElementById("contenedor-banners");
 const youtubeNoticia = document.getElementById("youtube-noticia");
 const escenasArray = [
@@ -1106,10 +1107,13 @@ bannerCard.addEventListener("click", () => {
 });
 
 bannerCard2.addEventListener("click", () => {
-  window.open("https://www.instagram.com/claudio.kappel");
+  window.open("https://www.instagram.com/institutoemiliocardenas");
+});
+bannerCard4.addEventListener("click", () => {
+  window.open("https://www.instagram.com/greys_viajes/");
 });
 bannerCard3.addEventListener("click", () => {
-  window.open("https://www.instagram.com/que.sabrosas");
+  window.open("https://www.instagram.com/impercuber/");
 });
 /*
 const PerVoi = document.getElementById("PerVoi");
