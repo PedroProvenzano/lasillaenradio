@@ -1110,7 +1110,7 @@ bannerCard2.addEventListener("click", () => {
   window.open("https://www.instagram.com/institutoemiliocardenas");
 });
 bannerCard4.addEventListener("click", () => {
-  window.open("https://www.instagram.com/greys_viajes/");
+  window.open("https://www.instagram.com/quiron.fitness/");
 });
 bannerCard3.addEventListener("click", () => {
   window.open("https://www.instagram.com/impercuber/");
