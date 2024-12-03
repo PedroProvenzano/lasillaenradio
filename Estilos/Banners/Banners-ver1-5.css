@@ -192,6 +192,12 @@
   width: 80%;
 }
 
+.xenona {
+  height: 40vh;
+  min-height: 150px;
+  max-height: 500px;
+}
+
 .srta-abella {
   display: flex;
   justify-content: center;
@@ -288,4 +294,4 @@
   .banner-fondo {
     height: 30vh;
   }
-}/*# sourceMappingURL=Banners-ver1-4.css.map */
+}/*# sourceMappingURL=Banners-ver1-5.css.map */

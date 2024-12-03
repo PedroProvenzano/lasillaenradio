@@ -24,6 +24,7 @@ const bannerCard = document.getElementById("emiliocardenas1");
 const bannerCard2 = document.getElementById("emiliocardenas2");
 const bannerCard3 = document.getElementById("quesabrosas");
 const bannerCard4 = document.getElementById("greysviajes");
+const bannerCard5 = document.getElementById("xenona");
 const contenedorBanners = document.getElementById("contenedor-banners");
 const youtubeNoticia = document.getElementById("youtube-noticia");
 const escenasArray = [
@@ -1114,6 +1115,9 @@ bannerCard4.addEventListener("click", () => {
 });
 bannerCard3.addEventListener("click", () => {
   window.open("https://www.instagram.com/impercuber/");
+});
+bannerCard5.addEventListener("click", () => {
+  window.open("https://www.instagram.com/xenona.jonte/");
 });
 /*
 const PerVoi = document.getElementById("PerVoi");
