@@ -495,9 +495,13 @@ i:hover {
   text-align: center;
 }
 
+.montecastro2 {
+  margin-top: 0;
+}
+
 .montecastroLogo {
-  max-width: 450px;
-  width: 50%;
+  max-width: 400px;
+  width: 35%;
 }
 
 .logo-text {
@@ -2056,6 +2060,6 @@ header {
     max-height: 100px;
   }
   .montecastroLogo {
-    width: 45%;
+    width: 30%;
   }
-}/*# sourceMappingURL=index-ver1-0.css.map */
+}/*# sourceMappingURL=index-ver1-1.css.map */
