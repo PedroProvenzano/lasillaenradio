@@ -214,6 +214,25 @@ async function getVideosHandler() {
       tagDivExtra.appendChild(tagAudioExtra);
       contenedorVideos.appendChild(tagDivExtra);
 
+      // Entrevista extra 2
+      const tagDivExtraDos = document.createElement("div");
+      tagDivExtraDos.setAttribute("class", "video");
+
+      const tagImgExtraDos = document.createElement("img");
+      tagImgExtraDos.src = "./imagenes/MarioGrinmann.jpeg";
+      tagImgExtraDos.setAttribute("alt", "Foto del entrevistado");
+      tagDivExtraDos.appendChild(tagImgExtraDos);
+
+      const tagAudioExtraDos = document.createElement("audio");
+      tagAudioExtraDos.setAttribute("controls", "true");
+
+      const tagSourceExtraDos = document.createElement("source");
+      tagSourceExtraDos.setAttribute("src", "./imagenes/MarioGrinmann.mp3");
+      tagSourceExtraDos.setAttribute("type", "audio/mpeg");
+      tagAudioExtraDos.appendChild(tagSourceExtraDos);
+      tagDivExtraDos.appendChild(tagAudioExtraDos);
+      contenedorVideos.appendChild(tagDivExtraDos);
+
       revers.forEach(({ imgUrl, src }) => {
         const tagDiv = document.createElement("div");
         tagDiv.setAttribute("class", "video");
