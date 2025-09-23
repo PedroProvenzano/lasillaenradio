@@ -22,8 +22,7 @@ const seccionEntrevistas = document.getElementById("entrevistas");
 const seccionActualidadFront = document.getElementById("actualidad-front");
 const bannerCard = document.getElementById("emiliocardenas1");
 const bannerCard2 = document.getElementById("emiliocardenas2");
-const bannerCard3 = document.getElementById("quesabrosas");
-const bannerCard5 = document.getElementById("xenona");
+//const bannerCard3 = document.getElementById("quesabrosas");
 const contenedorBanners = document.getElementById("contenedor-banners");
 const youtubeNoticia = document.getElementById("youtube-noticia");
 const escenasArray = [
@@ -1128,12 +1127,11 @@ bannerCard.addEventListener("click", () => {
 bannerCard2.addEventListener("click", () => {
   window.open("https://www.instagram.com/institutoemiliocardenas");
 });
+/*
 bannerCard3.addEventListener("click", () => {
   window.open("https://www.instagram.com/impercuber/");
 });
-bannerCard5.addEventListener("click", () => {
-  window.open("https://www.instagram.com/xenona.jonte/");
-});
+*/
 /*
 const PerVoi = document.getElementById("PerVoi");
 PerVoi.addEventListener("click", () => {
@@ -1143,11 +1141,6 @@ PerVoi.addEventListener("click", () => {
 const Entrenamiento = document.getElementById("entrenamiento");
 Entrenamiento.addEventListener("click", () => {
   window.open("https://www.instagram.com/suarezlaurafitness/");
-});
-
-const ElJoyero = document.getElementById("ElJoyero");
-ElJoyero.addEventListener("click", () => {
-  window.open("https://www.instagram.com/viverolacasajardin/");
 });
 
 const fundeu = document.getElementById("fundeu");
