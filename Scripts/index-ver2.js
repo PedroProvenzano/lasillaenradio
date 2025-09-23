@@ -23,7 +23,6 @@ const seccionActualidadFront = document.getElementById("actualidad-front");
 const bannerCard = document.getElementById("emiliocardenas1");
 const bannerCard2 = document.getElementById("emiliocardenas2");
 const bannerCard3 = document.getElementById("quesabrosas");
-const bannerCard4 = document.getElementById("greysviajes");
 const bannerCard5 = document.getElementById("xenona");
 const contenedorBanners = document.getElementById("contenedor-banners");
 const youtubeNoticia = document.getElementById("youtube-noticia");
@@ -1128,9 +1127,6 @@ bannerCard.addEventListener("click", () => {
 
 bannerCard2.addEventListener("click", () => {
   window.open("https://www.instagram.com/institutoemiliocardenas");
-});
-bannerCard4.addEventListener("click", () => {
-  window.open("https://www.instagram.com/quiron.fitness/");
 });
 bannerCard3.addEventListener("click", () => {
   window.open("https://www.instagram.com/impercuber/");
