@@ -1132,12 +1132,12 @@ bannerCard3.addEventListener("click", () => {
   window.open("https://www.instagram.com/impercuber/");
 });
 */
-/*
+
 const PerVoi = document.getElementById("PerVoi");
 PerVoi.addEventListener("click", () => {
-  window.open("https://www.instagram.com/fppervoi/");
+  window.open("https://www.instagram.com/chuna.lopedevega/");
 });
-*/
+
 const Entrenamiento = document.getElementById("entrenamiento");
 Entrenamiento.addEventListener("click", () => {
   window.open("https://www.instagram.com/suarezlaurafitness/");
