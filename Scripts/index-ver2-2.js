@@ -251,42 +251,6 @@ async function getVideosHandler() {
         contenedorVideos.appendChild(tagDiv);
       });
     });
-  /*fetch(
-    `https://www.googleapis.com/youtube/v3/playlistItems?part=contentDetails&maxResults=20&part=snippet&playlistId=PLhVVuQDrmmvhHk4B4RSB6ohdi5k1jr8NC&key=AIzaSyDOyvrBMukXKGNuwEC2bcB3b3EdMt2CYxA`
-  )
-    .then((data) => data.json())
-    .then((data) => {
-      contenedorVideos.innerHTML = "";
-      for (let item of data.items) {
-        // Contenedor
-        let divCont = document.createElement("div");
-        divCont.setAttribute("class", "video");
-        // Titulo
-        let h3Titulo = document.createElement("h3");
-        h3Titulo.innerText = item.snippet.title;
-        divCont.append(h3Titulo);
-        // IFrame
-        let iframe = document.createElement("iframe");
-        iframe.setAttribute(
-          "src",
-          `https://www.youtube.com/embed/${item.contentDetails.videoId}`
-        );
-        iframe.setAttribute("title", item.snippet.title);
-        iframe.setAttribute("frameborder", "0");
-        iframe.setAttribute(
-          "allow",
-          "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        );
-        iframe.setAttribute("allowfullscreen", "true");
-        divCont.append(iframe);
-        // Descripcion
-        let pDesc = document.createElement("p");
-        pDesc.innerText = item.snippet.description;
-        divCont.append(pDesc);
-        contenedorVideos.append(divCont);
-      }
-    });
-    */
   // RadioCut interviews
 }
 
