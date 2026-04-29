@@ -1,0 +1,162 @@
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;900&display=swap');
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  .flyer {
+    font-family: 'Montserrat', sans-serif;
+    background: #0a0a0a;
+    width: 100%;
+    max-width: 380px;
+    overflow: hidden;
+    border-radius: 12px;
+  }
+  .header {
+    background: #0a0a0a;
+    padding: 18px 20px 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid #1a1a1a;
+  }
+  .brand-name {
+    font-size: 32px;
+    font-weight: 900;
+    letter-spacing: 6px;
+    color: #fff;
+    line-height: 1;
+    text-align: center;
+  }
+  .brand-sub {
+    font-size: 10px;
+    letter-spacing: 8px;
+    color: #888;
+    margin-top: 2px;
+    text-align: center;
+  }
+  .hero {
+    position: relative;
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+    padding: 28px 20px;
+    overflow: hidden;
+  }
+  .hero-bg {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: 
+      radial-gradient(ellipse at 20% 50%, rgba(139,0,0,0.15) 0%, transparent 60%),
+      radial-gradient(ellipse at 80% 50%, rgba(255,255,255,0.03) 0%, transparent 60%);
+  }
+  .new-in-badge {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: #fff;
+    border: 1px solid rgba(255,255,255,0.3);
+    padding: 4px 10px;
+    margin-bottom: 10px;
+  }
+  .hero-headline {
+    font-size: 28px;
+    font-weight: 900;
+    color: #fff;
+    letter-spacing: 1px;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    position: relative;
+  }
+  .hero-headline span { color: #cc2200; }
+  .promos { display: flex; flex-direction: column; gap: 8px; position: relative; }
+  .promo-item { display: flex; align-items: center; gap: 10px; }
+  .promo-dot { width: 6px; height: 6px; background: #cc2200; border-radius: 50%; flex-shrink: 0; }
+  .promo-text { font-size: 13px; font-weight: 600; color: #fff; letter-spacing: 0.5px; }
+  .promo-text .highlight { color: #ffcc00; }
+  .divider { height: 1px; background: linear-gradient(to right, transparent, #333, transparent); margin: 0 20px; }
+  .info-section { background: #111; padding: 20px 20px; }
+  .location-block { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 14px; }
+  .location-icon {
+    width: 32px; height: 32px; background: #cc2200; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px;
+  }
+  .location-icon svg { width: 16px; height: 16px; fill: #fff; }
+  .location-text { flex: 1; }
+  .location-label { font-size: 10px; letter-spacing: 2px; color: #666; text-transform: uppercase; margin-bottom: 3px; }
+  .location-address { font-size: 16px; font-weight: 700; color: #fff; letter-spacing: 0.5px; }
+  .social-row { display: flex; align-items: center; gap: 8px; padding-top: 12px; border-top: 1px solid #1e1e1e; }
+  .social-icon { width: 28px; height: 28px; background: #222; border-radius: 6px; display: flex; align-items: center; justify-content: center; }
+  .social-icon svg { width: 14px; height: 14px; fill: #fff; }
+  .social-handle { font-size: 13px; font-weight: 600; color: #aaa; letter-spacing: 0.5px; }
+  .cta-strip { background: #cc2200; padding: 12px 20px; text-align: center; }
+  .cta-text { font-size: 12px; font-weight: 700; letter-spacing: 3px; color: #fff; text-transform: uppercase; }
+  .products-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; background: #1a1a1a; }
+  .product-card { background: #f5f5f5; position: relative; overflow: hidden; aspect-ratio: 2/3; }
+  .product-card img { width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; }
+  .product-tag {
+    position: absolute; bottom: 8px; left: 8px;
+    background: rgba(0,0,0,0.75); color: #fff;
+    font-size: 9px; letter-spacing: 2px; font-weight: 700;
+    padding: 4px 8px; text-transform: uppercase;
+  }
+</style>
+
+<div class="flyer">
+  <div class="header">
+    <div>
+      <div class="brand-name">XENONA</div>
+      <div class="brand-sub">JEANS</div>
+    </div>
+  </div>
+
+  <div class="hero">
+    <div class="hero-bg"></div>
+    <div class="new-in-badge">● New in</div>
+    <div class="hero-headline">
+      Aprovechá<br>las <span>promos</span>
+    </div>
+    <div class="promos">
+      <div class="promo-item">
+        <div class="promo-dot"></div>
+        <div class="promo-text"><span class="highlight">3 cuotas</span> sin interés</div>
+      </div>
+      <div class="promo-item">
+        <div class="promo-dot"></div>
+        <div class="promo-text"><span class="highlight">10% off</span> transferencia y efectivo</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="info-section">
+    <div class="location-block">
+      <div class="location-icon">
+        <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z"/></svg>
+      </div>
+      <div class="location-text">
+        <div class="location-label">Encontranos en</div>
+        <div class="location-address">Álvarez Jonte 4574, CABA</div>
+      </div>
+    </div>
+    <div class="social-row">
+      <div class="social-icon">
+        <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+      </div>
+      <div class="social-handle">@xenona.jonte</div>
+    </div>
+  </div>
+
+  <div class="cta-strip">
+    <div class="cta-text">Shop Now — Nueva Colección</div>
+  </div>
+
+  <div class="products-grid">
+    <div class="product-card">
+      <img src="imagen1.png" alt="Jean wide leg verde oliva" />
+      <div class="product-tag">Wide Leg</div>
+    </div>
+    <div class="product-card">
+      <img src="imagen2.png" alt="Jean negro con chaleco" />
+      <div class="product-tag">New In</div>
+    </div>
+  </div>
+</div>
