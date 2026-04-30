@@ -81,7 +81,7 @@ function Header({ theme, toggleTheme, onHome }) {
         {/* Right: Radio info */}
         <div className="header-side" style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end', gap: 6 }}>
           <img src="imagenes/whitelogoMonte.png" alt="ClassFM" style={{ height: 34, width: 'auto', opacity: 0.85 }} onError={e => e.target.style.display='none'} />
-          <span style={{ fontSize: 10, color: 'rgba(255,255,255,0.35)', textAlign: 'right' }}>Miércoles 18 a 20hs · classfm.com.ar</span>
+          <span style={{ fontSize: 13, color: 'rgba(255,255,255,0.35)', textAlign: 'right' }}>Miércoles 18 a 20hs · classfm.com.ar</span>
         </div>
         {/* Mobile: pronóstico debajo del logo */}
         <div className="header-mobile-weather">
@@ -231,7 +231,7 @@ function Navbar({ theme, toggleTheme, activeSection, onSection, onHome, onSearch
 
 const navBtnBase = {
   border: 'none', background: 'transparent', cursor: 'pointer',
-  fontSize: 12, fontFamily: 'Space Grotesk, sans-serif',
+  fontSize: 14, fontFamily: 'Space Grotesk, sans-serif',
   padding: '0 10px', height: 48, transition: 'all 0.15s',
   letterSpacing: '0.02em', color: 'var(--text-2)',
 };

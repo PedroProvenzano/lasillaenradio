@@ -4,7 +4,8 @@ const { useState, useEffect, useRef } = React;
 
 // ── HOME VIEW ──────────────────────────────────────────────────────
 function HomeView({ onSelectArticle }) {
-  const principales = NOTICIAS.filter(n => n.principal);
+  const byDateDesc = (a, b) => b.rawDate.localeCompare(a.rawDate);
+  const principales = NOTICIAS.filter(n => n.principal).sort(byDateDesc);
   const [vidaTab, setVidaTab] = useState('vidaSana');
   const [triviaAnswer, setTriviaAnswer] = useState(null);
   const vidaTabs = [
@@ -12,10 +13,10 @@ function HomeView({ onSelectArticle }) {
     { id: 'medioAmb', label: 'Medio Ambiente' },
     { id: 'genero', label: 'Género' },
   ];
-  const vidaNoticia = NOTICIAS.find(n => n.categoria === vidaTab) || NOTICIAS[6];
-  const actFront = NOTICIAS.filter(n => n.categoria === 'actualidad').slice(0, 2);
-  const arteNots = NOTICIAS.filter(n => n.categoria === 'espectaculo');
-  const ecoNot = NOTICIAS.find(n => n.categoria === 'streaming');
+  const vidaNoticia = [...NOTICIAS].sort(byDateDesc).find(n => n.categoria === vidaTab) || NOTICIAS[6];
+  const actFront = NOTICIAS.filter(n => n.categoria === 'actualidad').sort(byDateDesc).slice(0, 2);
+  const arteNots = NOTICIAS.filter(n => n.categoria === 'espectaculo').sort(byDateDesc);
+  const ecoNot = [...NOTICIAS].sort(byDateDesc).find(n => n.categoria === 'streaming');
 
   return (
     <div>
@@ -313,7 +314,7 @@ function TeamSection() {
     <section style={{ background: 'var(--surface)', borderTop: '1px solid var(--border)', borderBottom: '1px solid var(--border)', padding: '48px 20px', textAlign: 'center' }}>
       <div style={{ maxWidth: 700, margin: '0 auto' }}>
         <p style={{ fontSize: 11, fontWeight: 700, color: 'var(--accent)', letterSpacing: '0.12em', textTransform: 'uppercase', marginBottom: 8 }}>Quiénes somos</p>
-        <h2 style={{ fontSize: 32, fontWeight: 800, fontFamily: 'Space Grotesk, sans-serif', color: 'var(--text)', margin: '0 0 32px' }}>Hacemos Dato News</h2>
+        <h2 style={{ fontSize: 32, fontWeight: 800, fontFamily: 'Space Grotesk, sans-serif', color: 'var(--text)', margin: '0 0 32px' }}>Hacemos La Silla Diario</h2>
         <div style={{ display: 'flex', justifyContent: 'center', gap: 48 }}>
           {[
             { nombre: 'Marcos', apellido: 'Kamin', img: 'imagenes/1x/marcos.jpeg' },
@@ -404,7 +405,7 @@ function Paginador({ pagina, totalPaginas, onIr, color, maxVisible }) {
 // ── CATEGORY VIEW ──────────────────────────────────────────────────
 function CategoryView({ categoria, onSelectArticle }) {
   const cat  = CATEGORIAS[categoria] || { label: categoria, color: 'var(--accent)' };
-  const nots = NOTICIAS.filter(n => n.categoria === categoria);
+  const nots = NOTICIAS.filter(n => n.categoria === categoria).sort((a, b) => b.rawDate.localeCompare(a.rawDate));
   const [pagina, setPagina] = useState(0);
 
   const irPagina = (n) => {
@@ -705,7 +706,7 @@ function SearchView({ query, onSelectArticle }) {
     n.titulo.toLowerCase().includes(query.toLowerCase()) ||
     n.contenido.toLowerCase().includes(query.toLowerCase()) ||
     n.autor.toLowerCase().includes(query.toLowerCase())
-  );
+  ).sort((a, b) => b.rawDate.localeCompare(a.rawDate));
   return (
     <div style={{ maxWidth: 1360, margin: '0 auto', padding: '28px 20px 60px' }}>
       <SectionHeader title={`Resultados para "${query}"`} color="var(--accent)" />
