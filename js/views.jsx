@@ -731,8 +731,35 @@ function SearchView({ query, onSelectArticle }) {
 // ── CONTACT MODAL ──────────────────────────────────────────────────
 function ContactModal({ onClose }) {
   const [sent, setSent] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [error, setError] = useState('');
   const [form, setForm] = useState({ nombre: '', barrio: '', email: '', mensaje: '' });
-  const submit = (e) => { e.preventDefault(); setSent(true); };
+  const submit = async (e) => {
+    e.preventDefault();
+    setSending(true);
+    setError('');
+    try {
+      const res = await fetch('https://backend.lasillaenradio.com.ar/mensajes/enviar', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          nombre: form.nombre,
+          barrio: form.barrio,
+          email: form.email,
+          contenido: form.mensaje,
+        }),
+      });
+      if (res.ok) {
+        setSent(true);
+      } else {
+        setError('Hubo un error al enviar el mensaje. Intentá de nuevo.');
+      }
+    } catch (err) {
+      setError('No se pudo conectar con el servidor. Intentá más tarde.');
+    } finally {
+      setSending(false);
+    }
+  };
   return (
     <div style={{ position: 'fixed', inset: 0, background: 'rgba(0,0,0,0.75)', backdropFilter: 'blur(6px)', zIndex: 2000, display: 'flex', alignItems: 'center', justifyContent: 'center', padding: 20 }}
       onClick={e => e.target === e.currentTarget && onClose()}>
@@ -755,9 +782,10 @@ function ContactModal({ onClose }) {
               </div>
               <input required type="email" placeholder="E-mail *" value={form.email} onChange={e => setForm(f => ({...f, email: e.target.value}))} style={inputStyle} />
               <textarea required placeholder="Tu mensaje..." value={form.mensaje} onChange={e => setForm(f => ({...f, mensaje: e.target.value}))} rows={5} style={{...inputStyle, resize: 'vertical', fontFamily: 'DM Sans, sans-serif'}} />
+              {error && <p style={{ color: '#ef4444', fontSize: 13, margin: 0 }}>{error}</p>}
               <div style={{ display: 'flex', gap: 12, justifyContent: 'flex-end', marginTop: 4 }}>
                 <button type="button" onClick={onClose} style={{ background: 'var(--surface-2)', color: 'var(--text-2)', border: '1px solid var(--border)', borderRadius: 8, padding: '10px 22px', fontWeight: 700, cursor: 'pointer', fontSize: 13, fontFamily: 'Space Grotesk, sans-serif' }}>Cancelar</button>
-                <button type="submit" style={{ background: 'var(--accent)', color: '#000', border: 'none', borderRadius: 8, padding: '10px 28px', fontWeight: 700, cursor: 'pointer', fontSize: 13, fontFamily: 'Space Grotesk, sans-serif' }}>Enviar →</button>
+                <button type="submit" disabled={sending} style={{ background: 'var(--accent)', color: '#000', border: 'none', borderRadius: 8, padding: '10px 28px', fontWeight: 700, cursor: sending ? 'not-allowed' : 'pointer', fontSize: 13, fontFamily: 'Space Grotesk, sans-serif', opacity: sending ? 0.7 : 1 }}>{sending ? 'Enviando...' : 'Enviar →'}</button>
               </div>
             </form>
           </>
