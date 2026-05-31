@@ -95,6 +95,7 @@ var TRIVIA        = { pregunta: '', opciones: [], correcta: 'a', descripcion: ''
 var BREAKING_NEWS = ['🔴 Cargando titulares...'];
 var DATO_ART      = null;   // { imgUrl, descripcion, autor }
 var DATO_MEME     = null;   // { imgUrl }
+var DATO_HUMOR    = null;   // { imgUrl }
 var ENTREVISTAS   = [];     // [{ imgUrl, src }, ...]
 
 // ── CARGA DESDE EL BACKEND ─────────────────────────────────────────
@@ -151,7 +152,16 @@ var ENTREVISTAS   = [];     // [{ imgUrl, src }, ...]
     console.warn('[Dato News] Error cargando meme:', e);
   }
 
-  // 5 — Entrevistas / audios
+  // 5 — Dato Humor
+  try {
+    const res   = await get('datohumor/todas');
+    const humor = res[0];
+    if (humor) DATO_HUMOR = { imgUrl: humor.imgUrl };
+  } catch (e) {
+    console.warn('[Dato News] Error cargando dato humor:', e);
+  }
+
+  // 6 — Entrevistas / audios
   try {
     const res = await get('entrevistas/todas');
     ENTREVISTAS = [...res].reverse();
@@ -159,7 +169,7 @@ var ENTREVISTAS   = [];     // [{ imgUrl, src }, ...]
     console.warn('[Dato News] Error cargando entrevistas:', e);
   }
 
-  // 6 — Registrar visita
+  // 7 — Registrar visita
   fetch(URL_BACKEND + 'visitas/add').catch(() => {});
 
   // Avisar a React que los datos están listos

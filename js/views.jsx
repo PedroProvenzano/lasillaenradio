@@ -227,13 +227,16 @@ function DatoMemeCard() {
 
 // ── DATO HUMOR ─────────────────────────────────────────────────────
 function DatoHumorCard() {
+  const src = (typeof DATO_HUMOR !== 'undefined' && DATO_HUMOR && DATO_HUMOR.imgUrl)
+    ? DATO_HUMOR.imgUrl
+    : 'imagenes/kappelImagen.jpg';
   return (
     <div style={{ background: 'var(--surface)', border: '1px solid var(--border)', borderRadius: 14, overflow: 'hidden' }}>
       <div style={{ padding: '12px 16px', borderBottom: '1px solid var(--border)', display: 'flex', alignItems: 'center', gap: 8 }}>
         <span style={{ fontSize: 16 }}>🎭</span>
         <span style={{ fontWeight: 800, fontSize: 13, fontFamily: 'Space Grotesk, sans-serif', color: CATEGORIAS.cultura.color, textTransform: 'uppercase', letterSpacing: '0.06em' }}>Dato Humor</span>
       </div>
-      <img src="imagenes/kappelImagen.jpg" alt="dato humor" style={{ width: '100%', height: 'auto', display: 'block' }} onError={e => e.target.parentElement.style.display='none'} />
+      <img src={src} alt="dato humor" style={{ width: '100%', height: 'auto', display: 'block' }} onError={e => e.target.parentElement.style.display='none'} />
     </div>
   );
 }
