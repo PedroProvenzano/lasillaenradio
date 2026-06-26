@@ -6,11 +6,11 @@ const { useState, useEffect, useRef } = React;
 function HomeView({ onSelectArticle }) {
   const byDateDesc = (a, b) => b.rawDate.localeCompare(a.rawDate);
   const principales = NOTICIAS.filter(n => n.principal).sort(byDateDesc);
-  const [vidaTab, setVidaTab] = useState('vidaSana');
+  const [vidaTab, setVidaTab] = useState('medioAmb');
   const [triviaAnswer, setTriviaAnswer] = useState(null);
   const vidaTabs = [
-    { id: 'vidaSana', label: 'Vida Sana' },
     { id: 'medioAmb', label: 'Medio Ambiente' },
+    { id: 'vidaSana', label: 'Vida Sana' },
     { id: 'genero', label: 'Género' },
   ];
   const vidaNoticia = [...NOTICIAS].sort(byDateDesc).find(n => n.categoria === vidaTab) || NOTICIAS[6];
@@ -512,35 +512,51 @@ function EntrevistasExtra() {
 
       {/* Grid 3 por fila */}
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))', gap: 16 }}>
-        {paginaActual.map((ent, i) => (
-          <div key={inicio + i} style={{
-            background: 'var(--surface)',
-            border: '1px solid var(--border)',
-            borderRadius: 12,
-            overflow: 'hidden',
-          }}>
-            {ent.imgUrl && (
-              <div style={{ aspectRatio: '16/9', overflow: 'hidden', background: 'var(--surface-2)' }}>
-                <img
-                  src={ent.imgUrl}
-                  alt=""
-                  style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-                  onError={e => e.target.parentElement.style.display = 'none'}
-                />
+        {paginaActual.map((ent, i) => {
+          const isYoutube = ent.src && ent.src.includes('youtube.com/embed');
+          return (
+            <div key={inicio + i} style={{
+              background: 'var(--surface)',
+              border: '1px solid var(--border)',
+              borderRadius: 12,
+              overflow: 'hidden',
+            }}>
+              {ent.imgUrl && (
+                <div style={{ aspectRatio: '16/9', overflow: 'hidden', background: 'var(--surface-2)' }}>
+                  <img
+                    src={ent.imgUrl}
+                    alt=""
+                    style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                    onError={e => e.target.parentElement.style.display = 'none'}
+                  />
+                </div>
+              )}
+              <div style={{ padding: '12px 14px' }}>
+                {isYoutube ? (
+                  <div style={{ position: 'relative', paddingBottom: '56.25%', height: 0, overflow: 'hidden', borderRadius: 6 }}>
+                    <iframe
+                      src={ent.src}
+                      title="YouTube"
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                      style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
+                    />
+                  </div>
+                ) : (
+                  <iframe
+                    src={ent.src}
+                    width="100%"
+                    height="52"
+                    scrolling="no"
+                    frameBorder="no"
+                    style={{ display: 'block', borderRadius: 6 }}
+                  />
+                )}
               </div>
-            )}
-            <div style={{ padding: '12px 14px' }}>
-              <iframe
-                src={ent.src}
-                width="100%"
-                height="52"
-                scrolling="no"
-                frameBorder="no"
-                style={{ display: 'block', borderRadius: 6 }}
-              />
             </div>
-          </div>
-        ))}
+          );
+        })}
       </div>
 
       <Paginador pagina={pagina} totalPaginas={totalPaginas} onIr={irPagina} color="var(--accent)" />
