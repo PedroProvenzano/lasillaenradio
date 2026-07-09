@@ -188,6 +188,7 @@ function BannersRow() {
     { src: 'imagenes/Kappel.jpg',                       href: 'https://www.instagram.com/claudio.kappel/' },
     { src: 'imagenes/entrenamiento_personalizado.jpeg',  href: 'https://www.instagram.com/suarezlaurafitness/' },
     { src: 'imagenes/churros.jpeg',                     href: null },
+    { src: 'imagenes/coffee break.jpeg',                href: null },
   ];
   const cardStyle = { flex: '1 1 240px', maxWidth: 400, borderRadius: 10, overflow: 'hidden', border: '1px solid var(--border)', display: 'block' };
   return (
@@ -323,6 +324,7 @@ function TeamSection() {
             { nombre: 'Marcos', apellido: 'Kamin', img: 'imagenes/1x/marcos.jpeg' },
             { nombre: 'Nacho', apellido: 'Brown', img: 'imagenes/1x/juan.jpeg' },
             { nombre: 'Carolina', apellido: 'Somoza', img: 'imagenes/1x/carolina.jpeg' },
+            { nombre: 'Silvina', apellido: 'Castiglione', img: 'imagenes/1x/silvina.png' },
           ].map(p => (
             <div key={p.nombre} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 12 }}>
               <div style={{ width: 100, height: 100, borderRadius: '50%', overflow: 'hidden', border: '3px solid var(--accent)', background: 'var(--surface-2)' }}>
