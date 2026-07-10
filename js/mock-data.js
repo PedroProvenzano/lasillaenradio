@@ -14,7 +14,8 @@ const CATEGORIAS = {
   entrevistas: { label: 'Entrevistas',     color: '#f59e0b' },
   vidaSana:    { label: 'Vida Sana',       color: '#10b981' },
   medioAmb:    { label: 'Medio Ambiente',  color: '#84cc16' },
-  genero:      { label: 'Género',          color: '#e879f9' },
+  genero:       { label: 'Género',          color: '#e879f9' },
+  curiosidades: { label: 'Curiosidades',    color: '#f97316' },
 };
 
 // Mapeo: temaPrincipal del backend → ID de categoría del sitio
@@ -23,7 +24,7 @@ const TOPIC_MAP = {
   'actualidad-front-uno': 'actualidad',
   'actualidad-front-dos': 'actualidad',
   'ecofin':               'actualidad',
-  'curiosidades':         'actualidad',
+  'curiosidades':         'curiosidades',
   'cultura':              'cultura',
   'deporte':              'deporte',
   'streaming':            'streaming',
@@ -85,7 +86,8 @@ function mapNoticia(raw, index) {
     principal: importNum >= 1 && importNum <= 3,
     destacado: importNum >= 1 && importNum <= 6,
     youtubeUrl: (raw.youtubeUrl && raw.youtubeUrl !== 'vacio') ? raw.youtubeUrl : null,
-    tags:      raw.tags || '',
+    tags:         raw.tags || '',
+    temaPrincipal: raw.temaPrincipal || '',
   };
 }
 

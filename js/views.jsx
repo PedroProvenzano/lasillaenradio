@@ -155,7 +155,10 @@ function HomeView({ onSelectArticle }) {
         <div className="two-col-section" style={{ display: 'grid', gridTemplateColumns: '1fr 340px', gap: 20, alignItems: 'start' }}>
           <TriviaCard triviaAnswer={triviaAnswer} setTriviaAnswer={setTriviaAnswer} />
           {/* Curiosidades card */}
-          {NOTICIAS[8] && <NewsCard noticia={NOTICIAS[8]} onSelect={onSelectArticle} />}
+          {(() => {
+            const curiosidad = [...NOTICIAS].sort(byDateDesc).find(n => n.temaPrincipal === 'curiosidades');
+            return curiosidad && <NewsCard noticia={curiosidad} onSelect={onSelectArticle} />;
+          })()}
         </div>
       </section>
 
