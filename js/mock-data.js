@@ -32,6 +32,8 @@ const TOPIC_MAP = {
   'entrevistas':          'entrevistas',
   'Vida sana':            'vidaSana',
   'Medio ambiente':       'medioAmb',
+  'Medio ambiente 1':     'medioAmb',
+  'Medio ambiente 2':     'medioAmb',
   'Genero':               'genero',
 };
 

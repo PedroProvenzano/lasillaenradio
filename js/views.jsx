@@ -2,18 +2,104 @@
 
 const { useState, useEffect, useRef } = React;
 
+// ── XENONA FLYER ────────────────────────────────────────────────────
+function XenonaFlyer() {
+  const xnf = (cls) => 'xnf-' + cls;
+  return (
+    <div style={{ fontFamily: "'Montserrat', sans-serif", background: '#0a0a0a', width: '100%', overflow: 'hidden', borderRadius: 12 }}>
+      {/* Header */}
+      <div style={{ background: '#0a0a0a', padding: '18px 20px 14px', display: 'flex', alignItems: 'center', justifyContent: 'center', borderBottom: '1px solid #1a1a1a' }}>
+        <div>
+          <div style={{ fontSize: 32, fontWeight: 900, letterSpacing: 6, color: '#fff', lineHeight: 1, textAlign: 'center' }}>XENONA</div>
+          <div style={{ fontSize: 10, letterSpacing: 8, color: '#888', marginTop: 2, textAlign: 'center' }}>JEANS</div>
+        </div>
+      </div>
+      {/* Hero */}
+      <div style={{ position: 'relative', background: 'linear-gradient(135deg,#1a1a1a 0%,#2d2d2d 100%)', padding: '28px 20px', overflow: 'hidden' }}>
+        <div style={{ position: 'absolute', top: 0, left: 0, right: 0, bottom: 0, background: 'radial-gradient(ellipse at 20% 50%,rgba(139,0,0,0.15) 0%,transparent 60%),radial-gradient(ellipse at 80% 50%,rgba(255,255,255,0.03) 0%,transparent 60%)' }} />
+        <div style={{ display: 'inline-block', fontSize: 11, fontWeight: 700, letterSpacing: 3, color: '#fff', border: '1px solid rgba(255,255,255,0.3)', padding: '4px 10px', marginBottom: 10 }}>● New in</div>
+        <div style={{ fontSize: 28, fontWeight: 900, color: '#fff', letterSpacing: 1, lineHeight: 1.1, marginBottom: 20, position: 'relative' }}>
+          Aprovechá<br />las <span style={{ color: '#cc2200' }}>promos</span>
+        </div>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: 8, position: 'relative' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+            <div style={{ width: 6, height: 6, background: '#cc2200', borderRadius: '50%', flexShrink: 0 }} />
+            <div style={{ fontSize: 13, fontWeight: 600, color: '#fff', letterSpacing: 0.5 }}><span style={{ color: '#ffcc00' }}>3 cuotas</span> sin interés</div>
+          </div>
+          <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
+            <div style={{ width: 6, height: 6, background: '#cc2200', borderRadius: '50%', flexShrink: 0 }} />
+            <div style={{ fontSize: 13, fontWeight: 600, color: '#fff', letterSpacing: 0.5 }}><span style={{ color: '#ffcc00' }}>10% off</span> transferencia y efectivo</div>
+          </div>
+        </div>
+      </div>
+      {/* Divider */}
+      <div style={{ height: 1, background: 'linear-gradient(to right,transparent,#333,transparent)', margin: '0 20px' }} />
+      {/* Info */}
+      <div style={{ background: '#111', padding: 20 }}>
+        <div style={{ display: 'flex', alignItems: 'flex-start', gap: 12, marginBottom: 14 }}>
+          <div style={{ width: 32, height: 32, background: '#cc2200', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, marginTop: 2 }}>
+            <svg viewBox="0 0 24 24" style={{ width: 16, height: 16, fill: '#fff' }}><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z"/></svg>
+          </div>
+          <div>
+            <div style={{ fontSize: 10, letterSpacing: 2, color: '#666', textTransform: 'uppercase', marginBottom: 3 }}>Encontranos en</div>
+            <div style={{ fontSize: 16, fontWeight: 700, color: '#fff', letterSpacing: 0.5 }}>Álvarez Jonte 4574, CABA</div>
+          </div>
+        </div>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 8, paddingTop: 12, borderTop: '1px solid #1e1e1e' }}>
+          <div style={{ width: 28, height: 28, background: '#222', borderRadius: 6, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+            <svg viewBox="0 0 24 24" style={{ width: 14, height: 14, fill: '#fff' }}><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+          </div>
+          <div style={{ fontSize: 13, fontWeight: 600, color: '#aaa', letterSpacing: 0.5 }}>@xenona.jonte</div>
+        </div>
+      </div>
+      {/* CTA */}
+      <div style={{ background: '#cc2200', padding: '12px 20px', textAlign: 'center' }}>
+        <div style={{ fontSize: 12, fontWeight: 700, letterSpacing: 3, color: '#fff', textTransform: 'uppercase' }}>Shop Now — Nueva Colección</div>
+      </div>
+      {/* Products */}
+      <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 2, background: '#1a1a1a' }}>
+        <div style={{ position: 'relative' }}>
+          <img src="imagenes/publicidad/imagen1.png" alt="Jean wide leg verde oliva" style={{ width: '100%', height: 'auto', display: 'block' }} />
+          <div style={{ position: 'absolute', bottom: 8, left: 8, background: 'rgba(0,0,0,0.75)', color: '#fff', fontSize: 9, letterSpacing: 2, fontWeight: 700, padding: '4px 8px', textTransform: 'uppercase' }}>Wide Leg</div>
+        </div>
+        <div style={{ position: 'relative' }}>
+          <img src="imagenes/publicidad/imagen2.png" alt="Jean negro con chaleco" style={{ width: '100%', height: 'auto', display: 'block' }} />
+          <div style={{ position: 'absolute', bottom: 8, left: 8, background: 'rgba(0,0,0,0.75)', color: '#fff', fontSize: 9, letterSpacing: 2, fontWeight: 700, padding: '4px 8px', textTransform: 'uppercase' }}>New In</div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 // ── HOME VIEW ──────────────────────────────────────────────────────
 function HomeView({ onSelectArticle }) {
   const byDateDesc = (a, b) => b.rawDate.localeCompare(a.rawDate);
   const principales = NOTICIAS.filter(n => n.principal).sort(byDateDesc);
   const [vidaTab, setVidaTab] = useState('medioAmb');
+  const [medioAmbSubTab, setMedioAmbSubTab] = useState('1');
   const [triviaAnswer, setTriviaAnswer] = useState(null);
   const vidaTabs = [
     { id: 'medioAmb', label: 'Medio Ambiente' },
     { id: 'vidaSana', label: 'Vida Sana' },
     { id: 'genero', label: 'Género' },
   ];
-  const vidaNoticia = [...NOTICIAS].sort(byDateDesc).find(n => n.categoria === vidaTab) || NOTICIAS[6];
+
+  const getVidaNoticia = () => {
+    const sorted = [...NOTICIAS].sort(byDateDesc);
+    if (vidaTab === 'medioAmb') {
+      if (medioAmbSubTab === '1') {
+        const found = sorted.find(n => n.categoria === 'medioAmb' && (n.temaPrincipal === 'Medio ambiente 1' || n.temaPrincipal === 'Medio ambiente'));
+        return found || sorted.find(n => n.categoria === 'medioAmb') || NOTICIAS[6];
+      } else {
+        const found = sorted.find(n => n.categoria === 'medioAmb' && n.temaPrincipal === 'Medio ambiente 2');
+        const allMedioAmb = sorted.filter(n => n.categoria === 'medioAmb');
+        return found || allMedioAmb[1] || allMedioAmb[0] || NOTICIAS[6];
+      }
+    }
+    return sorted.find(n => n.categoria === vidaTab) || NOTICIAS[6];
+  };
+
+  const vidaNoticia = getVidaNoticia();
   const actFront = NOTICIAS.filter(n => n.categoria === 'actualidad').sort(byDateDesc).slice(0, 2);
   const arteNots = NOTICIAS.filter(n => n.categoria === 'espectaculo').sort(byDateDesc);
   const ecoNot = [...NOTICIAS].sort(byDateDesc).find(n => n.categoria === 'streaming');
@@ -60,6 +146,36 @@ function HomeView({ onSelectArticle }) {
                 );
               })}
             </div>
+
+            {/* Sub-tabs para Medio Ambiente */}
+            {vidaTab === 'medioAmb' && (
+              <div style={{ display: 'flex', gap: 6, padding: '8px 16px', background: 'var(--surface-2)', borderBottom: '1px solid var(--border)', alignItems: 'center' }}>
+                <span style={{ fontSize: 11, fontWeight: 700, color: 'var(--text-3)', marginRight: 6, textTransform: 'uppercase', letterSpacing: '0.05em' }}>Pestaña:</span>
+                {['1', '2'].map(num => {
+                  const active = medioAmbSubTab === num;
+                  return (
+                    <button
+                      key={num}
+                      onClick={() => setMedioAmbSubTab(num)}
+                      style={{
+                        padding: '4px 14px',
+                        borderRadius: 6,
+                        border: active ? '1px solid var(--accent)' : '1px solid var(--border)',
+                        background: active ? 'var(--accent)' : 'var(--surface)',
+                        color: active ? '#000' : 'var(--text)',
+                        fontWeight: active ? 700 : 500,
+                        fontSize: 12,
+                        cursor: 'pointer',
+                        fontFamily: 'Space Grotesk, sans-serif',
+                        transition: 'all 0.15s',
+                      }}
+                    >
+                      {num}
+                    </button>
+                  );
+                })}
+              </div>
+            )}
             {/* Tab content */}
             <div className="tab-inner-grid" style={{ display: 'grid', gridTemplateColumns: '200px 1fr', gap: 0 }}>
               <div style={{ overflow: 'hidden', aspectRatio: '2/3', background: 'var(--surface-2)' }}>
@@ -124,7 +240,7 @@ function HomeView({ onSelectArticle }) {
       {(() => {
         const banners2 = [
           { src: 'imagenes/pizzerialucita.png', href: 'https://www.instagram.com/lucita_pizzeria/' },
-          { type: 'iframe', iframeSrc: 'imagenes/publicidad/xenona_jeans_flyer_v2.html', href: 'https://www.instagram.com/xenona.jonte', iframeHeight: 720 },
+          { type: 'component', component: <XenonaFlyer />, href: 'https://www.instagram.com/xenona.jonte' },
           { src: 'imagenes/chuna.jpg',           href: 'https://www.instagram.com/chuna.lopedevega/' },
           { src: 'imagenes/llevatumascota.jpeg', href: null },
         ];
@@ -135,12 +251,11 @@ function HomeView({ onSelectArticle }) {
           onError: e => e.target.parentElement.style.display = 'none' };
         return (
           <div style={{ maxWidth: 1360, margin: '40px auto', padding: '0 20px', display: 'flex', gap: 16, flexWrap: 'wrap', justifyContent: 'center', alignItems: 'center' }}>
-            {banners2.map(({ src, href, type, iframeSrc, iframeHeight }, i) => {
-              if (type === 'iframe') {
-                const content = <iframe src={iframeSrc} scrolling="no" style={{ width: '100%', height: iframeHeight || 700, border: 'none', display: 'block' }} />;
+            {banners2.map(({ src, href, type, component }, i) => {
+              if (type === 'component') {
                 return href
-                  ? <a key={i} href={href} target="_blank" rel="noopener noreferrer" style={{ ...s, cursor: 'pointer' }}>{content}</a>
-                  : <div key={i} style={s}>{content}</div>;
+                  ? <a key={i} href={href} target="_blank" rel="noopener noreferrer" style={{ ...s, cursor: 'pointer' }}>{component}</a>
+                  : <div key={i} style={s}>{component}</div>;
               }
               return href
                 ? <a key={i} href={href} target="_blank" rel="noopener noreferrer" style={{ ...s, cursor: 'pointer' }}><img src={src} {...imgProps} /></a>
@@ -188,6 +303,7 @@ function ContactStrip() {
 function BannersRow() {
   const banners = [
     { src: 'imagenes/bannerEmilio1.jpeg',                href: 'https://www.instagram.com/institutoemiliocardenas' },
+    { src: 'imagenes/clementina.jpeg',                  href: null },
     { src: 'imagenes/Kappel.jpg',                       href: 'https://www.instagram.com/claudio.kappel/' },
     { src: 'imagenes/entrenamiento_personalizado.jpeg',  href: 'https://www.instagram.com/suarezlaurafitness/' },
     { src: 'imagenes/churros.jpeg',                     href: null },
@@ -327,7 +443,6 @@ function TeamSection() {
             { nombre: 'Marcos', apellido: 'Kamin', img: 'imagenes/1x/marcos.jpeg' },
             { nombre: 'Nacho', apellido: 'Brown', img: 'imagenes/1x/juan.jpeg' },
             { nombre: 'Carolina', apellido: 'Somoza', img: 'imagenes/1x/carolina.jpeg' },
-            { nombre: 'Silvina', apellido: 'Castiglione', img: 'imagenes/1x/silvina.png' },
           ].map(p => (
             <div key={p.nombre} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 12 }}>
               <div style={{ width: 100, height: 100, borderRadius: '50%', overflow: 'hidden', border: '3px solid var(--accent)', background: 'var(--surface-2)' }}>
